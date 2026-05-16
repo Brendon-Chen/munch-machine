@@ -46,3 +46,7 @@ def api_inquiry():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050, debug=True, use_reloader=True)
+
+@app.route("/google617561aecc5ec7c1.html")
+def google_verify():
+    return "google-site-verification: google617561aecc5ec7c1.html"
