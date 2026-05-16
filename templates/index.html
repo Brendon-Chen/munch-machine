@@ -1,0 +1,594 @@
+{% set v = range(1,999999) | random %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Munch Machine — Managed Vending Service | Bay Area, CA</title>
+<meta name="description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+<meta name="author" content="Munch Machine"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="{{ site_url }}/"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="{{ site_url }}/"/>
+<meta property="og:site_name" content="Munch Machine"/>
+<meta property="og:title" content="Munch Machine — Managed Vending Service | Bay Area, CA"/>
+<meta property="og:description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Munch Machine — Managed Vending Service | Bay Area, CA"/>
+<meta name="twitter:description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+
+<meta name="geo.region" content="US-CA"/>
+<meta name="geo.placename" content="Fremont, California"/>
+<meta name="geo.position" content="37.5485;-121.9886"/>
+<meta name="ICBM" content="37.5485, -121.9886"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}?v={{ v }}"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site_url }}/#business",
+  "name": "Munch Machine",
+  "description": "Premium managed vending machine service for Bay Area businesses. Zero-cost placement with full curation, restocking, and maintenance included.",
+  "url": "{{ site_url }}",
+  "telephone": "+19255834228",
+  "email": "munch.machine.vend@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fremont",
+    "addressRegion": "CA",
+    "postalCode": "94538",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.5485,
+    "longitude": -121.9886
+  },
+  "areaServed": [
+    { "@type": "City", "name": "San Francisco" },
+    { "@type": "City", "name": "Oakland" },
+    { "@type": "City", "name": "San Jose" },
+    { "@type": "City", "name": "Fremont" },
+    { "@type": "City", "name": "Palo Alto" },
+    { "@type": "City", "name": "Berkeley" },
+    { "@type": "AdministrativeArea", "name": "San Francisco Bay Area" }
+  ],
+  "priceRange": "$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Managed Vending Machine Service",
+  "provider": { "@id": "{{ site_url }}/#business" },
+  "serviceType": "Vending Machine Service",
+  "description": "Full-service vending placement at no cost to host businesses. Includes site visit, machine installation, product curation, weekly restocking, and ongoing maintenance.",
+  "areaServed": { "@type": "AdministrativeArea", "name": "San Francisco Bay Area, CA" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hosted Vending Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine Installation & Setup" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Product Curation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Weekly Restocking" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Machine Maintenance & Repair" } }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does it cost to host a vending machine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nothing. Munch Machine provides, installs, stocks, services, and insures the machine. You provide a standard outlet and Wi-Fi." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much space does the vending machine require?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Each machine measures 79 inches tall, 30 inches wide, and 38 inches deep — fits into almost any lobby, breakroom, or nook." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who handles restocking and servicing the vending machine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Munch Machine handles all restocking, servicing, and maintenance on a regular weekly cycle. Your staff never needs to touch it." }
+    },
+    {
+      "@type": "Question",
+      "name": "What products are available in the vending machine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Premium curated selections: juices, healthy snacks, protein bars, jerky, and sparkling beverages — tailored to your space and team." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the vending machine breaks down?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our team responds quickly to troubleshoot and resolve issues, keeping downtime to a minimum." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we brand the vending machine with our company logo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enterprise hosts can brand the machine's digital display with their own logo and messaging." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+{# ===== INTRO OVERLAY ===== #}
+<div id="intro" aria-hidden="true">
+  <div class="intro-curtain top"></div>
+  <div class="intro-curtain bot"></div>
+
+  <div class="intro-logo">
+    <svg viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5">
+      <rect x="4" y="4" width="56" height="88" rx="6" fill="#EAE6E0"/>
+      <rect x="10" y="10" width="44" height="50" rx="3" fill="#E2DDD4"/>
+      <line x1="10" y1="27" x2="54" y2="27"/>
+      <line x1="10" y1="44" x2="54" y2="44"/>
+      <rect x="14" y="65" width="36" height="14" rx="2" fill="#E2DDD4"/>
+    </svg>
+  </div>
+
+  <div class="intro-text">
+    <span data-intro-letter>M</span><span data-intro-letter>u</span><span data-intro-letter>n</span><span data-intro-letter>c</span><span data-intro-letter>h</span><span data-intro-letter>&nbsp;</span><span data-intro-letter>M</span><span data-intro-letter>a</span><span data-intro-letter>c</span><span data-intro-letter>h</span><span data-intro-letter>i</span><span data-intro-letter>n</span><span data-intro-letter>e</span>
+  </div>
+
+  <div class="intro-meta">Premium vending service · est. 2025</div>
+</div>
+
+{# ===== GRAIN + AMBIENT BLOBS ===== #}
+<div class="grain" aria-hidden="true"></div>
+<div class="blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+{# ===== TARGET CURSOR ===== #}
+<div id="target-cursor" class="target-cursor-wrapper">
+  <div class="target-cursor-dot"></div>
+  <div class="target-cursor-corner corner-tl"></div>
+  <div class="target-cursor-corner corner-tr"></div>
+  <div class="target-cursor-corner corner-br"></div>
+  <div class="target-cursor-corner corner-bl"></div>
+</div>
+
+{# ===== HEADER ===== #}
+<header class="site-header" id="site-header">
+  <div class="wrap row">
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5">
+        <rect x="4" y="4" width="56" height="88" rx="6" fill="#EAE6E0"/>
+        <rect x="10" y="10" width="44" height="50" rx="3" fill="#E2DDD4"/>
+        <line x1="10" y1="27" x2="54" y2="27"/>
+        <line x1="10" y1="44" x2="54" y2="44"/>
+        <rect x="14" y="65" width="36" height="14" rx="2" fill="#E2DDD4"/>
+      </svg>
+      <span class="logo-text">Munch Machine</span>
+    </a>
+    <nav class="nav">
+      <a href="#tech" class="cursor-target">Our service</a>
+      <a href="#process" class="cursor-target">Process</a>
+      <a href="#faq" class="cursor-target">Questions</a>
+    </nav>
+    <a href="#inquire" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+{# ===== HERO ===== #}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow fade-up" data-reveal>Premium vending service · Bay Area, California</div>
+        <h1 style="margin-top:24px">
+          <span class="reveal-line"><span data-line>Better snacks.</span></span>
+          <span class="reveal-line"><span data-line>Fully managed. <span class="accent">Zero hassle.</span></span></span>
+        </h1>
+        <p class="lead fade-up" data-reveal data-reveal-delay="0.2">
+          We place, curate, restock, and service premium vending in your offices, lobbies, and shared spaces.
+          You host — we handle everything.
+        </p>
+        <div class="actions fade-up" data-reveal data-reveal-delay="0.3">
+          <a href="#inquire" class="btn btn-dark cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:16px">arrow_outward</span></a>
+          <a href="#tech" class="btn btn-ghost cursor-target">
+            See how it works
+            <span class="arr"><span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-up" data-reveal data-reveal-delay="0.4">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+          <source src="{{ url_for('static', filename='hero-video.mp4') }}" type="video/mp4">
+        </video>
+        <div class="hero-visual-badge">
+          <span class="material-symbols-outlined" style="font-size:14px;color:var(--sage)">bolt</span>
+          <span>Micro · Mart</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-meta fade-up" data-reveal data-reveal-delay="0.4">
+      <div class="item">
+        <div class="label">Cost to host</div>
+        <div class="val">$0</div>
+      </div>
+      <div class="item">
+        <div class="label">Setup window</div>
+        <div class="val">2 Weeks</div>
+      </div>
+      <div class="item">
+        <div class="label">Service area</div>
+        <div class="val sage">Bay Area</div>
+      </div>
+      <div class="item">
+        <div class="label">Restock cycle</div>
+        <div class="val">Weekly</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== TECH ===== #}
+<section class="section alt" id="tech">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-reveal>01 — Our Service</div>
+        <h2 class="h-display" style="margin-top:20px" data-reveal-lines>
+          <span class="reveal-line"><span data-line>We handle</span></span>
+          <span class="reveal-line"><span data-line><em>everything.</em></span></span>
+        </h2>
+      </div>
+      <p class="lead fade-up" data-reveal>
+        From curation to restocking, we run the full operation.
+        Your team just helps themselves.
+      </p>
+    </div>
+
+    <div class="bento">
+      <div class="tile large fade-up" data-reveal>
+        <div>
+          <div class="tile-icon"><span class="material-symbols-outlined">visibility</span></div>
+          <h3 class="tile-title">Effortless shopping</h3>
+        </div>
+        <div class="tile-body"><p>Your people browse freely and grab what they want. No kiosk, no scanning, no waiting in line.</p></div>
+      </div>
+
+      <div class="tile fade-up" data-reveal data-reveal-delay="0.1">
+        <div>
+          <div class="tile-icon"><span class="material-symbols-outlined">contactless</span></div>
+          <h3 class="tile-title">Just grab anything</h3>
+        </div>
+        <div class="tile-body"><p>Browse freely, tap to pay. Secure integrated payment — no app, no account required.</p></div>
+      </div>
+
+      <div class="tile fade-up" data-reveal data-reveal-delay="0.2">
+        <div>
+          <div class="tile-icon"><span class="material-symbols-outlined">build</span></div>
+          <h3 class="tile-title">Zero maintenance</h3>
+        </div>
+        <div class="tile-body"><p>We monitor, restock, and service every machine. Your staff never has to touch it.</p></div>
+      </div>
+
+      <div class="tile fade-up" data-reveal data-reveal-delay="0.1">
+        <div>
+          <div class="tile-icon"><span class="material-symbols-outlined">inventory_2</span></div>
+          <h3 class="tile-title">Always stocked</h3>
+        </div>
+        <div class="tile-body"><p>We track what sells and refresh the selection to match your space. Shelves stay full with what your team actually wants.</p></div>
+      </div>
+
+      <div class="tile fade-up" data-reveal data-reveal-delay="0.2">
+        <div>
+          <div class="tile-icon"><span class="material-symbols-outlined">savings</span></div>
+          <h3 class="tile-title">No cost to host</h3>
+        </div>
+        <div class="tile-body"><p>We provide, install, stock, service, and insure the machine. You provide an outlet and Wi-Fi. That's it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== HARDWARE ===== #}
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-reveal>02 — The machine</div>
+        <h2 class="h-display" style="margin-top:20px" data-reveal-lines>
+          <span class="reveal-line"><span data-line>Technology that</span></span>
+          <span class="reveal-line"><span data-line><em>works for you.</em></span></span>
+        </h2>
+      </div>
+      <p class="lead fade-up" data-reveal>The machine does more than dispense snacks. It's a branded, contactless retail touchpoint that fits naturally into your space and reflects your identity.</p>
+    </div>
+
+    <div class="hw-grid">
+      <div class="hw-list">
+        <div class="hw-item fade-up" data-reveal>
+          <div class="ic"><span class="material-symbols-outlined">tv</span></div>
+          <div>
+            <h4>Your brand on display</h4>
+            <p>The digital screen is yours to use. Show your logo, promote events, or display messaging — a branded touchpoint your team sees every day.</p>
+          </div>
+        </div>
+        <div class="hw-item fade-up" data-reveal data-reveal-delay="0.1">
+          <div class="ic"><span class="material-symbols-outlined">contactless</span></div>
+          <div>
+            <h4>Fully cashless</h4>
+            <p>Tap-to-pay at the door. No cash, no receipts, no handling — a frictionless experience that reflects a modern workplace.</p>
+          </div>
+        </div>
+        <div class="hw-item fade-up" data-reveal data-reveal-delay="0.2">
+          <div class="ic"><span class="material-symbols-outlined">device_thermostat</span></div>
+          <div>
+            <h4>Configured for your space</h4>
+            <p>Ambient, refrigerated, or frozen — we select and configure the right unit for your location and stock it to match.</p>
+          </div>
+        </div>
+        <div class="hw-item fade-up" data-reveal data-reveal-delay="0.3">
+          <div class="ic"><span class="material-symbols-outlined">smart_toy</span></div>
+          <div>
+            <h4>Fully autonomous</h4>
+            <p>Object recognition means no staff involvement and no checkout lines. The machine runs itself — your team just enjoys it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="spaces-grid fade-up" data-reveal>
+        <div class="space-card">
+          <img src="{{ url_for('static', filename='Location Renders/Office.jpg') }}" alt="Munch Machine smart vending in a Bay Area corporate office">
+          <span>Corporate office</span>
+        </div>
+        <div class="space-card">
+          <img src="{{ url_for('static', filename='Location Renders/Gym.jpg') }}" alt="Premium vending machine in a gym or fitness center">
+          <span>Gym &amp; fitness</span>
+        </div>
+        <div class="space-card">
+          <img src="{{ url_for('static', filename='Location Renders/Hotel.jpg') }}" alt="Contactless vending machine in a hotel lobby">
+          <span>Hotel &amp; hospitality</span>
+        </div>
+        <div class="space-card">
+          <img src="{{ url_for('static', filename='Location Renders/Hospital.jpg') }}" alt="Smart vending machine in a medical or clinical facility">
+          <span>Medical &amp; clinic</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ===== PROCESS heading ===== #}
+<section class="section alt" id="process" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0">
+      <div>
+        <div class="eyebrow" data-reveal>03 — Process</div>
+        <h2 class="h-display" style="margin-top:20px" data-reveal-lines>
+          <span class="reveal-line"><span data-line>Up and running</span></span>
+          <span class="reveal-line"><span data-line><em>in four easy steps.</em></span></span>
+        </h2>
+      </div>
+      <p class="lead fade-up" data-reveal>Four steps. Each one handled by us, scheduled around your operations, with no disruption to your team.</p>
+    </div>
+  </div>
+</section>
+
+{# ===== PROCESS pinned horizontal scroll (standalone, no padding) ===== #}
+<section class="process-pin-section" style="background:var(--cream-warm)">
+  <div class="process-pin" id="process-pin">
+    <div class="process-track" id="process-track">
+      {% set steps = [
+        {'n':'01','t':'Site visit','d':'We come to your space, walk the floor, and identify the right placement. No cost, no commitment.','tag':'Day 1'},
+        {'n':'02','t':'Curate','d':'We select a product mix suited to your space.','tag':'Day 2 — 4'},
+        {'n':'03','t':'Install','d':'We handle delivery and setup. All you need is a standard outlet and Wi-Fi — no construction, no disruption.','tag':'Day 5 — 12'},
+        {'n':'04','t':'Enjoy','d':'We restock, service, and keep the machine running on a regular cycle. You never need to think about it.','tag':'Weekly +'}
+      ] %}
+      {% for s in steps %}
+      <div class="process-step">
+        <div class="num">{{s.n}}</div>
+        <div>
+          <h3 class="title">{{s.t}}</h3>
+          <p class="desc">{{s.d}}</p>
+          <div class="tag">{{s.tag}}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== PARTNERS ===== #}
+<section class="partners-section">
+  <div class="partners-header">
+    <div class="eyebrow" style="text-align:center;margin-bottom:48px">Trusted by</div>
+  </div>
+  <div class="partners-marquee" aria-label="Partner companies">
+    <div class="partners-track">
+      {% set partners = [
+        {'init':'','name':'Your company','placeholder':true},
+        {'init':'','name':'Your company','placeholder':true},
+        {'init':'','name':'Your company','placeholder':true},
+      ] %}
+      {% for _ in range(8) %}
+      {% for p in partners %}
+      <div class="partner-logo{% if p.placeholder %} partner-placeholder{% endif %}" title="{{ p.name }}" {% if not loop.first or not loop.index0 == 0 %}aria-hidden="true"{% endif %}>
+        {% if p.placeholder %}<span class="placeholder-inner">+ Your logo</span>{% else %}<span>{{ p.init }}</span>{% endif %}
+      </div>
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== FAQ ===== #}
+<section class="section faq-section alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-reveal>04 — Questions</div>
+        <h2 class="h-display" style="margin-top:20px" data-reveal-lines>
+          <span class="reveal-line"><span data-line>What hosts</span></span>
+          <span class="reveal-line"><span data-line><em>ask.</em></span></span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="faq">
+      {% set faqs = [
+        ('What does hosting cost?', 'Nothing. We provide, install, stock, service and insure the machine. You provide a standard outlet and Wi-Fi.'),
+        ('How much space is needed?', 'Each machine measures 79" tall, 30" wide, and 38" deep. It drops into almost any lobby, breakroom, or nook.'),
+        ('Who restocks and services it?', 'We restock, service, and keep the machine running — your staff never needs to touch it.'),
+        ('What products do you stock?', 'Premium and curated: juices, healthy snacks, protein bars, jerky, sparkling beverages, etc. Tuned to your space.'),
+        ('What if it breaks?', 'If an issue arises, our team will respond quickly to troubleshoot and resolve it with minimal downtime.'),
+        ('Can we white-label the machine?', 'Yes. Enterprise hosts can brand the digital display with their own identity.'),
+      ] %}
+      {% for q, a in faqs %}
+      <details class="faq-item">
+        <summary>
+          <span>{{q}}</span>
+          <span class="ch"><span class="material-symbols-outlined" style="font-size:18px">add</span></span>
+        </summary>
+        <p>{{a}}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# ===== INQUIRY ===== #}
+<section class="inquiry-section" id="inquire">
+  <div class="wrap">
+    <div class="inquiry-card">
+      <div>
+        <div class="eyebrow" style="color:rgba(243,241,241,0.55)">05 — Begin</div>
+        <h2 class="title" style="margin-top:20px">Host a <em>machine.</em></h2>
+        <p class="lead">Tell us about your space. We respond within 24 hours, with no obligation.</p>
+      </div>
+
+      <form id="inquiry-form" autocomplete="off">
+        <div class="field-row two">
+          <div>
+            <label class="field-label">Organization</label>
+            <input name="org" required type="text" class="field" placeholder="Nexus Corp"/>
+          </div>
+          <div>
+            <label class="field-label">Email</label>
+            <input name="email" required type="email" class="field" placeholder="name@company.com"/>
+          </div>
+        </div>
+        <div class="field-row" style="margin-top:24px">
+          <div>
+            <label class="field-label">Address</label>
+            <input name="address" type="text" class="field" placeholder="123 Main St, Fremont, CA 94538"/>
+          </div>
+        </div>
+        <div class="field-row" style="margin-top:24px">
+          <div>
+            <label class="field-label">Capacity</label>
+            <select name="capacity" class="field">
+              <option>Under 100 people</option>
+              <option>100 – 500 people</option>
+              <option>500 – 1,000 people</option>
+              <option>1,000+ people</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label">Anything we should know?</label>
+            <textarea name="notes" rows="3" class="field" placeholder="Lobby, breakroom, traffic patterns…"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn cursor-target">
+          Submit inquiry
+          <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+{# ===== FOOTER ===== #}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)">
+          <svg class="logo-mark" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5" style="width:36px;height:54px">
+            <rect x="4" y="4" width="56" height="88" rx="6" fill="#EAE6E0"/>
+            <rect x="10" y="10" width="44" height="50" rx="3" fill="#E2DDD4"/>
+            <line x1="10" y1="27" x2="54" y2="27"/>
+            <line x1="10" y1="44" x2="54" y2="44"/>
+            <rect x="14" y="65" width="36" height="14" rx="2" fill="#E2DDD4"/>
+          </svg>
+          <span class="logo-text">Munch Machine</span>
+        </a>
+        <p style="margin-top:24px;color:var(--muted);font-size:14px;max-width:340px;line-height:1.6">Premium vending, fully managed. We place, stock, and service every machine — so you never have to.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#tech">Our service</a></li>
+          <li><a href="#process">Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Reach</h5>
+        <address>
+          <ul>
+            <li><a href="tel:+19255834228">(925) 583-4228</a></li>
+            <li><a href="mailto:munch.machine.vend@gmail.com">munch.machine.vend@gmail.com</a></li>
+            <li>Fremont, California</li>
+          </ul>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Munch Machine — Crafted in California</div>
+      <div>All systems · operational</div>
+    </div>
+  </div>
+</footer>
+
+{# ===== SCRIPTS ===== #}
+<script src="{{ url_for('static', filename='js/vendor/gsap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/ScrollTrigger.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/vendor/lenis.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}?v={{ v }}"></script>
+</body>
+</html>

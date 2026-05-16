@@ -1,0 +1,20 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+.env.local
+
+# Vercel
+.vercel
+
+# Local dev only
+Reference/
+
+# OS
+.DS_Store
+Thumbs.db
