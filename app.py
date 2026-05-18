@@ -5,7 +5,7 @@ import os
 from datetime import date
 from pathlib import Path
 
-from flask import Flask, Response, jsonify, render_template, request
+from flask import Flask, Response, render_template, request
 
 ROOT = Path(__file__).parent
 app = Flask(__name__, template_folder=str(ROOT / "templates"), static_folder=str(ROOT / "static"))
@@ -38,15 +38,10 @@ def sitemap_xml():
     )
 
 
-@app.route("/api/inquiry", methods=["POST"])
-def api_inquiry():
-    data = request.get_json(silent=True) or {}
-    return jsonify({"ok": True, "received": {k: data.get(k) for k in ("org", "email", "capacity")}})
+@app.route("/google617561aecc5ec7c1.html")
+def google_verify():
+    return "google-site-verification: google617561aecc5ec7c1.html"
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050, debug=True, use_reloader=True)
-
-@app.route("/google617561aecc5ec7c1.html")
-def google_verify():
-    return "google-site-verification: google617561aecc5ec7c1.html"

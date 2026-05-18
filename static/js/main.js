@@ -262,14 +262,18 @@ function runProcessPin() {
     btn.innerHTML = 'Transmitting…';
     btn.disabled = true;
     try {
-      await fetch('/api/inquiry', {
+      const r = await fetch('https://formspree.io/f/mqejkyvn', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
-      btn.innerHTML = '✓ Received — we will be in touch';
-      form.reset();
-      setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 3500);
+      if (r.ok) {
+        btn.innerHTML = '✓ Received — we will be in touch';
+        form.reset();
+        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 3500);
+      } else {
+        throw new Error();
+      }
     } catch {
       btn.innerHTML = 'Error — retry';
       btn.disabled = false;
