@@ -38,9 +38,9 @@ def sitemap_xml():
     )
 
 
-@app.route("/google617561aecc5ec7c1.html")
+@app.route("/googlea56dbcb37b555c0c.html")
 def google_verify():
-    return "google-site-verification: google617561aecc5ec7c1.html"
+    return "google-site-verification: googlea56dbcb37b555c0c.html"
 
 
 if __name__ == "__main__":
