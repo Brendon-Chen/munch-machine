@@ -250,6 +250,15 @@ body {
   display: block;
   box-shadow: 0 32px 64px rgba(26,26,26,0.14);
 }
+.hero-mobile-poster {
+  display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 32px 64px rgba(26,26,26,0.14);
+}
 /* Badge beneath */
 .hero-visual-badge {
   position: absolute;
@@ -765,7 +774,8 @@ select.field { background: var(--ink); color: var(--cream); appearance: none; pa
 .faq-item summary span:first-child { font-size: 18px; }
 
   .hero-visual-badge { font-size: 10px; padding: 8px 14px; }
-  .hero-video { min-height: 300px; }
+  .hero-video { display: none; }
+  .hero-mobile-poster { display: block; min-height: 300px; }
 
   .site-footer { padding: 48px 0 28px; }
   .footer-grid { gap: 32px; margin-bottom: 40px; }

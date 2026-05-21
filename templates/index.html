@@ -30,7 +30,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400&display=swap" rel="stylesheet"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400&display=swap"/></noscript>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}?v={{ v }}"/>
 
 <script type="application/ld+json">
@@ -227,6 +228,7 @@
         <video class="hero-video" autoplay muted loop playsinline preload="metadata">
           <source src="{{ url_for('static', filename='hero-video.mp4') }}" type="video/mp4">
         </video>
+        <img class="hero-mobile-poster" src="{{ url_for('static', filename='hero-video-mobile.webp') }}" alt="Munch Machine smart vending machine" fetchpriority="high">
         <div class="hero-visual-badge">
           <span class="material-symbols-outlined" style="font-size:14px;color:var(--sage)">bolt</span>
           <span>Micro · Mart</span>
@@ -364,19 +366,19 @@
 
       <div class="spaces-grid fade-up" data-reveal>
         <div class="space-card">
-          <img src="{{ url_for('static', filename='Location Renders/Office.jpg') }}" alt="Munch Machine smart vending in a Bay Area corporate office">
+          <img src="{{ url_for('static', filename='Location Renders/Office.webp') }}" alt="Munch Machine smart vending in a Bay Area corporate office" loading="lazy">
           <span>Corporate office</span>
         </div>
         <div class="space-card">
-          <img src="{{ url_for('static', filename='Location Renders/Gym.jpg') }}" alt="Premium vending machine in a gym or fitness center">
+          <img src="{{ url_for('static', filename='Location Renders/Gym.webp') }}" alt="Premium vending machine in a gym or fitness center" loading="lazy">
           <span>Gym &amp; fitness</span>
         </div>
         <div class="space-card">
-          <img src="{{ url_for('static', filename='Location Renders/Hotel.jpg') }}" alt="Contactless vending machine in a hotel lobby">
+          <img src="{{ url_for('static', filename='Location Renders/Hotel.webp') }}" alt="Contactless vending machine in a hotel lobby" loading="lazy">
           <span>Hotel &amp; hospitality</span>
         </div>
         <div class="space-card">
-          <img src="{{ url_for('static', filename='Location Renders/Hospital.jpg') }}" alt="Smart vending machine in a medical or clinical facility">
+          <img src="{{ url_for('static', filename='Location Renders/Hospital.webp') }}" alt="Smart vending machine in a medical or clinical facility" loading="lazy">
           <span>Medical &amp; clinic</span>
         </div>
       </div>
