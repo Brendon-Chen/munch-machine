@@ -221,24 +221,20 @@ function runProcessPin() {
 
   function update() {
     const rect = section.getBoundingClientRect();
-    const vh = window.innerHeight;
-    // Progress 0 → 1 as section scrolls from "pin starts" to "pin ends".
-    // pin starts when section.top hits 0; pin ends when section.bottom hits vh.
-    const total = section.offsetHeight - vh;
-    const passed = Math.min(Math.max(-rect.top, 0), total);
-    const progress = total > 0 ? passed / total : 0;
+    const passed = Math.min(Math.max(-rect.top, 0), scrollDistance);
+    const progress = scrollDistance > 0 ? passed / scrollDistance : 0;
     track.style.transform = `translate3d(${-scrollDistance * progress}px, 0, 0)`;
   }
 
   measure();
-  update();
+  requestAnimationFrame(update);
 
   // Re-measure when fonts / layout settle
-  if (document.fonts?.ready) document.fonts.ready.then(() => { measure(); update(); });
-  setTimeout(() => { measure(); update(); }, 200);
-  setTimeout(() => { measure(); update(); }, 1000);
+  if (document.fonts?.ready) document.fonts.ready.then(() => { measure(); requestAnimationFrame(update); });
+  setTimeout(() => { measure(); requestAnimationFrame(update); }, 200);
+  setTimeout(() => { measure(); requestAnimationFrame(update); }, 1000);
 
-  window.addEventListener('resize', () => { measure(); update(); });
+  window.addEventListener('resize', () => { measure(); requestAnimationFrame(update); });
 
   // Hook into Lenis if present (fires per smooth scroll frame), otherwise native scroll
   if (lenis) {
