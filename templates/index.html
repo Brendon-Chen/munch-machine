@@ -27,6 +27,10 @@
 <meta name="geo.position" content="37.5485;-121.9886"/>
 <meta name="ICBM" content="37.5485, -121.9886"/>
 
+<link rel="preload" as="script" href="{{ url_for('static', filename='js/vendor/gsap.min.js') }}"/>
+<link rel="preload" as="script" href="{{ url_for('static', filename='js/vendor/ScrollTrigger.min.js') }}"/>
+<link rel="preload" as="script" href="{{ url_for('static', filename='js/vendor/lenis.min.js') }}"/>
+<link rel="preload" as="script" href="{{ url_for('static', filename='js/main.js') }}?v={{ v }}"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
