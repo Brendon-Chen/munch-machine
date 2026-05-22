@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}How Many Snacks Should You Eat in a Day? | Munch Machine{% endblock %}
+{% block meta_description %}How many snacks per day is healthy for an office worker? What the research says about snacking frequency, timing, and total calorie balance.{% endblock %}
+{% block canonical_path %}/tips/how-many-snacks-a-day{% endblock %}
+{% block og_url_path %}/tips/how-many-snacks-a-day{% endblock %}
+{% block og_title %}How Many Snacks Should You Eat in a Day? | Munch Machine{% endblock %}
+{% block og_description %}The honest answer to how many snacks is appropriate in a workday — what timing and composition matter more than frequency.{% endblock %}
+{% block twitter_title %}How Many Snacks Per Day? | Munch Machine{% endblock %}
+{% block twitter_description %}How many snacks should you eat per day? What the evidence actually says.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How Many Snacks Should You Eat in a Day?","publisher":{"@type":"Organization","name":"Munch Machine"},"description":"Practical guide to daily snacking frequency for office workers"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Snacking Guide</span></nav>
+    <div class="eyebrow">Consumer Tips · Nutrition</div>
+    <h1>How many snacks should you eat <em>in a day?</em></h1>
+    <p class="lead">The answer most people want: a specific number. The honest answer: it depends on your meals, your energy expenditure, and what you're eating. Here's the practical framework that actually helps.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Short answer<strong>1–2 snacks most days</strong></div>
+      <div class="meta-item">What matters more<strong>Composition</strong></div>
+      <div class="meta-item">Snack calorie range<strong>150–300 per snack</strong></div>
+      <div class="meta-item">Timing signal<strong>True hunger</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>The short answer</h2>
+    <p>For most office workers eating 3 meals per day, 1–2 snacks is appropriate. One in the mid-morning if breakfast was light or early, one in the mid-afternoon to bridge the gap to dinner. More than 2 snacks in a typical desk-job day usually means meals aren't providing enough satiety, or snacking has become habitual rather than hunger-driven.</p>
+    <p>That said: snack frequency matters less than snack composition. Two 300-calorie snacks made of protein, fiber, and whole foods will affect your energy, mood, and productivity very differently from two 300-calorie snacks of refined sugar and simple carbs. Getting the quality right matters more than counting snacks.</p>
+
+    <h2>When to snack (and when not to)</h2>
+    <p><strong>Snack when:</strong> You're genuinely hungry — your last meal was 3+ hours ago and your stomach is signaling need. Your energy is noticeably low and you have meaningful work ahead. You won't be eating a full meal for another 2+ hours.</p>
+    <p><strong>Don't snack when:</strong> You're bored, stressed, or eating out of habit rather than hunger. Your last meal was less than 2 hours ago. You just want something to do with your hands. You're procrastinating on a difficult task. These are common triggers in office environments and can lead to excessive calorie intake without any real energy benefit.</p>
+
+    <h2>The "snacking gap" problem in offices</h2>
+    <p>Office environments are uniquely prone to over-snacking because food is accessible, the work is mentally taxing (which the brain misconstrues as calorie demand), and breaks naturally revolve around the kitchen or break room. Walking to the vending machine can also be a displacement activity — a reason to step away from work — rather than a genuine hunger response.</p>
+    <p>This isn't a reason to avoid break rooms or vending machines. It's a reason to pause for three seconds before buying something and ask: am I actually hungry, or am I taking a break? Both are valid, but if it's the latter, a walk around the building or a glass of water might serve you equally well without the calorie intake.</p>
+
+    <h2>What 1–2 healthy snacks looks like calorically</h2>
+    <ul>
+      <li>A 1oz pack of mixed nuts (~170 cal) mid-morning + an RXBAR (~210 cal) at 3pm = ~380 extra calories, plus significant protein and fiber</li>
+      <li>A small bag of roasted chickpeas (~130 cal) + a sparkling water mid-afternoon = light snacking that doesn't crowd dinner</li>
+      <li>A beef jerky stick (~80 cal) + an apple = protein and natural sugar that bridges without bloating</li>
+    </ul>
+    <p>For reference: most adult office workers need somewhere between 1,800–2,400 calories per day depending on size and activity level. Two snacks totaling 300–500 calories is a reasonable snacking budget that leaves room for complete, balanced meals.</p>
+
+    <h2>The hydration confusion</h2>
+    <p>One of the most common causes of excessive snacking is mild dehydration, which the brain often misinterprets as hunger. If you've had less than 4–5 cups of water so far today and you're feeling a vague snack urge, try a large glass of water first and wait 10 minutes. You'll be surprised how often the craving disappears.</p>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Better snack options at <em>your workplace.</em></h2><p>We stock break rooms with genuinely good choices. Zero cost to your business.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

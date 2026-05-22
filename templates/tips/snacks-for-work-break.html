@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}What to Eat During Your Work Break | Munch Machine{% endblock %}
+{% block meta_description %}What to eat during a work break to actually recharge — the science of short breaks, what foods help, and how to make a 10-minute break actually feel restorative.{% endblock %}
+{% block canonical_path %}/tips/snacks-for-work-break{% endblock %}
+{% block og_url_path %}/tips/snacks-for-work-break{% endblock %}
+{% block og_title %}What to Eat During Your Work Break | Munch Machine{% endblock %}
+{% block og_description %}What to eat during a work break to feel genuinely refreshed — quick nutrition guide for busy Bay Area workers.{% endblock %}
+{% block twitter_title %}What to Eat on Your Work Break | Munch Machine{% endblock %}
+{% block twitter_description %}What to eat on a work break to actually recharge. Quick nutrition guide.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"What to Eat During Your Work Break","publisher":{"@type":"Organization","name":"Munch Machine"},"description":"Guide to work break nutrition for office workers"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Work Break Snacks</span></nav>
+    <div class="eyebrow">Consumer Tips · Work Wellness</div>
+    <h1>What to eat during <em>your work break.</em></h1>
+    <p class="lead">A work break is supposed to be restorative. What you eat during that break either supports that restoration or undermines it. Here's how to make a 10–15 minute break actually count.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Break length<strong>10–20 min</strong></div>
+      <div class="meta-item">Goal<strong>Energy + focus</strong></div>
+      <div class="meta-item">Avoid<strong>Sugar crash after</strong></div>
+      <div class="meta-item">Also: hydrate<strong>Often overlooked</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>The purpose of a work break (and why food matters)</h2>
+    <p>Short breaks from cognitively demanding work restore attention and reduce mental fatigue. This effect is real and well-documented. But a break that involves eating a high-sugar snack can undo some of the restoration by setting up a blood sugar crash 45 minutes later that arrives right when you're trying to focus again.</p>
+    <p>The ideal work break snack does three things: replenishes some energy, contributes to satiety so you're not hungry again in an hour, and doesn't cause a post-snack crash that interferes with your next work block.</p>
+
+    <h2>What works for a 10-minute break</h2>
+
+    <h3>Protein bar + water</h3>
+    <p>RXBAR, a Kind nut bar, or a Larabar paired with a full glass of water. The protein and fiber satisfy real hunger; the water addresses the dehydration that often masquerades as hunger or fatigue. Quick to consume, no mess, and you'll feel the difference in your next 90-minute work block.</p>
+
+    <h3>Nuts and sparkling water</h3>
+    <p>A small handful of mixed nuts is one of the most efficient snack choices in terms of satiety per minute. Add a sparkling water (Topo Chico, Waterloo) for the carbonation hit that makes sparkling water feel more like a treat than flat water. Takes 2 minutes to consume, keeps you going for 2+ hours.</p>
+
+    <h3>Beef jerky + sparkling water</h3>
+    <p>Good for mid-afternoon when you want something savory. High protein, zero sugar, genuinely satisfying. Pair with water or sparkling water and avoid eating it as a distraction while still at your desk — get up, move to the break room, take the actual break.</p>
+
+    <h2>The coffee question</h2>
+    <p>Coffee on a break is fine, especially before 2pm. Caffeine has a half-life of 5–6 hours, so afternoon coffee (3pm and later) can genuinely interfere with sleep — which affects the next day's energy more than anything you eat at work. If you're reaching for coffee at 4pm because you're exhausted, the actual problem is probably sleep or an early-morning caffeine habit that's created a dependency, not a nutrition gap that coffee will fix.</p>
+    <p>Cold brew with low-to-no sugar is the cleanest caffeine delivery among vending machine options. Energy drinks with 30+ grams of sugar are less ideal unless you're doing physical work that actually burns that glucose.</p>
+
+    <h2>What to skip if you want a productive afternoon</h2>
+    <ul>
+      <li><strong>Large meals at your desk:</strong> Blood flow increases to the digestive system after a big meal, which genuinely reduces alertness. If lunch made you sleepy, it was too large, too fast, or too carb-heavy.</li>
+      <li><strong>Candy bars as "quick energy":</strong> The energy spike is real but brief. The crash follows 30–45 minutes later. For a work break, this is the worst possible timing — you'll feel worse during your most productive post-break window.</li>
+      <li><strong>Eating at your desk while still working:</strong> This isn't a break. It doesn't restore attention the way a genuine departure from work does. Stand up, walk somewhere, eat with intention, and come back. Ten minutes of genuine disengagement beats thirty minutes of distracted desk-eating.</li>
+    </ul>
+
+    <h2>The hydration reminder</h2>
+    <p>Office workers are chronically mildly dehydrated — the air conditioning is dry, the focus of work crowds out water-drinking habits, and mild dehydration doesn't feel uncomfortable enough to trigger action. Use your break to drink water. Even 8–12oz of water during a break improves alertness measurably. If your break includes both a good snack and adequate hydration, you're doing better than 80% of office workers.</p>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Better break room options at <em>your workplace.</em></h2><p>We stock vending machines with genuinely good choices. Zero cost to your business.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

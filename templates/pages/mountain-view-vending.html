@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Mountain View Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for Mountain View offices and tech companies. Premium, health-forward snacks, cashless payment, micro market option. Zero cost to host.{% endblock %}
+{% block canonical_path %}/mountain-view-vending{% endblock %}
+{% block og_url_path %}/mountain-view-vending{% endblock %}
+{% block og_title %}Mountain View Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Premium managed vending for Mountain View tech offices. Health-focused product mix, cashless, zero cost. Serving Mountain View and the mid-Peninsula.{% endblock %}
+{% block twitter_title %}Mountain View Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Premium managed vending for Mountain View tech offices — health-focused, cashless, zero cost.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Mountain View CA Vending Services","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"City","name":"Mountain View","containedInPlace":{"@type":"State","name":"California"}},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Mountain View, CA</span></nav>
+    <div class="eyebrow">Local Vending · Mountain View, CA</div>
+    <h1>Vending that fits <em>Mountain View's culture.</em></h1>
+    <p class="lead">Mountain View is home to some of the most health-conscious, wellness-aware workforces in the Bay Area. The cycling commuters, the farmer's market regulars, the employees who read ingredient labels — your break room vending should reflect who your team actually is.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Market<strong>Tech / wellness culture</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Healthy options<strong>Emphasized</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Why Mountain View offices care about break room quality</h2>
+    <p>Mountain View's tech community has a particular relationship with wellness. The proximity to Caltrain, the outdoor culture of the mid-Peninsula, and the demographics of the tech workforce here combine to create a workplace where what's stocked in the vending machine is genuinely noticed. Not just as a perk — as a statement about what the company values.</p>
+    <p>We build Mountain View product mixes with this in mind. Organic and clean-label brands get stronger representation. Low-sugar and plant-based options are core, not afterthoughts. Premium sparkling water and cold-brew coffee anchor the beverage selection. And the classics are still there — balance, not restriction — because people buy snacks for pleasure as well as fuel.</p>
+
+    <h2>What we stock for Mountain View workforces</h2>
+    <ul>
+      <li><strong>Snacks:</strong> RXBAR, Kind, Larabar, organic trail mix, roasted chickpeas, rice cakes, dark chocolate, lightly salted nuts</li>
+      <li><strong>Beverages:</strong> Topo Chico, Liquid Death, Waterloo, cold brew (Chameleon, High Brew), Organic Valley shakes, coconut water</li>
+      <li><strong>Alongside classics:</strong> Kettle chips, Clif bars, Gatorade, standard sodas — because real product mix data shows people want both</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Can we request mostly healthy options for our Mountain View office?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. We can weight the mix heavily toward organic, low-sugar, and health-forward products. In Mountain View offices we typically do this as a default. We maintain a small representation of conventional items because sales data consistently shows they still move, but the balance can be adjusted based on your team's feedback.</p></details>
+      <details class="faq-item"><summary><span>Do you serve Google's campus or other major Mountain View tech companies?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>For very large campuses with internal food programs, the vending opportunity is typically in secondary buildings, co-located vendors, or employees who don't have cafeteria access. We serve the broader Mountain View commercial market including mid-market tech companies, office parks, and smaller office buildings.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Better snacks for <em>Mountain View teams.</em></h2><p>Health-forward, cashless, fully managed. Zero cost to your business.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block title %}Office Vending Services Bay Area | Munch Machine{% endblock %}
+{% block meta_description %}Managed office vending for Bay Area companies. Premium snacks, cashless payment, zero cost to host. We restock and service everything — your team just enjoys it.{% endblock %}
+{% block canonical_path %}/office-vending{% endblock %}
+{% block og_url_path %}/office-vending{% endblock %}
+{% block og_title %}Office Vending Services Bay Area | Munch Machine{% endblock %}
+{% block og_description %}Premium managed vending for Bay Area offices. Zero cost, no contracts, no maintenance burden. Cashless machines, curated product mix, weekly restocking.{% endblock %}
+{% block twitter_title %}Office Vending Services Bay Area | Munch Machine{% endblock %}
+{% block twitter_description %}Premium managed vending for Bay Area offices. Zero cost, no contracts, cashless machines, weekly restocking.{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does office vending cost for businesses?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nothing. Munch Machine provides equipment, installation, restocking, and maintenance at no charge to the host business. Revenue comes from product sales." }
+    },
+    {
+      "@type": "Question",
+      "name": "What snacks are most popular in Bay Area offices?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In Bay Area offices, popular items tend to include protein bars, trail mix, sparkling water, natural chips, premium coffees, and low-sugar snack options alongside classic chips, candy, and sodas. Health-conscious options move faster in tech and professional environments." }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Home</a>
+      <span class="sep">›</span>
+      <a href="{{ url_for('blog') }}">Resources</a>
+      <span class="sep">›</span>
+      <span>Office Vending</span>
+    </nav>
+    <div class="eyebrow">Service · Office Vending</div>
+    <h1>Office vending that actually <em>reflects your company.</em></h1>
+    <p class="lead">Bay Area employees notice their break rooms. A well-curated vending setup isn't just a perk — it signals investment in the people who work there. We make that easy to get right.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Setup cost<strong>$0</strong></div>
+      <div class="meta-item">Cashless payment<strong>Included</strong></div>
+      <div class="meta-item">Restocking<strong>Weekly+</strong></div>
+      <div class="meta-item">Service area<strong>Bay Area-wide</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>Why Bay Area offices take break rooms seriously</h2>
+      <p>In a market where office workers have real leverage over where they spend their time, the quality of in-office amenities matters more than it used to. Free snacks became a Silicon Valley joke, then a genuine expectation. Companies that don't think about the break room find that employees who have a choice — and many do — choose to work somewhere else.</p>
+      <p>That pressure extends beyond the big tech campuses. Mid-market companies in Fremont, San Jose, Newark, and throughout the East Bay compete for the same talent pool. A thoughtful break room setup signals attention to employee experience without requiring a large ongoing budget commitment.</p>
+
+      <div class="callout">
+        <p><strong>The practical reality:</strong> Most companies trying to manage break room snacks in-house spend more time, money, and staff attention on it than they realize — and the results are still inconsistent. Managed vending removes the operational overhead entirely.</p>
+      </div>
+
+      <h2>What we provide and manage</h2>
+      <p>Everything about the vending setup is handled by us. Your team's involvement ends at approving the initial product mix and providing an outlet and Wi-Fi connection.</p>
+      <ul>
+        <li><strong>Equipment</strong> — Machines are provided at no cost. We handle delivery, installation, and physical setup.</li>
+        <li><strong>Product curation</strong> — We build a product lineup around your team's preferences, dietary needs, and consumption patterns.</li>
+        <li><strong>Real-time inventory monitoring</strong> — Every sale is tracked. We know what's running low before it runs out.</li>
+        <li><strong>Scheduled restocking</strong> — Most offices are serviced weekly. High-traffic locations are restocked more frequently.</li>
+        <li><strong>Maintenance and repair</strong> — We handle technical issues, typically same-day or next business day in the Bay Area.</li>
+        <li><strong>Product rotation</strong> — Slow-moving items get replaced. We keep the lineup relevant based on actual sales data.</li>
+        <li><strong>Cashless payment processing</strong> — Tap-to-pay, Apple Pay, Google Pay, and card — all standard on every machine.</li>
+      </ul>
+
+      <h2>Signs your office needs better break room solutions</h2>
+      <ul>
+        <li>Employees are leaving the building for snacks or coffee during short breaks</li>
+        <li>Your current vending machine runs out of popular items by mid-week</li>
+        <li>Someone on your team is regularly responsible for ordering or managing snacks</li>
+        <li>The break room machine only accepts cash or cards but not tap-to-pay</li>
+        <li>Employees complain about limited healthy options</li>
+        <li>You have a new office or have recently grown significantly and the current setup doesn't scale</li>
+      </ul>
+
+      <h2>Popular snacks in Bay Area offices</h2>
+      <p>Product preferences vary by company culture, but some consistent patterns emerge across Bay Area offices:</p>
+
+      <div class="table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Category</th><th>Top performers</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Protein & energy</td><td>RXBAR, Kind bars, Clif bars, beef jerky, trail mix</td></tr>
+            <tr><td>Salty snacks</td><td>Kettle chips, Sun Chips, nuts, popcorn, pretzels</td></tr>
+            <tr><td>Sweet snacks</td><td>Dark chocolate, granola bars, fruit snacks, cookies</td></tr>
+            <tr><td>Cold beverages</td><td>Sparkling water, Liquid Death, Gatorade, iced tea, sodas</td></tr>
+            <tr><td>Premium options</td><td>Organic bars, low-sugar snacks, plant-based items</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>These are baselines — your team's data tells the real story. We adjust the mix on every restock visit based on what's actually selling.</p>
+
+      <h2>Office vending vs. managing it yourself</h2>
+      <p>Some companies try to manage break room snacks in-house — ordering from Costco, setting up an honor-system snack basket, or designating a rotating snack coordinator. The math rarely works out well when you account for the real costs:</p>
+      <ul>
+        <li>Staff time for ordering, receiving, and stocking</li>
+        <li>Inconsistent availability when whoever handles it is busy or out</li>
+        <li>No payment processing — cash systems create friction and get skipped</li>
+        <li>No data on what's actually popular, leading to chronic over- or under-ordering</li>
+        <li>Inventory sitting unused because product selection wasn't based on real demand</li>
+      </ul>
+      <p>Managed vending eliminates all of this. The machine is always stocked, always working, and always cashless. Zero internal resources required.</p>
+
+      <h2>Office types we serve across the Bay Area</h2>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">hub</span></div>
+          <h3>Tech companies</h3>
+          <p>Engineering and product teams with high-quality expectations. We weight the mix toward premium options and adjust based on the culture — startup energy, established enterprise, or anything in between.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">business_center</span></div>
+          <h3>Professional services</h3>
+          <p>Law firms, accounting firms, and consultancies that want a professional, well-maintained break room without dedicating staff time to managing it.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">medical_services</span></div>
+          <h3>Healthcare & biotech</h3>
+          <p>Staff in clinical and research environments often have limited break time. Fast access to quality food and beverages during short windows is especially valuable here.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">groups</span></div>
+          <h3>Coworking spaces</h3>
+          <p>Shared offices use vending as a value-add for members. We manage everything so your staff stays focused on running the space, not restocking it.</p>
+        </div>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <div class="page-faq faq">
+
+        <details class="faq-item">
+          <summary>
+            <span>How much does office vending cost our business?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Nothing. Equipment, installation, restocking, and maintenance are provided at no charge. We generate revenue from product sales. Your only requirements are a standard 120V outlet, a Wi-Fi connection, and a suitable location for the machine.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can we request specific products or brands?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Yes. Before installation we discuss your team's preferences. If there are specific items people regularly request — a particular protein bar, a specific sparkling water brand, dietary-specific snacks — we source and stock them. Ongoing, you can flag product requests anytime and we'll work them into the next restock.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What's the minimum office size you work with?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>We look for at least 30–40 regular occupants to ensure the machine stays active enough to maintain fresh inventory. Smaller offices can sometimes qualify if there's consistent additional foot traffic — visitors, customers, or shared amenity use. Get in touch and we'll assess your specific situation.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>How do employees pay?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Every machine accepts contactless cards, Apple Pay, Google Pay, and standard debit/credit cards. No cash, no coins. Transactions complete in under three seconds. There's nothing to set up from the employee side — they just tap and go.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What if the machine is broken or empty?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Machine issues are often flagged by our monitoring system before anyone reports them. For technical problems, we respond typically same-day or next business day. For stock issues, our proactive restocking schedule means machines rarely run out — but if yours does, contact us and we'll prioritize the visit.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Is there a long-term contract?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>We don't require long-term contracts. We ask for reasonable notice before ending a placement so we can schedule removal. In practice, most businesses keep the service because it works well and costs them nothing — but you're not locked in.</p>
+        </details>
+
+      </div>
+
+      <div class="page-cta">
+        <div class="cta-text">
+          <h2>Upgrade your <em>office break room.</em></h2>
+          <p>No cost, no contract, no management burden. Tell us about your space and we'll take it from there.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">
+            Get started <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

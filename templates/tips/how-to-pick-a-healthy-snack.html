@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}How to Pick a Healthy Snack | Munch Machine{% endblock %}
+{% block meta_description %}A practical guide to choosing healthy snacks — what to look for on nutrition labels, what to avoid, and the best options available in a modern vending machine.{% endblock %}
+{% block canonical_path %}/tips/how-to-pick-a-healthy-snack{% endblock %}
+{% block og_url_path %}/tips/how-to-pick-a-healthy-snack{% endblock %}
+{% block og_title %}How to Pick a Healthy Snack | Munch Machine{% endblock %}
+{% block og_description %}What makes a snack actually healthy? How to read labels, what to prioritize, and the best picks in a modern vending machine.{% endblock %}
+{% block twitter_title %}How to Pick a Healthy Snack | Munch Machine{% endblock %}
+{% block twitter_description %}A practical guide to picking healthier snacks from a vending machine or break room.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Pick a Healthy Snack","publisher":{"@type":"Organization","name":"Munch Machine"},"description":"Practical guide to choosing healthy snacks from vending machines and break rooms"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Healthy Snack Guide</span></nav>
+    <div class="eyebrow">Consumer Tips · Nutrition</div>
+    <h1>How to pick a <em>healthy snack.</em></h1>
+    <p class="lead">Standing in front of a vending machine at 3pm trying to make a good choice is harder than it should be. Here's a practical framework for picking snacks that actually fuel you — not just satisfy the craving and leave you worse off an hour later.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Read time<strong>4 minutes</strong></div>
+      <div class="meta-item">Audience<strong>Anyone who snacks</strong></div>
+      <div class="meta-item">Key signal<strong>Protein + fiber</strong></div>
+      <div class="meta-item">Red flag<strong>First 3 ingredients</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>The two things that actually matter</h2>
+    <p>Nutrition labels are noisy. Most of the numbers are distractions. The two things that separate a snack that keeps you going from one that crashes you are:</p>
+    <ol>
+      <li><strong>Protein content:</strong> Protein slows digestion and blunts the blood sugar spike that causes the 4pm energy crash. A snack with 5g or more of protein is doing meaningful work. Under 2g and you're essentially just getting carbs and calories.</li>
+      <li><strong>Fiber content:</strong> Same principle — fiber slows digestion, keeps you fuller longer, and buffers against sugar spikes. 3g or more of fiber per serving is a good target.</li>
+    </ol>
+    <p>A snack that hits both — protein and fiber — is almost always a better choice than one that hits neither, regardless of what the front-of-package marketing says.</p>
+
+    <h2>What to ignore</h2>
+    <p><strong>"Natural" and "organic":</strong> These words on the front of a package tell you almost nothing about nutritional quality. Organic cane sugar is still sugar. Natural flavors can mean anything. These marketing labels don't change the protein, fiber, or sugar content — check the actual numbers.</p>
+    <p><strong>Calorie count alone:</strong> A 100-calorie snack pack of crackers and a 200-calorie bar with 10g of protein and 5g of fiber will affect your energy and hunger very differently. Calories are one input, not the whole story.</p>
+    <p><strong>Fat content:</strong> Fat isn't the enemy. Fats from nuts, seeds, and whole foods are satiating and nutritionally valuable. The snacks to avoid are high-fat + high-sugar combinations (most processed junk food), not high-fat foods on their own.</p>
+
+    <h2>The ingredient list trick</h2>
+    <p>Flip to the ingredient list and look at the first three items. Ingredients are listed in order of quantity — what appears first is what the product is mostly made of. If the first three ingredients are some form of sugar, refined flour, or corn syrup, the rest of the label doesn't matter much. If the first three are whole food ingredients (almonds, oats, dates, egg whites), that's a good sign.</p>
+
+    <h2>Best options in a modern vending machine</h2>
+    <ul>
+      <li><strong>RXBAR:</strong> Dates, egg whites, nuts. Simple ingredient list, 12g protein. One of the cleanest bars available in vending machines.</li>
+      <li><strong>Kind Bars (nut varieties):</strong> Whole nuts visible in the bar, reasonable sugar (8–10g), decent fiber and protein. Avoid the heavily chocolate-coated varieties if sugar is a concern.</li>
+      <li><strong>Beef jerky:</strong> High protein, low carb, satiating. Check sodium if that's a concern — jerky tends to run high. Chomps and Epic brands are cleaner than Jack Link's.</li>
+      <li><strong>Mixed nuts:</strong> Best fat/protein/fiber ratio in most vending machines. Unsalted or lightly salted is preferable. A 1oz nut pack is one of the best snack choices nutritionally.</li>
+      <li><strong>Roasted chickpeas:</strong> 6g protein + 5g fiber per serving, satisfyingly crunchy, not overly processed. Biena is a common vending brand.</li>
+      <li><strong>Protein shakes (Premier Protein, etc.):</strong> 30g protein for 160 calories. Not everyone's preference texture-wise, but nutritionally excellent for a quick protein hit.</li>
+    </ul>
+
+    <h2>What to skip most of the time</h2>
+    <ul>
+      <li>Chips and crackers with no protein or fiber — pure starch calories</li>
+      <li>Candy and chocolate bars with 30+ grams of sugar and minimal protein</li>
+      <li>Fruit snacks and gummies — essentially candy with a health halo</li>
+      <li>Granola bars with 20+ grams of sugar — many are closer to cookies than real food</li>
+    </ul>
+    <p>None of these are forbidden — eating them occasionally won't harm you. But as a daily work snack habit, they set up a cycle of energy spikes and crashes that makes the afternoon harder, not easier.</p>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Want your workplace vending to include <em>better options?</em></h2><p>Munch Machine stocks health-forward brands as a default. Zero cost to your business.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

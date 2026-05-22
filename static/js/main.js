@@ -42,14 +42,28 @@ function killIntro() {
 }
 
 function bootSite() {
-  try { lenis?.start(); } catch {}
   killIntro();
-  try { runRevealQueue(); } catch (e) { console.error(e); }
+  // Measure process-pin first so section.style.height is final before anything scrolls.
   try { runProcessPin(); } catch (e) { console.error(e); }
+
+  // Resolve hash navigation BEFORE Lenis starts so Lenis inherits the correct offset.
+  // getBoundingClientRect() forces a synchronous reflow — the returned top already
+  // reflects the expanded process-pin height — giving us the true document Y.
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY);
+    }
+  }
+
+  try { lenis?.start(); } catch {}
+  try { runRevealQueue(); } catch (e) { console.error(e); }
 }
 
 function runIntro() {
-  if (!gsap) { bootSite(); return; }
+  // Skip the branded intro when navigating directly to a section (e.g. from a CTA
+  // on an article page). The user wants the content, not the animation.
+  if (!gsap || !document.getElementById('intro') || window.location.hash) { bootSite(); return; }
 
   // Safety: no matter what, page boots after 5s
   const safety = setTimeout(() => bootSite(), 5000);
@@ -152,6 +166,13 @@ function runIntro() {
 // SCROLL REVEAL — line masks + fade-ups via ScrollTrigger
 // ============================================================
 function runRevealQueue() {
+  if (!ScrollTrigger) {
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (header) header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+    return;
+  }
   // Line-mask reveals on every section heading
   document.querySelectorAll('[data-reveal-lines]').forEach(el => {
     const lines = el.querySelectorAll('[data-line]');

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}How Much Does a Vending Machine Cost for a Business? | Munch Machine{% endblock %}
+{% block meta_description %}The full cost breakdown for vending machines — managed service (zero cost), purchased machines ($3K–$8K), and ongoing operational expenses. What Bay Area businesses actually pay.{% endblock %}
+{% block canonical_path %}/how-much-does-vending-cost{% endblock %}
+{% block og_url_path %}/how-much-does-vending-cost{% endblock %}
+{% block og_title %}How Much Does a Vending Machine Cost for a Business? | Munch Machine{% endblock %}
+{% block og_description %}Honest vending cost breakdown for Bay Area businesses — managed service model (zero) vs machine purchase ($3K–$8K) with full operational cost comparison.{% endblock %}
+{% block twitter_title %}How Much Does Vending Cost? | Munch Machine{% endblock %}
+{% block twitter_description %}Full cost breakdown: managed vending service vs buying your own machine.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does it cost to get a vending machine for an office?","acceptedAnswer":{"@type":"Answer","text":"With a managed vending service like Munch Machine, there is no cost to the host business. The vending company provides the machine, installs it, and stocks it at zero charge. Revenue comes from employee product purchases."}},{"@type":"Question","name":"How much does it cost to buy a vending machine?","acceptedAnswer":{"@type":"Answer","text":"New commercial vending machines cost $3,000–$8,000 depending on type and features. Refurbished machines run $1,500–$4,000. This does not include product sourcing, cashless payment hardware, or ongoing maintenance costs."}},{"@type":"Question","name":"Is there a monthly fee for managed vending?","acceptedAnswer":{"@type":"Answer","text":"No. Managed vending services like Munch Machine charge no monthly fee to the host business. The service is funded entirely by product sales revenue."}}]}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Vending Cost</span></nav>
+    <div class="eyebrow">Guide · Cost & Pricing</div>
+    <h1>How much does a vending machine <em>actually cost?</em></h1>
+    <p class="lead">The answer depends entirely on whether you're using a managed vending service or buying a machine yourself. We'll cover both, honestly. If you use a managed service like ours, the short answer is: nothing. If you buy your own, the real costs add up quickly.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Managed service cost<strong>$0</strong></div>
+      <div class="meta-item">Machine purchase<strong>$3K–$8K</strong></div>
+      <div class="meta-item">Monthly fee (managed)<strong>None</strong></div>
+      <div class="meta-item">Setup fee (managed)<strong>None</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Managed vending service: the costs</h2>
+    <p>With a managed vending service (what we provide), the host business pays nothing. No equipment purchase, no installation fee, no monthly service charge, no maintenance fees, no product purchasing costs. The vending operator provides everything in exchange for the right to sell products at your location.</p>
+    <p>Your only "cost" is the physical space (roughly 9–10 square feet of floor space) and the electricity to run the machine (typically $10–$20/month in power consumption, paid as part of your regular utility bill). Most businesses consider this a non-cost — the space and power are already paid for.</p>
+
+    <h2>Buying a vending machine: the real costs</h2>
+
+    <table class="comparison-table">
+      <thead><tr><th>Cost item</th><th>Typical range</th></tr></thead>
+      <tbody>
+        <tr><td>New snack machine</td><td>$3,500–$6,000</td></tr>
+        <tr><td>New beverage machine</td><td>$4,000–$8,000</td></tr>
+        <tr><td>Refurbished machine</td><td>$1,500–$4,000</td></tr>
+        <tr><td>Cashless payment card reader</td><td>$200–$500 + ~$15–$30/month</td></tr>
+        <tr><td>First product inventory load</td><td>$200–$600</td></tr>
+        <tr><td>Ongoing monthly product cost</td><td>$400–$1,200 depending on volume</td></tr>
+        <tr><td>Mechanical repair (average incident)</td><td>$150–$600</td></tr>
+        <tr><td>Restocking labor (if outsourced)</td><td>$100–$250/visit</td></tr>
+      </tbody>
+    </table>
+
+    <p>The first-year cost of owning a single machine typically runs $5,000–$10,000 when you include the hardware, setup, product inventory, and at least a couple of service incidents. Year two and beyond is lower — primarily product costs and occasional repairs — but you're still managing the operational side.</p>
+
+    <h2>What about commission or revenue share?</h2>
+    <p>Some managed vending operators offer the host business a commission on product sales — typically 5–15% of gross machine revenue. This sounds attractive but represents a small absolute amount for most locations. A machine generating $400/month in sales at a 10% commission rate pays $40/month. Most businesses find the zero-cost, zero-hassle model more valuable than a $40/month check that comes with administrative tracking overhead.</p>
+    <p>For very large accounts (multiple machines, high volume), commission arrangements can become more meaningful and are worth discussing.</p>
+
+    <h2>The electricity cost</h2>
+    <p>A single vending machine typically consumes 7–14 kWh per day depending on machine type, ambient temperature, and how often the refrigeration unit cycles. At California's commercial electricity rates (roughly $0.20–$0.30/kWh), that's $42–$126/month in power costs. This is the one real cost to the host business in a managed vending arrangement — though most facility managers consider it negligible compared to the benefit delivered.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Are there any hidden fees in your managed vending service?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>No. There are no setup fees, no monthly service fees, no installation charges, and no minimum volume requirements that trigger penalties. The model is straightforward: we provide the machine and service, you provide the space, and the operation is funded by product sales. If the economics don't work for a particular location, we'll decline the placement upfront — not after charging you for setup.</p></details>
+      <details class="faq-item"><summary><span>What if the machine doesn't get much usage — do we owe anything?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>No. If a machine underperforms, that's our problem — we absorb the cost of providing service to a low-volume location. We assess this during qualification and won't place a machine we don't think will be viable. But if circumstances change after placement (team downsizes, remote work increases), we'll reassess together rather than billing you for the shortfall.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Zero cost, zero hassle, <em>zero hidden charges.</em></h2><p>Tell us about your space and we'll confirm if your location qualifies.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

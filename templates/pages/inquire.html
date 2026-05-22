@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Request a Vending Machine Placement | Munch Machine{% endblock %}
+{% block meta_description %}Tell us about your Bay Area business and we'll set up a managed vending machine — zero cost, cashless, fully managed. We respond within 24 hours.{% endblock %}
+{% block canonical_path %}/inquire{% endblock %}
+{% block og_url_path %}/inquire{% endblock %}
+{% block og_title %}Request a Vending Machine Placement | Munch Machine{% endblock %}
+{% block og_description %}Start your managed vending placement request. Zero cost, cashless, fully managed. We respond within 24 hours.{% endblock %}
+{% block twitter_title %}Request a Placement | Munch Machine{% endblock %}
+{% block twitter_description %}Request a managed vending machine for your Bay Area business. Zero cost to host.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","name":"Vending Placement Inquiry","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}}}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero" style="padding-bottom:60px">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><span>Request a Placement</span></nav>
+    <div class="eyebrow">Begin</div>
+    <h1>Host a <em>machine.</em></h1>
+    <p class="lead">Tell us about your space. We respond within 24 hours, with no obligation.</p>
+  </div>
+</section>
+
+<section class="inquire-page-section">
+  <div class="wrap">
+    <div class="inquire-grid">
+
+      <div class="inquire-meta">
+        <div class="inquire-point">
+          <span class="material-symbols-outlined">attach_money</span>
+          <div>
+            <strong>Zero cost to host</strong>
+            <p>No equipment purchase, no monthly fee. Revenue comes from employee purchases.</p>
+          </div>
+        </div>
+        <div class="inquire-point">
+          <span class="material-symbols-outlined">schedule</span>
+          <div>
+            <strong>Installed in ~2 weeks</strong>
+            <p>From inquiry to stocked machine typically takes about two weeks.</p>
+          </div>
+        </div>
+        <div class="inquire-point">
+          <span class="material-symbols-outlined">contactless</span>
+          <div>
+            <strong>Cashless as standard</strong>
+            <p>Apple Pay, Google Pay, and tap-to-pay on every machine — no cash handling required.</p>
+          </div>
+        </div>
+        <div class="inquire-point">
+          <span class="material-symbols-outlined">build</span>
+          <div>
+            <strong>Fully managed</strong>
+            <p>We own, stock, and service everything. Your team provides the space.</p>
+          </div>
+        </div>
+        <div class="inquire-qualify">
+          <p class="eyebrow" style="color:var(--sage);margin-bottom:12px">Minimum requirements</p>
+          <ul>
+            <li>30+ employees present on-site daily</li>
+            <li>Break room or common area with ~10 sq ft of floor space</li>
+            <li>Standard 120V electrical outlet nearby</li>
+            <li>Located in our Bay Area service territory</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="inquire-form-wrap">
+        <form id="inquiry-form" autocomplete="off">
+          <div class="field-row two">
+            <div>
+              <label class="field-label">Organization</label>
+              <input name="org" required type="text" class="field" placeholder="Nexus Corp"/>
+            </div>
+            <div>
+              <label class="field-label">Email</label>
+              <input name="email" required type="email" class="field" placeholder="name@company.com"/>
+            </div>
+          </div>
+          <div class="field-row" style="margin-top:24px">
+            <div>
+              <label class="field-label">Address</label>
+              <input name="address" type="text" class="field" placeholder="123 Main St, Fremont, CA 94538"/>
+            </div>
+          </div>
+          <div class="field-row two" style="margin-top:24px">
+            <div>
+              <label class="field-label">Capacity</label>
+              <select name="capacity" class="field">
+                <option>Under 100 people</option>
+                <option>100 – 500 people</option>
+                <option>500 – 1,000 people</option>
+                <option>1,000+ people</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">Anything we should know?</label>
+              <textarea name="notes" rows="3" class="field" placeholder="Lobby, breakroom, traffic patterns…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" style="margin-top:28px">
+            Submit inquiry
+            <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

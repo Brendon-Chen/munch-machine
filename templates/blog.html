@@ -1,0 +1,349 @@
+{% extends "base.html" %}
+
+{% block title %}Vending Resources & Guides | Munch Machine{% endblock %}
+{% block meta_description %}Guides, comparisons, and local vending insights for Bay Area business owners and facility managers. Learn about micro markets, office snack programs, and more.{% endblock %}
+{% block canonical_path %}/resources{% endblock %}
+{% block og_url_path %}/resources{% endblock %}
+{% block og_title %}Vending Resources & Guides | Munch Machine{% endblock %}
+{% block og_description %}Guides and local insights for Bay Area facility managers. Micro markets, office vending, healthy snack programs — everything you need to upgrade your break room.{% endblock %}
+{% block twitter_title %}Vending Resources & Guides | Munch Machine{% endblock %}
+{% block twitter_description %}Guides and local insights for Bay Area facility managers. Micro markets, office vending, healthy snack programs.{% endblock %}
+
+{% block content %}
+<section class="blog-hero section dark">
+  <div class="wrap">
+    <div class="eyebrow">Resources · Guides</div>
+    <h1>Everything you need to know about<br><em style="font-style:italic;color:var(--sage-light)">modern workplace vending.</em></h1>
+    <p class="lead" style="margin-top:20px;color:rgba(234,230,224,0.6);max-width:520px;font-size:17px">Local guides, service comparisons, and practical advice for Bay Area facility managers and office operators.</p>
+  </div>
+</section>
+
+<section style="background:var(--cream);padding-bottom:120px">
+  <div class="wrap">
+
+    <!-- Local city pages -->
+    <div style="margin-top:64px;margin-bottom:24px">
+      <p class="eyebrow" style="color:var(--ink-light)">Local · Service Areas</p>
+    </div>
+    <div class="blog-grid">
+
+      <a href="{{ url_for('page_fremont_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Fremont</span>
+        <h2>Vending Services in Fremont, CA</h2>
+        <p>How Fremont's industrial and tech workforce drives demand for premium break room solutions — and what to look for in a local vending partner.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_bay_area_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Bay Area</span>
+        <h2>Bay Area Vending Services</h2>
+        <p>How our service covers the full Bay Area — from the East Bay industrial corridor to Silicon Valley tech campuses — and what each market requires.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_silicon_valley_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Silicon Valley</span>
+        <h2>Silicon Valley Office Vending</h2>
+        <p>What San Jose, Santa Clara, and Sunnyvale tech companies expect from their break rooms — and how managed vending delivers it without ongoing cost or effort.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_san_jose_vending') }}" class="blog-card">
+        <span class="card-tag">Local · San Jose</span>
+        <h2>San Jose Vending Services</h2>
+        <p>San Jose's diverse commercial districts — North SJ tech corridor, Downtown, East SJ logistics — each have different vending needs. Here's how we serve them.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_newark_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Newark CA</span>
+        <h2>Vending Services in Newark, CA</h2>
+        <p>Newark's industrial and warehouse base needs reliable, high-volume vending. We're based next door in Fremont — same-day response, core service territory.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_hayward_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Hayward</span>
+        <h2>Hayward Vending Services</h2>
+        <p>Hayward's mix of food processing, logistics, education, and mid-size businesses needs a vending partner that handles industrial volume and cultural diversity equally well.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_union_city_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Union City</span>
+        <h2>Union City Vending Services</h2>
+        <p>Compact but commercially active, Union City serves as a transit hub and industrial center in the heart of our core service territory.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_milpitas_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Milpitas</span>
+        <h2>Milpitas Vending Services</h2>
+        <p>At the East Bay / Silicon Valley junction — semiconductor companies, logistics, and diverse workforces with elevated product expectations.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_sunnyvale_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Sunnyvale</span>
+        <h2>Sunnyvale Vending Services</h2>
+        <p>LinkedIn, Juniper, Lockheed Martin — Sunnyvale's workforce has elevated break room expectations. Premium product mix, micro market option, zero cost.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_mountain_view_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Mountain View</span>
+        <h2>Mountain View Vending Services</h2>
+        <p>Health-conscious, cycling-commuter workforce with strong organic and clean-label preferences. We build Mountain View product mixes to match.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_oakland_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Oakland</span>
+        <h2>Oakland Vending Services</h2>
+        <p>Port logistics, creative tech, healthcare — Oakland's layered commercial scene needs product mixes as diverse as its workforce.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_pleasanton_vending') }}" class="blog-card">
+        <span class="card-tag">Local · Tri-Valley</span>
+        <h2>Pleasanton, Dublin & Livermore Vending</h2>
+        <p>Hacienda Business Park, biotech, logistics, and the Tri-Valley commuter market — how we cover Pleasanton, Dublin, and Livermore as a single service territory.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <!-- Service / how-it-works pages -->
+    <div style="margin-top:64px;margin-bottom:24px">
+      <p class="eyebrow" style="color:var(--ink-light)">Service · How It Works</p>
+    </div>
+    <div class="blog-grid">
+
+      <a href="{{ url_for('page_office_vending') }}" class="blog-card">
+        <span class="card-tag">Service · Office</span>
+        <h2>Office Vending for Bay Area Companies</h2>
+        <p>Why Silicon Valley companies treat break room quality as a talent retention tool — and how managed vending makes it effortless to get right.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_micro_markets') }}" class="blog-card">
+        <span class="card-tag">Service · Micro Market</span>
+        <h2>What Is a Micro Market?</h2>
+        <p>A complete breakdown of open-shelf micro markets — how they work, what they cost, which workplaces benefit most, and how they compare to traditional vending.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_healthy_vending') }}" class="blog-card">
+        <span class="card-tag">Service · Wellness</span>
+        <h2>Healthy Vending for Bay Area Workplaces</h2>
+        <p>From protein bars to fresh food options, how to build a vending program that satisfies a health-conscious Bay Area workforce without sacrificing convenience.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_warehouse_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Warehouse</span>
+        <h2>Vending for Warehouses & Distribution Centers</h2>
+        <p>Shift workers need more than crackers. How managed vending solves the break room challenge in logistics, manufacturing, and industrial facilities.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_break_room') }}" class="blog-card">
+        <span class="card-tag">Guide · Break Room</span>
+        <h2>Break Room Solutions That Actually Work</h2>
+        <p>Signs your office break room needs an upgrade, what a managed service includes, and how to stop spending internal resources on snack logistics.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_cashless_vending') }}" class="blog-card">
+        <span class="card-tag">Feature · Cashless</span>
+        <h2>Cashless Vending Machines</h2>
+        <p>Why tap-to-pay, Apple Pay, and Google Pay are now the baseline expectation — and how cashless payment directly increases machine usage and employee satisfaction.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_full_service_vending') }}" class="blog-card">
+        <span class="card-tag">Service · Full-Service</span>
+        <h2>What Full-Service Vending Actually Means</h2>
+        <p>A complete breakdown of what "fully managed" covers — machine ownership, product sourcing, restocking, maintenance — and what your business is actually responsible for (not much).</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_vending_installation') }}" class="blog-card">
+        <span class="card-tag">Service · Installation</span>
+        <h2>How Vending Machine Installation Works</h2>
+        <p>Step by step: from first inquiry to stocked machine in your break room — what happens, what you need to provide, and what to expect on installation day.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_vending_restocking') }}" class="blog-card">
+        <span class="card-tag">Service · Restocking</span>
+        <h2>Proactive Vending Machine Restocking</h2>
+        <p>How remote inventory monitoring eliminates the "empty machine" problem — and what actually happens during a restocking visit.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_office_snack_delivery') }}" class="blog-card">
+        <span class="card-tag">Guide · Comparison</span>
+        <h2>Office Snack Delivery vs Vending Machines</h2>
+        <p>SnackNation vs a managed vending machine — an honest comparison of cost, variety, management burden, and which model fits which type of company.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <!-- Industry pages -->
+    <div style="margin-top:64px;margin-bottom:24px">
+      <p class="eyebrow" style="color:var(--ink-light)">Industry · Use Cases</p>
+    </div>
+    <div class="blog-grid">
+
+      <a href="{{ url_for('page_apartment_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Residential</span>
+        <h2>Apartment & Residential Vending</h2>
+        <p>Lobby, fitness room, and common area vending for apartment communities. 24/7 convenience as a resident amenity — zero cost to property management.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_coworking_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Coworking</span>
+        <h2>Vending for Coworking Spaces</h2>
+        <p>How managed vending becomes a zero-effort member amenity for coworking operators — premium product mix, no operational burden.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_gym_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Fitness</span>
+        <h2>Gym & Fitness Center Vending</h2>
+        <p>Performance-focused product mix for gyms and fitness facilities — protein, electrolytes, and clean-label snacks built for post-workout demand.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_manufacturing_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Manufacturing</span>
+        <h2>Manufacturing & Industrial Vending</h2>
+        <p>Multi-shift capable, high-calorie product mix for manufacturing plants and industrial facilities. Built for volume, not office templates.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_school_vending') }}" class="blog-card">
+        <span class="card-tag">Industry · Education</span>
+        <h2>School & Campus Vending Machines</h2>
+        <p>USDA-compliant K-12 vending and broader college/university programs — serving students, faculty, and staff across educational campuses.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_corporate_campus') }}" class="blog-card">
+        <span class="card-tag">Industry · Corporate</span>
+        <h2>Corporate Campus Vending Solutions</h2>
+        <p>Multi-building vending programs for large corporate campuses — differentiated product mixes by building, single account, coordinated service schedule.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <!-- Question / FAQ guides -->
+    <div style="margin-top:64px;margin-bottom:24px">
+      <p class="eyebrow" style="color:var(--ink-light)">Guides · Common Questions</p>
+    </div>
+    <div class="blog-grid">
+
+      <a href="{{ url_for('page_how_vending_works') }}" class="blog-card">
+        <span class="card-tag">Guide · How It Works</span>
+        <h2>How Office Vending Machines Work</h2>
+        <p>Plain-English explainer: who owns the machine, how employees pay, how restocking works, and what your business is actually responsible for.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_how_to_get_vending') }}" class="blog-card">
+        <span class="card-tag">Guide · Getting Started</span>
+        <h2>How to Get a Vending Machine for Your Business</h2>
+        <p>The 5-step process from inquiry to stocked machine — what qualifies, what you need to provide, and how fast it happens.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_vending_vs_owning') }}" class="blog-card">
+        <span class="card-tag">Guide · Comparison</span>
+        <h2>Vending Service vs Buying Your Own Machine</h2>
+        <p>Total cost of ownership compared: upfront equipment, ongoing product costs, repairs, and management burden. When each model makes sense.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_vending_benefits') }}" class="blog-card">
+        <span class="card-tag">Guide · Benefits</span>
+        <h2>The Benefits of Office Vending Machines</h2>
+        <p>Why quality break room vending reduces off-site departures, signals company investment in employees, and improves afternoon productivity.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('page_vending_cost') }}" class="blog-card">
+        <span class="card-tag">Guide · Cost</span>
+        <h2>How Much Does a Vending Machine Cost?</h2>
+        <p>The honest breakdown: managed service (zero), machine purchase ($3K–$8K), and all the ongoing costs that the purchase price doesn't include.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+    </div>
+
+    <!-- Consumer tips -->
+    <div style="margin-top:64px;margin-bottom:24px">
+      <p class="eyebrow" style="color:var(--ink-light)">Tips · Consumer Nutrition</p>
+    </div>
+    <div class="blog-grid">
+
+      <a href="{{ url_for('tip_healthy_snack') }}" class="blog-card">
+        <span class="card-tag">Tips · Nutrition</span>
+        <h2>How to Pick a Healthy Snack</h2>
+        <p>What actually makes a snack healthy — protein and fiber over marketing claims — and the best specific options in a modern vending machine.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('tip_snacks_per_day') }}" class="blog-card">
+        <span class="card-tag">Tips · Nutrition</span>
+        <h2>How Many Snacks Should You Eat a Day?</h2>
+        <p>The practical answer: 1–2 for most desk workers, but composition matters more than count. When to snack and when you're eating out of habit.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('tip_snacks_energy') }}" class="blog-card">
+        <span class="card-tag">Tips · Energy</span>
+        <h2>Best Snacks for Energy at Work</h2>
+        <p>Why sugar causes the afternoon crash and what to eat instead — the specific snacks that provide steady energy through the workday.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('tip_healthy_options') }}" class="blog-card">
+        <span class="card-tag">Tips · Vending</span>
+        <h2>Healthy Vending Options: What's Actually Worth Buying</h2>
+        <p>What's genuinely healthy in a modern vending machine versus what's just health-washed — and how to tell the difference quickly.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('tip_work_break_snacks') }}" class="blog-card">
+        <span class="card-tag">Tips · Wellness</span>
+        <h2>What to Eat During Your Work Break</h2>
+        <p>How to make a 10-minute break actually restorative — what to eat, what to skip, and why the snack matters as much as the break itself.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <a href="{{ url_for('tip_workplace_benefits') }}" class="blog-card">
+        <span class="card-tag">Tips · Workplace</span>
+        <h2>Benefits of Healthy Snacks at Work</h2>
+        <p>The evidence for why access to healthy snacks at work improves afternoon focus, reduces fatigue, and changes what employees actually choose to eat.</p>
+        <span class="card-arrow">Read guide <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></span>
+      </a>
+
+      <div class="blog-card" style="background:var(--ink);border-color:var(--ink);justify-content:space-between">
+        <div>
+          <span class="card-tag" style="color:var(--sage-light)">Get started</span>
+          <h2 style="color:var(--cream);margin-top:12px">Ready to upgrade your break room?</h2>
+          <p style="color:rgba(234,230,224,0.6)">Zero cost to host. We handle everything from installation to weekly restocking.</p>
+        </div>
+        <a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);margin-top:28px;display:inline-flex">
+          Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock %}

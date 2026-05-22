@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}How Office Vending Machines Work | Munch Machine{% endblock %}
+{% block meta_description %}A plain-English explanation of how managed office vending works — from placement to restocking to payment. Everything a Bay Area facility manager needs to know.{% endblock %}
+{% block canonical_path %}/how-office-vending-works{% endblock %}
+{% block og_url_path %}/how-office-vending-works{% endblock %}
+{% block og_title %}How Office Vending Machines Work | Munch Machine{% endblock %}
+{% block og_description %}How managed office vending actually works — machines, payment, restocking, and maintenance explained simply for Bay Area business owners and facility managers.{% endblock %}
+{% block twitter_title %}How Office Vending Works | Munch Machine{% endblock %}
+{% block twitter_description %}Plain-English explainer: how managed office vending machines work.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a managed vending machine work?","acceptedAnswer":{"@type":"Answer","text":"A managed vending machine is owned, stocked, and maintained by the vending operator at zero cost to the host business. Employees purchase items using cashless payment, and the operator handles all restocking, repairs, and product management."}},{"@type":"Question","name":"How do employees pay at a vending machine?","acceptedAnswer":{"@type":"Answer","text":"Modern vending machines accept Apple Pay, Google Pay, contactless credit/debit cards, and mobile wallets. Cash acceptance is less common and typically not required in modern Bay Area office settings."}},{"@type":"Question","name":"How often is the machine restocked?","acceptedAnswer":{"@type":"Answer","text":"Restocking frequency depends on usage volume. Most office machines are restocked 1-2 times per week using remote inventory monitoring that schedules visits based on actual consumption rather than a fixed calendar."}}]}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>How Vending Works</span></nav>
+    <div class="eyebrow">Guide · How It Works</div>
+    <h1>How office vending machines <em>actually work.</em></h1>
+    <p class="lead">If you've never had a vending machine at your workplace before, the logistics might feel opaque. Who owns it? How do people pay? What happens when it breaks? Here's the complete picture, explained plainly.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Read time<strong>5 minutes</strong></div>
+      <div class="meta-item">Audience<strong>Facility managers</strong></div>
+      <div class="meta-item">Cost model<strong>Explained below</strong></div>
+      <div class="meta-item">Setup time<strong>~2 weeks</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>The ownership model</h2>
+    <p>In a managed vending arrangement, the vending company (us) owns the machine. We provide it at no cost to your business in exchange for the right to sell products to your employees. This is different from buying or leasing a machine yourself — you're not a machine owner, you're a host location.</p>
+    <p>Because we own the machine, we're responsible for everything: installation, product sourcing, restocking, repairs, and eventually replacement when a machine reaches end of life. You never write a check for any of this.</p>
+
+    <h2>How payment works</h2>
+    <p>Modern vending machines accept contactless payment as standard. Employees pay with:</p>
+    <ul>
+      <li>Apple Pay or Google Pay (tap phone to reader)</li>
+      <li>Contactless credit or debit card (tap card to reader)</li>
+      <li>Any NFC-enabled mobile wallet</li>
+    </ul>
+    <p>The machine processes each transaction independently through a built-in payment processor connected to cellular or WiFi. Money goes from the employee's payment method to us directly — the host business is not in the payment chain at all.</p>
+
+    <h2>How restocking works</h2>
+    <p>Our machines report inventory data in real time via remote monitoring. When inventory levels fall below a threshold, the machine is scheduled for a restock on the next route visit. A technician arrives, loads fresh product using FIFO rotation (new product behind existing), removes expired items, and verifies the machine is functioning correctly. This visit typically takes 15–25 minutes and happens without any action required from your team.</p>
+
+    <h2>What happens when something goes wrong</h2>
+    <p>Two types of issues can occur: mechanical faults (machine doesn't dispense, payment reader fails) and customer experience issues (someone paid but didn't receive their item). Both are handled by us:</p>
+    <ul>
+      <li><strong>Machine fault:</strong> Remote monitoring detects most faults automatically. If your employees notice an issue, they can contact us directly. We dispatch a technician — typically same business day for our core East Bay territory.</li>
+      <li><strong>Failed purchase:</strong> Employees can contact us for a refund directly. They don't go through your company's admin to get their $2.50 back.</li>
+    </ul>
+
+    <h2>What your business actually does</h2>
+    <p>Provide floor space and a standard 120V outlet. That's it. There's no product ordering, no inventory management, no payment processing, no maintenance calls to make. The vending machine runs as a self-contained operation inside your break room.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Does my company make money from the vending machine?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>In our standard model, no — the revenue from product sales goes to us to cover our costs (product, labor, machine overhead). The benefit to your company is the amenity value: a free, managed vending service that improves the employee experience without costing you anything to operate. For large multi-machine accounts, commission arrangements can sometimes be discussed.</p></details>
+      <details class="faq-item"><summary><span>Do employees need an account or app to use the machine?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>No. Any employee with a contactless payment method (phone, watch, or card) can purchase immediately with no setup. There's no app to download and no account to create. The barrier to use is as low as possible.</p></details>
+      <details class="faq-item"><summary><span>How long does it take to get a machine?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>From initial inquiry to an installed, stocked machine typically takes about two weeks. This accounts for qualification, site assessment, machine preparation, and scheduling the installation visit. See our <a href="{{ url_for('page_vending_installation') }}">installation page</a> for the full step-by-step process.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Ready to see how it works <em>in your break room?</em></h2><p>Tell us about your location and we'll walk you through the rest.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

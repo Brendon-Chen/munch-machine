@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Full-Service Vending Machine Company | Munch Machine{% endblock %}
+{% block meta_description %}What full-service vending actually means — machine ownership, product sourcing, restocking, maintenance, and cashless technology all handled for you. Zero cost to businesses.{% endblock %}
+{% block canonical_path %}/full-service-vending{% endblock %}
+{% block og_url_path %}/full-service-vending{% endblock %}
+{% block og_title %}Full-Service Vending Machine Company | Munch Machine{% endblock %}
+{% block og_description %}Full-service managed vending for Bay Area businesses. We own, stock, service, and maintain every machine — zero cost to your business.{% endblock %}
+{% block twitter_title %}Full-Service Vending | Munch Machine{% endblock %}
+{% block twitter_description %}Full-service managed vending. We own, stock, and maintain everything. Zero cost to host.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Full-Service Vending","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Full-Service Vending</span></nav>
+    <div class="eyebrow">Service · How We Work</div>
+    <h1>What <em>full-service vending</em> actually means.</h1>
+    <p class="lead">"Full-service" is overused in the vending industry. Here's exactly what it means when we say it: we own the machine, we source the products, we install it, we restock it on a proactive schedule, we handle all maintenance and repairs, and we manage all cashless payment technology. Your business provides the space. That's the entire ask.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Machine ownership<strong>Ours</strong></div>
+      <div class="meta-item">Product sourcing<strong>Ours</strong></div>
+      <div class="meta-item">Maintenance<strong>Ours</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Every component, handled</h2>
+    <p>Full-service vending means there is no task in the vending chain that belongs to your business. Here's what that actually covers:</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Component</th><th>Who handles it</th></tr></thead>
+      <tbody>
+        <tr><td>Machine hardware</td><td class="yes">Munch Machine owns and provides</td></tr>
+        <tr><td>Installation & positioning</td><td class="yes">We install, position, and set up</td></tr>
+        <tr><td>Product selection & curation</td><td class="yes">We propose, you approve</td></tr>
+        <tr><td>Purchasing & sourcing</td><td class="yes">We buy from distributors directly</td></tr>
+        <tr><td>Restocking visits</td><td class="yes">We restock on proactive schedule</td></tr>
+        <tr><td>Expired product removal</td><td class="yes">We manage rotation and freshness</td></tr>
+        <tr><td>Machine cleaning</td><td class="yes">Included in service visits</td></tr>
+        <tr><td>Mechanical repairs</td><td class="yes">We diagnose and repair</td></tr>
+        <tr><td>Cashless payment system</td><td class="yes">We own and maintain the hardware</td></tr>
+        <tr><td>Customer service for purchase issues</td><td class="yes">Users contact us directly</td></tr>
+        <tr><td>Space/electricity</td><td>Your business provides</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why zero cost is possible</h2>
+    <p>The full-service model is funded by product sales, not service fees. We earn revenue when employees buy from the machine. That aligns our incentive with yours: a well-stocked, well-maintained machine sells more, which is exactly what we want. A machine that's broken or empty doesn't earn us anything — so we have a direct financial reason to keep it running and full.</p>
+    <p>This is different from vending operators who charge placement fees, service fees, or equipment rental charges. Those models exist because the operator isn't confident enough in their product sales to fund the operation that way. We're confident enough.</p>
+
+    <h2>How restocking works</h2>
+    <p>We don't wait for machines to run empty before restocking. Remote inventory monitoring tracks sales in real time. When inventory levels fall to a threshold, the machine is scheduled for a restocking visit on the next route pass through your area. For high-volume accounts, we increase route frequency. For lower-volume locations, we maintain appropriate intervals without over-servicing.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>What if I want to request a specific product?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We take product requests seriously. If your employees want something specific, let us know and we'll assess whether it fits the machine's category and whether we can source it. We can't accommodate every request but we make genuine effort to reflect the preferences of your specific team.</p></details>
+      <details class="faq-item"><summary><span>Is there a contract?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We don't require long-term contracts. We operate on reasonable notice periods — typically 30 days — for either party to end the arrangement. Our model is designed so that our service quality keeps you wanting us there, not a binding agreement.</p></details>
+      <details class="faq-item"><summary><span>What if the machine breaks down?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Contact us and we'll dispatch a technician. For our East Bay core service territory, we typically respond same business day. For extended territory, next business day is standard. We maintain a stock of common parts to avoid multi-day repair waits.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Genuinely <em>full service.</em></h2><p>No asterisks. Zero cost, fully managed, long-term partnership.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

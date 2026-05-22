@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}San Jose Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for San Jose offices, warehouses & tech companies. Zero cost to host, cashless payment, weekly restocking. Munch Machine serves all of San Jose and Silicon Valley.{% endblock %}
+{% block canonical_path %}/san-jose-vending-services{% endblock %}
+{% block og_url_path %}/san-jose-vending-services{% endblock %}
+{% block og_title %}San Jose Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Fully managed vending for San Jose businesses. Tech offices, warehouses, corporate campuses — zero cost, cashless, weekly restocking. Silicon Valley service from Fremont.{% endblock %}
+{% block twitter_title %}San Jose Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Fully managed vending for San Jose offices and warehouses. Zero cost, cashless, weekly restocking.{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "San Jose Vending Services",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Munch Machine",
+    "telephone": "+19255834228",
+    "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA" }
+  },
+  "areaServed": { "@type": "City", "name": "San Jose", "sameAs": "https://en.wikipedia.org/wiki/San_Jose,_California" },
+  "serviceType": "Managed Vending Machine Service",
+  "description": "Fully managed vending placement, restocking, and maintenance for San Jose businesses at no cost to the host."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Munch Machine serve San Jose businesses?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. San Jose is within Munch Machine's primary service territory. We serve offices, warehouses, tech campuses, manufacturing facilities, and commercial buildings throughout San Jose and surrounding South Bay cities." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does vending service cost in San Jose?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zero cost to the host business. Equipment, installation, restocking, and maintenance are all included at no charge. Revenue comes from product sales." }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Home</a>
+      <span class="sep">›</span>
+      <a href="{{ url_for('blog') }}">Resources</a>
+      <span class="sep">›</span>
+      <span>San Jose, CA</span>
+    </nav>
+    <div class="eyebrow">Local Vending · San Jose, CA</div>
+    <h1>Managed vending for <em>San Jose's diverse workforce.</em></h1>
+    <p class="lead">San Jose is the economic engine of Silicon Valley — the largest city in the Bay Area, home to hundreds of tech companies, a significant manufacturing base, and one of the most competitive labor markets in the country. We bring the same fully managed, zero-cost vending service here that we operate throughout the Bay Area.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Serves<strong>All of San Jose</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Payment<strong>Cashless standard</strong></div>
+      <div class="meta-item">Setup time<strong>~2 weeks</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>San Jose's commercial complexity — and what it means for vending</h2>
+      <p>San Jose isn't a single commercial market — it's several layered on top of each other. North San Jose, along the North First Street corridor, is one of the densest concentrations of semiconductor and enterprise tech companies in the world. Downtown San Jose has a mix of corporate offices, legal and financial services firms, and growing tech presence. East San Jose is home to manufacturing, logistics, and distribution operations. The Alviso area connects to the broader South Bay logistics network. Each of these environments has different vending needs.</p>
+      <p>A single standard approach doesn't work across all of them. What a North San Jose semiconductor company expects from its break room is different from what a downtown law firm needs, which is different again from what an East San Jose distribution center requires. We build the product mix, service frequency, and equipment configuration around the actual workplace.</p>
+
+      <div class="callout">
+        <p><strong>San Jose is our most diverse placement market:</strong> We've served tech campuses, distribution centers, biomedical labs, and corporate offices all within the same city. No two product mixes end up the same because no two workforces are the same.</p>
+      </div>
+
+      <h2>San Jose vending by district</h2>
+
+      <h3>North San Jose / Silicon Valley core</h3>
+      <p>The North First Street corridor and surrounding tech parks host major semiconductor companies, networking firms, and enterprise software companies. These environments align closely with our <a href="{{ url_for('page_silicon_valley_vending') }}">Silicon Valley vending</a> model — premium product curation, health-conscious options, cashless payment, and often micro market setups for larger campuses.</p>
+
+      <h3>Downtown San Jose</h3>
+      <p>Downtown's mix of corporate offices, professional services firms, and tech companies creates a lunch-hour vending opportunity that's somewhat different from campuses. Employees working in office towers or downtown commercial buildings benefit from accessible break room options when they don't want to navigate downtown lunch crowds.</p>
+
+      <h3>East San Jose / industrial areas</h3>
+      <p>The industrial and logistics operations in East San Jose, along Tully Road, Senter Road, and the areas east of Highway 101, represent the same high-volume, multi-shift vending environment we serve throughout the East Bay. Reliability and consistent restocking are the primary requirements here. Our <a href="{{ url_for('page_warehouse_vending') }}">warehouse vending</a> approach applies directly.</p>
+
+      <h3>West San Jose / Willow Glen</h3>
+      <p>Smaller commercial offices, professional services firms, and mixed-use buildings in the residential-adjacent neighborhoods of West San Jose and Willow Glen benefit from standard vending or combo unit placements suited to smaller teams.</p>
+
+      <h2>Why San Jose businesses use managed vending</h2>
+      <p>The practical case is consistent across San Jose regardless of industry: managed vending eliminates a recurring operational headache with zero cost to the host. But the specific motivation varies by workplace type.</p>
+      <p>For <strong>tech companies</strong>, it's about employee experience and staying competitive with peer companies that offer strong perks. For <strong>warehouses and logistics firms</strong>, it's about keeping employees productive during limited break windows without requiring them to leave the facility. For <strong>corporate offices</strong>, it's about removing the burden of managing a snack program from an operations or HR team that has better things to do.</p>
+
+      <h2>Services available in San Jose</h2>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">lunch_dining</span></div>
+          <h3>Vending machines</h3>
+          <p>Snack, beverage, or combo units for offices, warehouses, and commercial buildings. Cashless, curated, managed. Best for 30–150 person locations.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">shopping_basket</span></div>
+          <h3>Micro markets</h3>
+          <p>Open-shelf setup with fresh food and self-checkout for larger San Jose locations. 200+ SKUs, fresh items rotated regularly. Best for 50+ employees.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">eco</span></div>
+          <h3>Healthy programs</h3>
+          <p>Curated for San Jose's health-aware workforce — organic, plant-based, low-sugar options weighted appropriately for your specific team.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">deployed_code</span></div>
+          <h3>Multi-unit service</h3>
+          <p>Large San Jose campuses or multi-floor offices served with coordinated multi-machine placements under a single service relationship.</p>
+        </div>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+      <div class="page-faq faq">
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you serve all parts of San Jose, including North San Jose and East San Jose?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Yes. We serve businesses throughout San Jose — North San Jose, Downtown, East San Jose, West San Jose, and Willow Glen. San Jose is part of our primary South Bay service territory, and we have active route coverage across the city.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>How does Munch Machine compare to local San Jose vending companies?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>The key differences are in the service model and product quality. Many regional vending operators use calendar-based restocking regardless of actual consumption, place older equipment, and are slow to respond to service issues. We use real-time inventory monitoring, place modern cashless machines, and maintain response times typical of a locally operated business rather than a regional chain.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can you serve a San Jose company with multiple office locations?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Yes. For companies with multiple locations across San Jose or the broader Bay Area, we can manage all placements under a single service relationship. Product mixes can be customized per location, and restocking routes are coordinated across all sites.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>How long does installation take for a San Jose business?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Typically about two weeks from initial inquiry to a live machine. The process includes a site visit, product curation discussion, and installation scheduling. San Jose accounts get the same timeline as our core East Bay territory.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What do employees in San Jose tech offices usually buy from vending?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>In San Jose tech offices, sparkling water is often the top-selling beverage. Protein bars (Kind, RXBAR, Clif) and mixed nuts are consistently strong snack performers. Cold brew and premium canned coffees move well mid-morning and mid-afternoon. Classic items — chips, candy, soda — still sell but tend to be a smaller portion of the mix than in non-tech environments.</p>
+        </details>
+
+      </div>
+
+      <div class="page-cta">
+        <div class="cta-text">
+          <h2>Vending for your <em>San Jose business.</em></h2>
+          <p>Tell us your location, team size, and what you're looking for — we'll confirm availability and put together a plan within one business day.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">
+            Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

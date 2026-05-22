@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Vending Machine Installation | Munch Machine{% endblock %}
+{% block meta_description %}How vending machine installation works — site assessment, machine delivery, positioning, and setup. From first contact to stocked machine in about two weeks.{% endblock %}
+{% block canonical_path %}/vending-machine-installation{% endblock %}
+{% block og_url_path %}/vending-machine-installation{% endblock %}
+{% block og_title %}Vending Machine Installation | Munch Machine{% endblock %}
+{% block og_description %}From site assessment to first restock — how vending machine installation works at Munch Machine. About two weeks from inquiry to stocked machine.{% endblock %}
+{% block twitter_title %}Vending Machine Installation | Munch Machine{% endblock %}
+{% block twitter_description %}How vending machine installation works. Site assessment to stocked machine in ~2 weeks.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Vending Machine Installation","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Vending Machine Installation"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Installation</span></nav>
+    <div class="eyebrow">Service · Installation</div>
+    <h1>How vending machine <em>installation works.</em></h1>
+    <p class="lead">From your first contact to a stocked machine in your break room takes about two weeks. Here's exactly what happens during that time — and what we need from you to make it happen smoothly.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Timeline<strong>~2 weeks</strong></div>
+      <div class="meta-item">Site visit<strong>Optional</strong></div>
+      <div class="meta-item">Your burden<strong>Space + electrical</strong></div>
+      <div class="meta-item">Cost<strong>$0</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Step by step: the installation process</h2>
+
+    <h3>Step 1 — Inquiry & qualification (Day 1–3)</h3>
+    <p>You submit an inquiry through our website. We contact you within one business day to ask about your location, employee count, space available, and any specific product preferences. This call or email exchange takes about 10 minutes. If your location qualifies, we move to the next step.</p>
+
+    <h3>Step 2 — Site assessment (Day 3–7)</h3>
+    <p>For most standard placements, we can assess the location from photos and a brief description. For larger accounts or unusual spaces, we'll schedule a brief in-person visit to confirm machine dimensions fit, verify electrical access, and plan positioning. This visit takes 20–30 minutes and doesn't require your full attention — just access to the break room.</p>
+
+    <h3>Step 3 — Machine selection & product curation (Day 5–10)</h3>
+    <p>Based on your workforce size, industry, and any preferences you've shared, we select the appropriate machine type and build an initial product mix proposal. We share this with you and incorporate any feedback before the machine is loaded.</p>
+
+    <h3>Step 4 — Delivery & installation (Day 10–14)</h3>
+    <p>We schedule a delivery window that works for your facility. The machine arrives loaded with product. Our team positions it, connects it to your standard 120V outlet, configures the cashless payment reader, and verifies everything is working before leaving. Installation typically takes 30–60 minutes.</p>
+
+    <h3>Step 5 — First restock & tune (Week 3–4)</h3>
+    <p>We visit within two weeks of installation to assess initial sales patterns, remove any slow-moving products, and adjust the mix based on what your team is actually buying. This first adjustment is when the machine really gets dialed in.</p>
+
+    <h2>What your business needs to provide</h2>
+    <ul>
+      <li><strong>Floor space:</strong> A standard snack machine is approximately 29" wide × 35" deep × 72" tall. A beverage machine is similar. Allow clearance for door swing and service access from the front.</li>
+      <li><strong>Standard electrical:</strong> 120V/15A grounded outlet within 6 feet of the machine location. No special wiring required.</li>
+      <li><strong>Reasonable access:</strong> Our service team needs to be able to enter the break room during business hours for restocking visits. Most facilities handle this with a standing access arrangement or advance notice protocol.</li>
+    </ul>
+
+    <div class="callout"><p><strong>No loading dock required:</strong> Our machines are delivered and positioned using standard equipment. We've installed in building lobbies, second-floor break rooms (via elevator), and industrial facilities. We handle the logistics — just let us know what to expect.</p></div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Do I need to be present during installation?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We need one person with access to the break room available during the installation window. This doesn't need to be a decision-maker — just someone who can let us in and is available if we have quick questions about placement. Installation takes under an hour and doesn't require your ongoing attention.</p></details>
+      <details class="faq-item"><summary><span>What if the machine doesn't fit through the door?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We assess this before scheduling delivery. Standard interior doors (32"+ clear opening) accommodate our machines. We'll confirm dimensions during site assessment. For tight spaces, some machines can have side panels temporarily removed for installation — we handle that as part of the process.</p></details>
+      <details class="faq-item"><summary><span>Can installation happen on a weekend?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We schedule installations on weekdays. For facilities where weekday access is difficult, we can sometimes accommodate early-morning or late-afternoon windows. Contact us and we'll work with your facility's schedule.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Ready to get started? <em>Two weeks to stocked.</em></h2><p>Tell us about your space and we'll take it from there.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

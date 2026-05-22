@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Vending for Coworking Spaces | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending machines for coworking spaces and shared offices in the Bay Area. Member amenity vending — zero cost, cashless, weekly restocking.{% endblock %}
+{% block canonical_path %}/coworking-vending{% endblock %}
+{% block og_url_path %}/coworking-vending{% endblock %}
+{% block og_title %}Vending for Coworking Spaces | Munch Machine{% endblock %}
+{% block og_description %}Managed vending for Bay Area coworking spaces and shared offices. Member amenity, zero cost to host, cashless, fully managed.{% endblock %}
+{% block twitter_title %}Vending for Coworking Spaces | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending for Bay Area coworking spaces. Zero cost, member amenity, cashless.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Coworking Space Vending","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Coworking Vending</span></nav>
+    <div class="eyebrow">Industry · Coworking</div>
+    <h1>Vending as a <em>coworking amenity.</em></h1>
+    <p class="lead">Coworking operators compete on the experience they deliver to members. A well-curated vending machine in the right location is a low-effort, high-impact amenity that members interact with daily — and that costs the operator nothing to run.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Model<strong>Amenity · zero cost</strong></div>
+      <div class="meta-item">Members served<strong>Hot desks + dedicated</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+      <div class="meta-item">Management burden<strong>None</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Why coworking spaces are an ideal vending fit</h2>
+    <p>Traditional offices have a dedicated admin or operations team that could theoretically manage snack inventory. Coworking operators don't have that luxury — their team is focused on member experience and sales, not stocking a refrigerator. Fully managed vending eliminates the operational ask entirely while delivering an amenity that members notice.</p>
+    <p>Coworking spaces also tend to have diverse, independent-minded members who value quality and variety. The startup founder at the standing desk has different snack preferences than the freelance designer at the hot desk. A well-curated machine with breadth handles the full range better than a company-managed snack basket.</p>
+
+    <h2>What works for coworking member demographics</h2>
+    <p>Bay Area coworking members skew toward tech-adjacent, health-conscious, and quality-aware. We build coworking product mixes to reflect that: premium cold brew, organic and clean-label snacks, plant-based options alongside conventional favorites. The mix is designed to feel intentional — not like a gas station machine transplanted into a WeWork.</p>
+
+    <div class="callout"><p><strong>Member-facing note:</strong> All our machines show nutritional information on-screen and accept any major contactless payment method. Members never need cash or a special app. This matters particularly in coworking environments where members aren't on a corporate expense account.</p></div>
+
+    <h2>Placement in coworking environments</h2>
+    <p>The highest-performing coworking placements are near the common area or kitchen — within view of the main collaboration space, not tucked in a back hallway. A machine that's part of the flow of the space outperforms one that requires a detour. For larger coworking operations with multiple floors, we can discuss multi-machine placements that bring convenience to each floor.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Does the coworking operator pay anything for this?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>No. The machine, installation, restocking, and ongoing maintenance are all at zero cost to the coworking operator. Revenue comes from member purchases directly. There's no fee, no commission split owed to us that comes from your pocket, and no contract requiring minimum purchase volume.</p></details>
+      <details class="faq-item"><summary><span>Can we offer members a discount through the vending machine?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Discounted pricing for members is something we can discuss. This typically works for larger coworking operations with 100+ active members, where subsidized pricing is part of the membership value proposition. Get in touch to explore what's possible for your specific setup.</p></details>
+      <details class="faq-item"><summary><span>What if our space is too small?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>For very small coworking operations (under 25 active daily members), a full machine may not generate enough volume. In those cases, we can discuss options including multi-location agreements if you're part of a network, or we'll be straightforward that the economics don't work yet and revisit when you've grown.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Better amenities for <em>your members.</em></h2><p>Zero cost to operate. We handle everything so you can focus on your community.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

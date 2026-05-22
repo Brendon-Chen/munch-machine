@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Vending Machine Restocking Service | Munch Machine{% endblock %}
+{% block meta_description %}How proactive vending machine restocking works — remote inventory monitoring, route scheduling, and product rotation. Never an empty machine again.{% endblock %}
+{% block canonical_path %}/vending-machine-restocking{% endblock %}
+{% block og_url_path %}/vending-machine-restocking{% endblock %}
+{% block og_title %}Vending Machine Restocking Service | Munch Machine{% endblock %}
+{% block og_description %}Proactive restocking powered by real-time inventory monitoring. We restock before machines run low — never wait for employees to complain about an empty machine.{% endblock %}
+{% block twitter_title %}Vending Machine Restocking | Munch Machine{% endblock %}
+{% block twitter_description %}Proactive restocking via remote monitoring. Never an empty machine.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Vending Machine Restocking","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Vending Machine Restocking Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Restocking</span></nav>
+    <div class="eyebrow">Service · Restocking</div>
+    <h1>Proactive restocking — <em>never an empty row.</em></h1>
+    <p class="lead">Traditional vending restocking is reactive: someone notices a machine is low, calls the vendor, and waits. We flip that model. Remote inventory monitoring tracks sales in real time, so we know a machine is running low before anyone has to complain — and we schedule the restock before it becomes visible.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Monitoring<strong>Real-time remote</strong></div>
+      <div class="meta-item">Schedule<strong>Demand-driven</strong></div>
+      <div class="meta-item">Freshness<strong>Rotation guaranteed</strong></div>
+      <div class="meta-item">Notification<strong>Not required from you</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>How remote monitoring changes restocking</h2>
+    <p>Every machine we operate is connected to remote telemetry that reports inventory levels after each sale. Our operations system aggregates this data across all machines on a route and generates restocking schedules based on actual consumption — not guesses or fixed weekly calendars that ignore usage variation.</p>
+    <p>For high-volume machines (large offices, industrial facilities), this may mean twice-weekly visits during busy periods. For lower-volume locations, it means less frequent visits that don't waste time when inventory is still adequate. The schedule bends to reality rather than forcing reality to fit the schedule.</p>
+
+    <h2>What happens during a restock visit</h2>
+    <ul>
+      <li>Technician arrives with pre-loaded product trays sized to each machine's current inventory gaps</li>
+      <li>Products loaded column by column — new product rotated to the back, existing product moved forward (FIFO rotation)</li>
+      <li>Expired items removed and logged</li>
+      <li>Machine exterior wiped down</li>
+      <li>Payment reader and display verified functional</li>
+      <li>Visit logged in our system, inventory updated</li>
+    </ul>
+    <p>A standard restock visit takes 15–25 minutes. For multi-machine locations, all machines are serviced in a single visit to minimize disruption and access requirements.</p>
+
+    <h2>Product rotation and freshness</h2>
+    <p>We use strict FIFO (first in, first out) rotation on every restock — newer product always goes behind existing inventory. This prevents older items from sitting at the back while fresh product gets purchased first. For time-sensitive items (particularly anything with shorter shelf life), we track dates and pull items before they expire, not after.</p>
+
+    <div class="callout"><p><strong>Expired product policy:</strong> Any item reaching its best-by date is removed during the next service visit, regardless of how much inventory remains. We don't leave aging product hoping someone buys it — that's how vending machines earn bad reputations. We absorb that cost rather than passing stale product to your employees.</p></div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>How often will someone come to restock?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>It depends on your machine's usage. High-volume locations (200+ employees, industrial facilities) may see 2–3 visits per week. Standard office machines (50–100 employees) typically run 1–2 visits per week. We adjust frequency based on what monitoring data shows, not a fixed schedule that ignores actual consumption.</p></details>
+      <details class="faq-item"><summary><span>Do we need to notify you before the restock visit?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>No. Our routes are coordinated through remote monitoring and pre-scheduled access arrangements with your facility. We don't need a call or email before each visit — we show up when the machine needs it. If access requirements change, let us know and we'll update our records.</p></details>
+      <details class="faq-item"><summary><span>What if the machine runs out between scheduled visits?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>This can happen during unusual high-demand periods (company events, policy changes that drive more employees to the break room). You can request an unscheduled restock visit via our contact line. We'll dispatch based on our route capacity that day. For accounts with predictably variable demand, we can pre-schedule additional visits around known busy periods.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Never manage <em>a restock again.</em></h2><p>We monitor, schedule, and handle everything. Your only job is enjoying the break room.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

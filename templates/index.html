@@ -956,6 +956,7 @@ html.lenis { height: auto; }
       <a href="#tech" class="cursor-target">Our service</a>
       <a href="#process" class="cursor-target">Process</a>
       <a href="#faq" class="cursor-target">Questions</a>
+      <a href="{{ url_for('blog') }}" class="cursor-target">Resources</a>
     </nav>
     <a href="#inquire" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
   </div>
@@ -1323,19 +1324,20 @@ html.lenis { height: auto; }
         <p style="margin-top:24px;color:var(--muted);font-size:14px;max-width:340px;line-height:1.6">Premium vending, fully managed. We place, stock, and service every machine — so you never have to.</p>
       </div>
       <div>
-        <h5>Product</h5>
+        <h5>Services</h5>
         <ul>
-          <li><a href="#tech">Our service</a></li>
-          <li><a href="#process">Process</a></li>
+          <li><a href="{{ url_for('page_office_vending') }}">Office Vending</a></li>
+          <li><a href="{{ url_for('page_micro_markets') }}">Micro Markets</a></li>
+          <li><a href="{{ url_for('page_healthy_vending') }}">Healthy Vending</a></li>
+          <li><a href="{{ url_for('page_warehouse_vending') }}">Warehouse Vending</a></li>
         </ul>
       </div>
       <div>
-        <h5>Company</h5>
+        <h5>Resources</h5>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
+          <li><a href="{{ url_for('blog') }}">All Guides</a></li>
+          <li><a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div>

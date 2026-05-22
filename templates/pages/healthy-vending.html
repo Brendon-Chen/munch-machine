@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Healthy Vending for Bay Area Workplaces | Munch Machine{% endblock %}
+{% block meta_description %}Healthy vending machines for Bay Area offices and gyms. Protein snacks, low-sugar options, organic products, fresh food — fully managed, zero cost to host.{% endblock %}
+{% block canonical_path %}/healthy-vending{% endblock %}
+{% block og_url_path %}/healthy-vending{% endblock %}
+{% block og_title %}Healthy Vending for Bay Area Workplaces | Munch Machine{% endblock %}
+{% block og_description %}Healthy vending programs for Bay Area offices, gyms, and wellness-focused workplaces. Curated product mix, zero cost, fully managed.{% endblock %}
+{% block twitter_title %}Healthy Vending for Bay Area Workplaces | Munch Machine{% endblock %}
+{% block twitter_description %}Healthy vending for Bay Area offices and gyms. Protein snacks, low-sugar options, fresh food — zero cost, fully managed.{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Home</a>
+      <span class="sep">›</span>
+      <a href="{{ url_for('blog') }}">Resources</a>
+      <span class="sep">›</span>
+      <span>Healthy Vending</span>
+    </nav>
+    <div class="eyebrow">Service · Healthy Vending</div>
+    <h1>Better snacks for a <em>health-conscious workforce.</em></h1>
+    <p class="lead">Bay Area employees have specific expectations about what goes in their body. We build vending programs that reflect that — without removing the options people actually reach for.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Organic options<strong>Available</strong></div>
+      <div class="meta-item">Low-sugar choices<strong>Available</strong></div>
+      <div class="meta-item">Fresh food<strong>Micro markets</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>Healthy vending in the Bay Area context</h2>
+      <p>The Bay Area has a genuinely different relationship with food than most American markets. A workforce that trends toward health-conscious, environmentally aware, and often follows specific dietary frameworks — keto, plant-based, gluten-free, low-sugar — notices what's available in the break room and makes judgments about the company based on it.</p>
+      <p>That doesn't mean filling the machine with items nobody buys. The most effective healthy vending programs balance real nutritional value with products people are willing to pay for during an actual workday. A $4 protein bar competes with a candy bar at $1.75 — the product has to justify itself.</p>
+
+      <div class="callout">
+        <p>The best-performing vending programs in Bay Area workplaces stock roughly 40–60% premium/healthy options alongside classics. That split reflects what people actually buy when both are available — not what they say they'd buy in a survey.</p>
+      </div>
+
+      <h2>What "healthy vending" actually means</h2>
+      <p>Healthy vending is a spectrum, not a category. We stock products across several levels depending on your team's preferences and the type of workplace:</p>
+
+      <h3>Better-for-you snacks</h3>
+      <ul>
+        <li>Protein bars — RXBAR, Kind, Larabar, Quest, One Bar, Clif</li>
+        <li>Nut and seed mixes — no added sugar, sea salt varieties, mixed nuts</li>
+        <li>Whole grain crackers and rice cakes</li>
+        <li>Baked or lightly seasoned chip alternatives</li>
+        <li>Dark chocolate options (70%+ cacao)</li>
+        <li>Dried fruit, fruit leather, and apple chips</li>
+      </ul>
+
+      <h3>Beverages with purpose</h3>
+      <ul>
+        <li>Sparkling water — Topo Chico, Liquid Death, La Croix, Waterloo</li>
+        <li>Functional beverages — electrolyte drinks, coconut water, kombucha</li>
+        <li>Zero-sugar options alongside standard sodas</li>
+        <li>Cold-brew and premium canned coffee</li>
+        <li>Plant-based protein shakes (in larger setups)</li>
+      </ul>
+
+      <h3>For fitness facilities and gyms</h3>
+      <ul>
+        <li>Pre-workout snacks — banana chips, dates, energy chews</li>
+        <li>Post-workout recovery — protein bars, Greek yogurt (micro markets), electrolytes</li>
+        <li>Hydration options — sports drinks, enhanced water, coconut water</li>
+        <li>High-protein snacks — jerky, peanut butter packs, hard-boiled eggs (micro markets)</li>
+      </ul>
+
+      <h2>Workplaces that prioritize healthy vending</h2>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">fitness_center</span></div>
+          <h3>Gyms & fitness centers</h3>
+          <p>Members who just finished a workout want protein and hydration, not candy. A performance-oriented product mix aligned with your gym's brand reinforces the environment you've built — and complements what you sell at the front desk.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">biotech</span></div>
+          <h3>Biotech & life sciences</h3>
+          <p>Research and clinical staff often have strong awareness of nutritional content. Organic, non-GMO, and clean-label products move well in biotech environments where the workforce is scientifically literate about ingredients.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">school</span></div>
+          <h3>Schools & education</h3>
+          <p>For faculty lounges and staff break rooms, we can build a mix that meets institutional nutrition guidelines while still giving teachers and administrators options they'll actually eat.</p>
+        </div>
+        <div class="usecase-card">
+          <div class="uc-icon"><span class="material-symbols-outlined">spa</span></div>
+          <h3>Wellness & healthcare</h3>
+          <p>Medical offices, wellness centers, and healthcare facilities benefit from a product selection consistent with the wellness messaging they communicate to clients and patients.</p>
+        </div>
+      </div>
+
+      <h2>Fresh food — the next level of healthy vending</h2>
+      <p>For organizations ready to go beyond packaged snacks, a <a href="{{ url_for('page_micro_markets') }}">micro market</a> adds refrigerated fresh food to the mix. Sandwiches, salads, yogurt, hard-boiled eggs, fruit cups, and similar items rotate daily or every other day. This is the only way to offer genuinely fresh, whole-food options through an unattended setup.</p>
+      <p>Fresh food requires a larger install footprint and higher-frequency service visits, but carries no additional cost to the host business. It works best in locations with 50 or more regular users.</p>
+
+      <h2>How we build your healthy vending program</h2>
+      <ol>
+        <li><strong>Assess your team</strong> — We discuss your workforce composition, any dietary preferences or restrictions, and the types of options that would be most valued.</li>
+        <li><strong>Design the product mix</strong> — We build an initial lineup that balances premium/healthy options with the classics that keep the machine commercially viable. Both categories need to be present for the program to work.</li>
+        <li><strong>Install and calibrate</strong> — After installation, we monitor what sells and what doesn't during the first few weeks and adjust accordingly.</li>
+        <li><strong>Optimize continuously</strong> — Every restock visit is an opportunity to rotate slow-moving products and introduce new items. We track this systematically, not ad hoc.</li>
+      </ol>
+
+      <h2>Frequently asked questions</h2>
+      <div class="page-faq faq">
+
+        <details class="faq-item">
+          <summary>
+            <span>Can we request an all-healthy vending machine?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>We can heavily weight the product mix toward healthier options, and for the right environment — a gym, a wellness center, a healthcare facility — that makes sense. In general office settings, a mix that includes some conventional favorites alongside healthy options tends to result in better overall usage and less waste from slow-moving items. We'll work with you to find the right balance for your team.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you stock organic or non-GMO products?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Yes. Many of the brands we stock — RXBAR, Kind, Larabar, Organic Valley, and others — carry organic or non-GMO certifications. If these designations are important to your workplace, we can prioritize certified products in the mix.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can you accommodate vegan or gluten-free options?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Yes. Both are common requests in Bay Area workplaces and we stock a range of options in both categories. If a significant portion of your team has specific dietary requirements, we'll make sure those needs are well-represented in the product selection.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Are healthy options more expensive in the machine?</span>
+            <div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div>
+          </summary>
+          <p>Premium products are priced higher than conventional snacks, which reflects their actual cost. A protein bar typically runs $2.50–$4.00, while a standard candy bar might be $1.50–$2.00. We price everything transparently through the machine interface so employees always know the cost before purchasing.</p>
+        </details>
+
+      </div>
+
+      <div class="page-cta">
+        <div class="cta-text">
+          <h2>Build a vending program your team <em>actually wants.</em></h2>
+          <p>Tell us about your workplace and what matters to your employees — we'll design a product mix that delivers.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">
+            Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

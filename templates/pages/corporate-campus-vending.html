@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Corporate Campus Vending Solutions | Munch Machine{% endblock %}
+{% block meta_description %}Vending solutions for corporate campuses in the Bay Area. Multi-building programs, premium product curation, micro markets — zero cost, fully managed.{% endblock %}
+{% block canonical_path %}/corporate-campus-vending{% endblock %}
+{% block og_url_path %}/corporate-campus-vending{% endblock %}
+{% block og_title %}Corporate Campus Vending Solutions | Munch Machine{% endblock %}
+{% block og_description %}Multi-building vending for Bay Area corporate campuses. Premium product mix, micro market option, cashless payment. Zero cost to host.{% endblock %}
+{% block twitter_title %}Corporate Campus Vending | Munch Machine{% endblock %}
+{% block twitter_description %}Multi-building vending for Bay Area corporate campuses. Premium, cashless, zero cost.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Corporate Campus Vending","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Corporate Campus Vending</span></nav>
+    <div class="eyebrow">Industry · Corporate</div>
+    <h1>Vending programs for <em>corporate campuses.</em></h1>
+    <p class="lead">Large corporate campuses have vending needs that go beyond a single machine in a single break room. Multiple buildings, diverse employee populations, and a workplace culture where food quality signals company values all call for a coordinated, campus-wide approach.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Scale<strong>Multi-building programs</strong></div>
+      <div class="meta-item">Options<strong>Vending + micro market</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>What "campus" vending actually requires</h2>
+    <p>A corporate campus with three buildings and 300 employees has fundamentally different vending logistics than a single-office company with 50 people. Each building needs its own coverage. Each break room may serve a different team with different preferences — engineering might weight toward caffeine and protein; a marketing team toward variety and premium snacks. The service schedule needs to account for multiple machines across multiple locations without requiring facilities management to coordinate anything.</p>
+    <p>We handle all of this under a single account. One contact, one service schedule, consolidated reporting if needed, and machines that are stocked to the specific location rather than running a copy-paste product mix across every machine on campus.</p>
+
+    <h2>Campus program structure</h2>
+    <p>For campuses with 100–300 employees across multiple buildings, the typical program combines standard vending machines in each building's break room with a <a href="{{ url_for('page_micro_markets') }}">micro market</a> in the main building or cafeteria area. The micro market serves as the primary food destination — fresh food, open shelving, wide variety — while machines in secondary buildings handle convenience traffic without requiring a trip to the main building.</p>
+
+    <div class="callout"><p><strong>Micro market option:</strong> Campuses with a central gathering space benefit most from adding a micro market. Open shelves, fresh food, and self-checkout give employees a food experience that competes with off-campus restaurants — reducing the lunch run departures that fragment the workday.</p></div>
+
+    <h2>Product differentiation by building</h2>
+    <p>We don't run identical product mixes across every campus machine. If your R&D building houses engineers working late while your HQ building has a 9-to-5 corporate team, the machines should reflect those differences. We use early sales data to tune each location's mix — pulling slow-movers and expanding what actually sells in that specific building.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>How do you handle service across multiple buildings?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>All machines on a campus are on coordinated service routes — we don't treat each building as a separate account. Restocking visits are timed to cover all campus machines in a single visit window when possible, minimizing the number of days facilities staff need to provide access.</p></details>
+      <details class="faq-item"><summary><span>Can we get reporting on what employees are buying?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. We can provide category-level sales reports for campus accounts that want to track usage patterns. This is useful for HR and facilities teams assessing the ROI of the vending program or planning changes to the product mix.</p></details>
+      <details class="faq-item"><summary><span>What employee count justifies a full campus program?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Multi-machine campus programs typically make sense with 150+ employees across multiple buildings. For smaller campuses, a single well-placed machine or micro market often serves the full population adequately. Get in touch and we'll give you an honest assessment based on your headcount and building layout.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Campus-wide vending, <em>centrally managed.</em></h2><p>One account, multiple buildings, zero overhead for your team.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

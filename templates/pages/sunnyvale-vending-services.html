@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Sunnyvale Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for Sunnyvale tech companies and offices. Premium snacks, cashless payment, micro markets — zero cost to host. Serving Sunnyvale and all of Silicon Valley.{% endblock %}
+{% block canonical_path %}/sunnyvale-vending-services{% endblock %}
+{% block og_url_path %}/sunnyvale-vending-services{% endblock %}
+{% block og_title %}Sunnyvale Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Premium managed vending for Sunnyvale tech offices. Curated snacks, cashless payment, micro market option. Zero cost to host.{% endblock %}
+{% block twitter_title %}Sunnyvale Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Premium managed vending for Sunnyvale tech offices. Cashless, curated, zero cost.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Sunnyvale CA Vending Services","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"City","name":"Sunnyvale","containedInPlace":{"@type":"State","name":"California"}},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Sunnyvale, CA</span></nav>
+    <div class="eyebrow">Local Vending · Sunnyvale, CA</div>
+    <h1>Break rooms worthy of <em>Sunnyvale's talent.</em></h1>
+    <p class="lead">Sunnyvale is one of the highest-earning commercial cities in the country. LinkedIn, Yahoo, Google's former campus, Juniper Networks, Lockheed Martin — the workforce here has elevated expectations for every aspect of the workplace, including what's in the break room.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Market<strong>Enterprise tech / defense</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Fresh food option<strong>Micro market</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Vending in Sunnyvale's competitive talent market</h2>
+    <p>Sunnyvale companies compete for engineering and technical talent against some of the most well-resourced employers in the world. The workplace experience — including break room quality — is part of that competitive landscape in a way it simply isn't in most other markets.</p>
+    <p>Managed vending isn't a cafeteria replacement, but it closes a meaningful gap for companies that want to signal investment in their team without the overhead of a full food program. A well-curated micro market or premium vending setup tells employees something about how the company operates — and that signal matters during onboarding, during performance reviews, and during the moments when employees are deciding whether to stay.</p>
+
+    <div class="callout"><p><strong>Premium product curation for Sunnyvale:</strong> In this market, we lean heavily toward quality — organic brands, protein-focused options, premium cold brew and sparkling water, international specialty items. The standard candy-bar-heavy mix doesn't reflect Sunnyvale workforces and we don't stock it as a default here.</p></div>
+
+    <h2>Services available in Sunnyvale</h2>
+    <p>For smaller Sunnyvale offices (30–80 people), a dedicated snack and beverage machine pair with a premium product mix is the typical starting point. For larger campuses and companies with 50 or more employees in a single building, a <a href="{{ url_for('page_micro_markets') }}">micro market</a> is often a stronger fit — open shelves, fresh food, self-checkout, and the kind of variety that replaces off-site lunch runs.</p>
+    <p>All Sunnyvale placements include <a href="{{ url_for('page_cashless_vending') }}">cashless payment</a> (Apple Pay, Google Pay, tap-to-pay) as standard, real-time inventory monitoring, and proactive restocking before machines run low.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>How do you serve Sunnyvale from Fremont?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Sunnyvale is approximately 25–35 minutes from our Fremont base via 880 South to 237 West or via 101. It falls within our South Bay service territory alongside San Jose and Santa Clara. Restocking visits are on coordinated South Bay routes, and service response times for Sunnyvale accounts are typically same-day or next business day.</p></details>
+      <details class="faq-item"><summary><span>What makes Sunnyvale vending different from other markets?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Product mix. Sunnyvale workforces have strong preferences for premium and health-conscious options. We weight the lineup accordingly — more organic, more protein, more specialty beverages — rather than applying a generic Bay Area template. The service model is the same everywhere; the product curation reflects the specific workforce.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Premium vending for <em>Sunnyvale companies.</em></h2><p>No cost, no contract, no management burden. Get started in about two weeks.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

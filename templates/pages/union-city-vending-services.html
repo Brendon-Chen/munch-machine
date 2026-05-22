@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Union City Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for Union City businesses — offices, warehouses & commercial buildings. Zero cost to host, cashless payment, local East Bay service.{% endblock %}
+{% block canonical_path %}/union-city-vending-services{% endblock %}
+{% block og_url_path %}/union-city-vending-services{% endblock %}
+{% block og_title %}Union City Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Fully managed vending for Union City workplaces. Zero cost, cashless, weekly restocking. East Bay based in neighboring Fremont.{% endblock %}
+{% block twitter_title %}Union City Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending for Union City — zero cost, cashless, locally serviced.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Union City CA Vending Services","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"City","name":"Union City","containedInPlace":{"@type":"State","name":"California"}},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Union City, CA</span></nav>
+    <div class="eyebrow">Local Vending · Union City, CA</div>
+    <h1>Managed vending for <em>Union City workplaces.</em></h1>
+    <p class="lead">Union City sits between Fremont and Hayward on the 880 corridor — compact, commercially dense, and home to a significant light industrial and logistics base as well as a diverse residential and commercial community. We're based directly next door in Fremont.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Neighboring city<strong>Fremont (our base)</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+      <div class="meta-item">Setup time<strong>~2 weeks</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Serving Union City's commercial community</h2>
+    <p>Union City's commercial footprint is concentrated but active — the Alvarado-Niles corridor, the industrial areas near the BART station, the retail and office developments around Decoto Road, and the logistics operations that take advantage of the city's central location between major East Bay markets. The workforce here is diverse, transit-connected, and increasingly tech-adjacent as development around the BART station continues.</p>
+    <p>For Union City businesses managing break rooms, the challenge is typically the same regardless of industry: nobody has bandwidth to order snacks, manage a cash box, and coordinate with a vending company's service schedule. We eliminate that entirely — one call to set up, and then it simply works.</p>
+
+    <div class="callout"><p><strong>The proximity advantage:</strong> Union City is literally on our way. Our Fremont-based routes pass through Union City regularly, which means faster response times and more flexible service scheduling than operators based in Oakland or San Jose.</p></div>
+
+    <h2>What Union City businesses typically need</h2>
+    <p>The most common placements in Union City are:</p>
+    <ul>
+      <li><strong>Warehouse and light industrial break rooms</strong> — High-energy snacks, beverages including sports drinks and energy drinks, and calorie-dense options for physically demanding shifts</li>
+      <li><strong>Office and commercial break rooms</strong> — Standard snack/beverage mix with cashless payment; product mix adjusted for office culture vs. industrial workforce</li>
+      <li><strong>Retail staff areas</strong> — Combo units or smaller machines for back-of-house staff break rooms in retail environments along the commercial corridors</li>
+      <li><strong>Residential amenity spaces</strong> — 24/7 accessible vending for apartment communities near the BART station and along Mission Boulevard</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Is Union City in your primary service area?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. Union City is within our core East Bay territory — it's adjacent to our Fremont base and on our regular service routes. Service response times and restocking frequency are the same as our Fremont accounts.</p></details>
+      <details class="faq-item"><summary><span>Do you serve retail businesses in Union City?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. Back-of-house break rooms in retail environments qualify for placement provided there are enough regular staff users. We can assess based on the size of your team and the space available.</p></details>
+      <details class="faq-item"><summary><span>What payment methods are supported?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>All machines support Apple Pay, Google Pay, contactless cards, and standard debit/credit. No cash required. Every placement is fully cashless as standard.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Your <em>Union City vending partner.</em></h2><p>We're right next door. Tell us about your space and we'll get started.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

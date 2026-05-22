@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Vending Machine Service vs Buying Your Own | Munch Machine{% endblock %}
+{% block meta_description %}Should your business use a managed vending service or buy its own machine? A straightforward comparison of costs, responsibilities, and trade-offs.{% endblock %}
+{% block canonical_path %}/vending-service-vs-owning{% endblock %}
+{% block og_url_path %}/vending-service-vs-owning{% endblock %}
+{% block og_title %}Vending Machine Service vs Buying Your Own | Munch Machine{% endblock %}
+{% block og_description %}Managed vending service vs buying a machine outright — total cost of ownership, operational burden, and which makes sense for Bay Area businesses.{% endblock %}
+{% block twitter_title %}Vending Service vs Owning | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending vs buying your own machine — honest cost and burden comparison.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Vending Machine Service vs Buying Your Own","publisher":{"@type":"Organization","name":"Munch Machine"},"description":"Comparison of managed vending service versus buying a vending machine outright for Bay Area businesses"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Service vs Owning</span></nav>
+    <div class="eyebrow">Guide · Decision Framework</div>
+    <h1>Managed vending vs <em>buying your own machine.</em></h1>
+    <p class="lead">Occasionally businesses wonder whether it's cheaper to simply buy a vending machine outright rather than use a managed service. The honest answer depends on what you value — but the total cost of ownership calculation usually resolves the question quickly.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Machine purchase cost<strong>$3,000–$8,000</strong></div>
+      <div class="meta-item">Managed service cost<strong>$0</strong></div>
+      <div class="meta-item">Ongoing ops burden<strong>See below</strong></div>
+      <div class="meta-item">Verdict<strong>Below</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>The full cost of owning a machine</h2>
+    <p>Buying a vending machine solves the one-time hardware cost — and creates a large set of ongoing responsibilities that most businesses aren't equipped to handle efficiently.</p>
+
+    <table class="comparison-table">
+      <thead><tr><th>Cost / responsibility</th><th>Buy your own</th><th>Managed service</th></tr></thead>
+      <tbody>
+        <tr><td>Machine purchase</td><td>$3,000–$8,000 upfront</td><td class="yes">$0</td></tr>
+        <tr><td>Cashless payment hardware</td><td>$200–$500 + monthly fees</td><td class="yes">Included</td></tr>
+        <tr><td>Product sourcing & purchasing</td><td>Your team buys & stocks</td><td class="yes">We handle</td></tr>
+        <tr><td>Restocking labor</td><td>Your team's time</td><td class="yes">We handle</td></tr>
+        <tr><td>Mechanical repairs</td><td>Your cost ($200–$600/repair)</td><td class="yes">Our cost</td></tr>
+        <tr><td>Expired product management</td><td>Your responsibility</td><td class="yes">We manage</td></tr>
+        <tr><td>Machine depreciation</td><td>Your asset, your depreciation</td><td class="yes">Our asset</td></tr>
+        <tr><td>Replacement when worn out</td><td>Your cost</td><td class="yes">Our cost</td></tr>
+        <tr><td>Product markup retained</td><td>Yes (you keep revenue)</td><td>No (we keep revenue)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The revenue math</h2>
+    <p>Owning your own machine means you keep the product markup — the difference between what you pay for snacks wholesale and what employees pay retail. For a machine selling $500/month in product, that markup might be $100–$150/month in gross margin.</p>
+    <p>The question is whether that margin justifies the capital outlay, operational overhead, and repair exposure. For most businesses — whose core competency is not vending machine operation — the answer is no. Your team's time spent sourcing products, restocking, and managing a machine has real value that's usually worth more than $100–$150/month.</p>
+
+    <h2>When owning might make sense</h2>
+    <p>There are scenarios where owning a machine is genuinely better:</p>
+    <ul>
+      <li>You want to run a highly specialized product mix that no managed vendor would maintain (e.g., branded company merchandise, custom dietary requirements)</li>
+      <li>You're in a location with no managed vending providers willing to service it</li>
+      <li>You're operating a vending business yourself and this is core to your revenue model</li>
+      <li>You have internal operations staff with spare capacity who can absorb the management burden</li>
+    </ul>
+    <p>For Bay Area businesses looking to improve their break room without adding operational overhead, managed service is almost always the better choice.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>What if we already have a machine we own?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>If you own a machine and find the management burden isn't worth it, contact us. We can assess whether we can take over operation of an existing machine or replace it with one of ours. Each situation is different — but we're happy to look at it.</p></details>
+      <details class="faq-item"><summary><span>Can we buy the machine from you later if we want to?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Our model is based on machine ownership — we don't sell machines to host businesses. If you want to own a machine, the most practical path is purchasing directly from a distributor like USI or AMS. We can point you in the right direction even if we're not the right fit for your situation.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Skip the machine ownership headache. <em>We handle everything.</em></h2><p>Zero upfront cost, zero ongoing management burden.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

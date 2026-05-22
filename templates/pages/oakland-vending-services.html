@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Oakland Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for Oakland businesses — offices, warehouses, creative studios & more. Zero cost, cashless, weekly restocking. Bay Area vending with East Bay roots.{% endblock %}
+{% block canonical_path %}/oakland-vending-services{% endblock %}
+{% block og_url_path %}/oakland-vending-services{% endblock %}
+{% block og_title %}Oakland Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Fully managed vending for Oakland workplaces. Offices, warehouses, creative businesses, coworking spaces. Zero cost, cashless, weekly restocking.{% endblock %}
+{% block twitter_title %}Oakland Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending for Oakland businesses. Zero cost, cashless, locally serviced.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Oakland CA Vending Services","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"City","name":"Oakland","containedInPlace":{"@type":"State","name":"California"}},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Oakland, CA</span></nav>
+    <div class="eyebrow">Local Vending · Oakland, CA</div>
+    <h1>Vending for Oakland's <em>diverse commercial scene.</em></h1>
+    <p class="lead">Oakland is one of the most economically layered cities in the Bay Area — port and logistics operations, a strong creative and tech industry presence in neighborhoods like Uptown and Jack London Square, industrial zones, healthcare, and one of the Bay Area's largest concentrations of small and mid-size businesses.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Market<strong>Diverse / multi-industry</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+      <div class="meta-item">Setup time<strong>~2 weeks</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Oakland's commercial complexity</h2>
+    <p>No single product mix serves all of Oakland. A logistics company near the port has fundamentally different workforce needs from a creative agency in Uptown or a biotech firm in the Broadway-Valdez corridor. We build each program around the specific location — not a generic "Oakland" template.</p>
+    <p>What's consistent across all of them: cashless payment, proactive restocking, and a service model that doesn't require your team to do anything beyond providing space. The product differentiation happens in the curation conversation before installation.</p>
+
+    <h2>Oakland industries we serve</h2>
+    <div class="usecase-grid">
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">local_shipping</span></div><h3>Port & logistics</h3><p>The Port of Oakland and the industrial operations in West Oakland and the Fruitvale district represent significant vending opportunities for high-traffic, physically demanding environments.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">palette</span></div><h3>Creative & tech</h3><p>Uptown, Jack London Square, and the areas around the 19th Street BART station host a concentration of creative agencies, tech startups, and professional services firms with modern break room expectations.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">local_hospital</span></div><h3>Healthcare</h3><p>Alameda County's healthcare infrastructure, including Highland Hospital and the various clinic networks throughout Oakland, represents a significant market for reliable break room vending for long-shift staff.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">groups</span></div><h3>Coworking & shared offices</h3><p>Oakland's growing coworking sector in the downtown and Uptown areas uses vending as a member amenity. We manage everything so operators can focus on their communities.</p></div>
+    </div>
+
+    <h2>Product curation for Oakland</h2>
+    <p>Oakland's workforce is among the most culturally diverse in the Bay Area. We stock to reflect that — broader snack variety, international brands, and product options that reflect the actual demographics of Oakland rather than a homogenized Silicon Valley template. Alongside standard Bay Area staples, we include options with appeal across a wider range of backgrounds and taste preferences.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Do you serve Oakland businesses regularly or only on request?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Oakland is within our Bay Area service territory. We have active accounts in Oakland and make regular service runs. For new accounts, we evaluate service frequency based on location and expected machine usage.</p></details>
+      <details class="faq-item"><summary><span>Can you serve small creative businesses in Oakland?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Smaller businesses qualify if there are enough consistent users — typically 30–40 people. For small Oakland studios or offices below that threshold, shared building placements (lobby or shared break room used by multiple tenants) can often make the math work. Get in touch and we'll assess your specific situation.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Vending built for <em>Oakland.</em></h2><p>Locally operated, culturally aware, zero cost. Tell us about your space.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

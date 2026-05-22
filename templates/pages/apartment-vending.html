@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Apartment & Residential Vending Machines | Munch Machine{% endblock %}
+{% block meta_description %}Vending machines for apartment complexes and residential communities in the Bay Area. Amenity vending for common areas, lobbies, and fitness rooms. Zero cost to install.{% endblock %}
+{% block canonical_path %}/apartment-vending{% endblock %}
+{% block og_url_path %}/apartment-vending{% endblock %}
+{% block og_title %}Apartment & Residential Vending Machines | Munch Machine{% endblock %}
+{% block og_description %}Managed vending for Bay Area apartment complexes. Lobby, common area, and fitness room placements — zero cost, cashless, fully managed.{% endblock %}
+{% block twitter_title %}Apartment & Residential Vending | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending for Bay Area apartment complexes. Zero cost, cashless amenity vending.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Apartment & Residential Vending","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Apartment Vending</span></nav>
+    <div class="eyebrow">Industry · Residential</div>
+    <h1>Vending machines for <em>apartment communities.</em></h1>
+    <p class="lead">Modern apartment communities compete on amenities. Vending in common areas, lobbies, fitness rooms, and mail rooms turns dead square footage into a round-the-clock convenience that residents notice — and mention in reviews.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Placement<strong>Lobby · Fitness · Common areas</strong></div>
+      <div class="meta-item">Hours<strong>24/7 operation</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Why residential vending is different</h2>
+    <p>Apartment vending serves a fundamentally different need than workplace vending. Residents aren't on a break — they're coming home late, heading to the gym at 6am, or waiting in the lobby for a package. The usage pattern is unpredictable and peaks at non-business hours. That's why 24/7 availability and cashless payment aren't optional in residential settings — they're baseline expectations.</p>
+    <p>The product mix also shifts. Late-night snack demand is real. Beverages outperform snacks at a higher ratio than in offices. Cold brew matters less; energy drinks and sparkling water matter more. We build residential programs around these patterns rather than reusing an office template.</p>
+
+    <h2>Where we place in residential communities</h2>
+    <div class="usecase-grid">
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">apartment</span></div><h3>Lobby & mail rooms</h3><p>High foot-traffic areas where residents pass multiple times daily. A snack and beverage machine here becomes a daily touchpoint that reinforces the community's amenity value.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">fitness_center</span></div><h3>Fitness centers</h3><p>Pre- and post-workout beverage demand is consistent. Electrolyte drinks, protein bars, and water perform well in residential fitness rooms. We stock accordingly.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">local_laundry_service</span></div><h3>Laundry rooms & common areas</h3><p>Residents spending 45–60 minutes waiting on laundry are a captive audience with time to purchase. Snack and beverage machines in laundry rooms consistently outperform volume expectations.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">pool</span></div><h3>Pool & recreation areas</h3><p>Seasonal but high-value. Beverage-focused machines near pool areas serve peak summer demand. We adjust product mix seasonally without needing building management to get involved.</p></div>
+    </div>
+
+    <h2>What property managers appreciate</h2>
+    <p>Property management companies and HOAs don't want another vendor relationship to manage. Our model is designed around that reality. We handle installation, product curation, restocking, maintenance, and all tenant-facing issues directly. Building management's only job is providing access during service visits.</p>
+    <p>For multi-building properties or larger communities, we can coordinate a single service account covering multiple machines across the campus. One point of contact, one agreement, consolidated service schedule.</p>
+
+    <h2>Minimum size requirements</h2>
+    <p>Residential vending works when there's consistent daily foot traffic past the machine. For a lobby placement, a building with 50+ units is typically sufficient. Fitness room placements work with 80+ units (assuming regular gym usage). For smaller communities, shared amenity buildings or parking garage lobbies that serve multiple adjacent properties can sometimes combine to hit the threshold.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Do residents pay for the machine or does the property management company?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Neither. The machine is owned and operated by Munch Machine at zero cost to the property. Revenue comes from resident purchases. There is no charge to the property management company or HOA for installation, service, or the machine itself.</p></details>
+      <details class="faq-item"><summary><span>What happens if a machine malfunctions at 2am?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Our machines have remote monitoring that alerts us to malfunctions automatically. For resident-facing issues (stuck product, overcharge), residents can contact us directly — we don't route everything through building management. We typically resolve machine issues within one business day.</p></details>
+      <details class="faq-item"><summary><span>Can we request specific products for our residents?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. We welcome feedback from property managers on resident preferences and demographics. If your building has a specific health-focused culture, a high concentration of fitness-oriented residents, or other relevant characteristics, we'll build the product mix to reflect that.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Add vending to your <em>residential community.</em></h2><p>Zero cost, fully managed, 24/7 convenience for your residents.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

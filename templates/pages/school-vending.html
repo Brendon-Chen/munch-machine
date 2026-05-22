@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}School & Campus Vending Machines | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for schools, colleges, and university campuses in the Bay Area. Compliant, healthy-forward options, cashless payment. Zero cost to the institution.{% endblock %}
+{% block canonical_path %}/school-vending{% endblock %}
+{% block og_url_path %}/school-vending{% endblock %}
+{% block og_title %}School & Campus Vending Machines | Munch Machine{% endblock %}
+{% block og_description %}Vending for Bay Area schools and campuses. Health-compliant product mix, cashless, zero cost to the institution. Serving K-12 and higher education.{% endblock %}
+{% block twitter_title %}School & Campus Vending | Munch Machine{% endblock %}
+{% block twitter_description %}Managed vending for schools and campuses. Healthy options, cashless, zero cost.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"School & Campus Vending","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"State","name":"California"},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>School Vending</span></nav>
+    <div class="eyebrow">Industry · Education</div>
+    <h1>Vending for <em>schools and campuses.</em></h1>
+    <p class="lead">Educational institutions have specific vending requirements — regulatory compliance, health guidelines, and a diverse student population with varying nutritional needs. We build campus vending programs that work within those constraints while delivering genuine convenience to students, staff, and faculty.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Compliance<strong>USDA / state guidelines</strong></div>
+      <div class="meta-item">Users<strong>Students · faculty · staff</strong></div>
+      <div class="meta-item">Cost to institution<strong>$0</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>K-12 vs higher education: different requirements</h2>
+    <p>K-12 schools in California are subject to the USDA Smart Snacks in Schools standards for any food sold on campus during the school day. These rules define calorie, fat, sugar, and sodium limits for competitive foods — including vending machine products. We stock K-12 machines exclusively with compliant products and can provide documentation for district food services review.</p>
+    <p>Community colleges and universities have more flexibility. The student population is adults, off-campus students mix with on-campus residents, and the hours extend far beyond standard school day constraints. University vending programs can include a wider range of products while still leaning toward the health-forward mix that college-age consumers prefer in the Bay Area.</p>
+
+    <h2>High-performance locations on campus</h2>
+    <div class="usecase-grid">
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">library_books</span></div><h3>Libraries & study areas</h3><p>Students studying for extended periods generate consistent snack and beverage demand. Machines near campus libraries or 24-hour study spaces often see some of the highest volume on campus.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">sports_basketball</span></div><h3>Athletic facilities</h3><p>Campus gyms and sports facilities serve both student athletes and the broader student body. A performance-focused product mix (protein, electrolytes, clean-label snacks) fits this location well.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">work</span></div><h3>Faculty & staff areas</h3><p>Faculty lounges and administrative buildings serve adults who may have different preferences than the student population. A second machine in staff-only areas can offer a broader range outside USDA student food requirements.</p></div>
+      <div class="usecase-card"><div class="uc-icon"><span class="material-symbols-outlined">hotel</span></div><h3>Dormitories</h3><p>Residential campus students represent 24/7 demand — late-night studying, early morning classes, weekend hunger. Dorm lobby machines see some of the most consistent round-the-clock volume of any vending placement.</p></div>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Are your machines compliant with California school nutrition standards?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. For K-12 placements, we stock exclusively products that meet USDA Smart Snacks in Schools standards. We maintain a list of compliant products and can provide documentation for district nutrition coordinators. We do not mix compliant and non-compliant products in K-12 machines.</p></details>
+      <details class="faq-item"><summary><span>Does the school district or college get any revenue from the machines?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Our base model is zero-cost to the institution with no revenue share. For larger campus accounts with multiple machines, we can discuss commission arrangements. Get in touch and we'll be direct about what's possible for your specific situation.</p></details>
+      <details class="faq-item"><summary><span>Can you serve a school in the Bay Area suburbs?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>We serve schools and community colleges throughout our East Bay and South Bay service territory. If you're in Fremont, Newark, Hayward, Union City, Milpitas, or the San Jose area, you're within our regular routes. For schools in outlying areas, contact us and we'll assess serviceability for your specific location.</p></details>
+    </div>
+
+    <div class="page-cta">
+      <div class="cta-text"><h2>Campus vending that <em>meets the standard.</em></h2><p>Compliant, cashless, zero cost to your institution.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}
