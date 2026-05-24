@@ -228,6 +228,32 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Research pages -->
+  <url>
+    <loc>{{ base }}/research/afternoon-energy-crash</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ base }}/research/dehydration-at-work</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ base }}/research/choice-architecture-break-room</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ base }}/research/work-breaks-and-performance</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Consumer tips -->
   <url>
     <loc>{{ base }}/tips/how-to-pick-a-healthy-snack</loc>

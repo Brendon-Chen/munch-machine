@@ -209,6 +209,28 @@ def page_vending_cost():
     return render_template("pages/how-much-does-vending-cost.html", **_ctx())
 
 
+# --- Research pages ---
+
+@app.route("/research/afternoon-energy-crash")
+def research_afternoon_crash():
+    return render_template("research/afternoon-energy-crash.html", **_ctx())
+
+
+@app.route("/research/dehydration-at-work")
+def research_dehydration():
+    return render_template("research/dehydration-at-work.html", **_ctx())
+
+
+@app.route("/research/choice-architecture-break-room")
+def research_choice_architecture():
+    return render_template("research/choice-architecture-break-room.html", **_ctx())
+
+
+@app.route("/research/work-breaks-and-performance")
+def research_work_breaks():
+    return render_template("research/work-breaks-and-performance.html", **_ctx())
+
+
 # --- Consumer tips ---
 
 @app.route("/tips/how-to-pick-a-healthy-snack")
