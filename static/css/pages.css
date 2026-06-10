@@ -506,6 +506,121 @@ textarea.field { resize: vertical; min-height: 80px; }
 .page-cta p { color: rgba(234,230,224,0.6); font-size: 15px; margin: 0; }
 .page-cta .cta-actions { flex-shrink: 0; }
 
+/* ========================== FEATURE GRID ========================== */
+.feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 48px 0;
+}
+@media (max-width: 640px) { .feat-grid { grid-template-columns: 1fr; } }
+
+.feat-item {
+  background: var(--cream-warm);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 36px 32px;
+  transition: border-color 0.25s;
+}
+.feat-item:hover { border-color: var(--sand); }
+.feat-item .feat-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(107,124,89,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--sage);
+  margin-bottom: 20px;
+}
+.feat-item h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.feat-item p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ========================== STEPS ========================== */
+.steps-list {
+  margin: 48px 0;
+}
+.step-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.step-item:first-child { padding-top: 0; }
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'Fraunces', serif;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--sage);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  opacity: 0.7;
+}
+.step-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 6px 0 10px;
+  letter-spacing: -0.01em;
+}
+.step-content p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .step-item { grid-template-columns: 44px 1fr; gap: 16px; }
+  .step-num { font-size: 36px; }
+}
+
+/* ========================== PILLAR LIST ========================== */
+.pillar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 40px 0;
+}
+.pillar-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pillar-item:last-child { border-bottom: none; }
+.pillar-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pillar-item h4 .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--sage);
+}
+.pillar-item p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  margin: 0;
+}
+
 /* ========================== MOBILE ========================== */
 @media (max-width: 700px) {
   .page-hero { padding: 120px 0 56px; }

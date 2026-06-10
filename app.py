@@ -162,6 +162,11 @@ def page_corporate_campus():
 
 # --- Service long-tail pages ---
 
+@app.route("/managed-vending-services")
+def page_managed_vending():
+    return render_template("pages/managed-vending-services.html", **_ctx())
+
+
 @app.route("/full-service-vending")
 def page_full_service_vending():
     return render_template("pages/full-service-vending.html", **_ctx())
