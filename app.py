@@ -187,6 +187,13 @@ def page_office_snack_delivery():
     return render_template("pages/office-snack-delivery.html", **_ctx())
 
 
+# --- Workplace culture guides ---
+
+@app.route("/why-employees-come-to-the-office")
+def guide_hybrid_office():
+    return render_template("pages/why-employees-come-to-the-office.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")

@@ -202,6 +202,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Workplace culture guides -->
+  <url>
+    <loc>{{ base }}/why-employees-come-to-the-office</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Question / guide pages -->
   <url>
     <loc>{{ base }}/how-office-vending-works</loc>
