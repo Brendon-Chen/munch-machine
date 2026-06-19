@@ -199,6 +199,11 @@ def guide_break_room_audit():
     return render_template("pages/break-room-audit.html", **_ctx())
 
 
+@app.route("/cost-of-employee-turnover")
+def guide_turnover_cost():
+    return render_template("pages/cost-of-employee-turnover.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")
