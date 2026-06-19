@@ -194,6 +194,11 @@ def guide_hybrid_office():
     return render_template("pages/why-employees-come-to-the-office.html", **_ctx())
 
 
+@app.route("/break-room-audit")
+def guide_break_room_audit():
+    return render_template("pages/break-room-audit.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")

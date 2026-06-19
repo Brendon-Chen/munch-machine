@@ -621,6 +621,99 @@ textarea.field { resize: vertical; min-height: 80px; }
   margin: 0;
 }
 
+/* ========================== AUDIT CHECKLIST ========================== */
+.audit-list {
+  margin: 48px 0;
+}
+.audit-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 20px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.audit-item:first-child { padding-top: 0; }
+.audit-item:last-child { border-bottom: none; }
+.audit-check {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--sage);
+  border-radius: 7px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sage);
+  font-size: 13px;
+  font-weight: 700;
+}
+.audit-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.audit-item p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 0;
+}
+.audit-item .audit-fail {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-light);
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-style: italic;
+}
+
+/* ========================== SCORE CARDS ========================== */
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 48px 0;
+}
+@media (max-width: 760px) { .score-grid { grid-template-columns: 1fr; } }
+.score-card {
+  border-radius: 20px;
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+.score-card.good { border-color: rgba(107,124,89,0.3); background: rgba(107,124,89,0.04); }
+.score-card.warn { border-color: rgba(180,140,60,0.3); background: rgba(180,140,60,0.04); }
+.score-card.bad  { border-color: rgba(160,80,60,0.2);  background: rgba(160,80,60,0.03); }
+.score-range {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.score-card.good .score-range { color: var(--sage); }
+.score-card.warn .score-range { color: #9a7a2e; }
+.score-card.bad  .score-range { color: #8a3c2a; }
+.score-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.score-card p {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* ========================== MOBILE ========================== */
 @media (max-width: 700px) {
   .page-hero { padding: 120px 0 56px; }
