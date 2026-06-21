@@ -204,6 +204,11 @@ def guide_turnover_cost():
     return render_template("pages/cost-of-employee-turnover.html", **_ctx())
 
 
+@app.route("/what-candidates-notice-on-an-office-tour")
+def guide_office_tour():
+    return render_template("pages/what-candidates-notice-office-tour.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")
