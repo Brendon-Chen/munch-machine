@@ -209,6 +209,11 @@ def guide_office_tour():
     return render_template("pages/what-candidates-notice-office-tour.html", **_ctx())
 
 
+@app.route("/office-perks-that-actually-matter")
+def guide_office_perks():
+    return render_template("pages/office-perks-that-actually-matter.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")
