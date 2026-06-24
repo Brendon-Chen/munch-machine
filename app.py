@@ -214,6 +214,11 @@ def guide_office_perks():
     return render_template("pages/office-perks-that-actually-matter.html", **_ctx())
 
 
+@app.route("/the-hidden-cost-of-the-coffee-run")
+def guide_coffee_run():
+    return render_template("pages/hidden-cost-of-the-coffee-run.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")
