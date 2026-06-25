@@ -219,6 +219,11 @@ def guide_coffee_run():
     return render_template("pages/hidden-cost-of-the-coffee-run.html", **_ctx())
 
 
+@app.route("/the-office-managers-invisible-workload")
+def guide_office_manager():
+    return render_template("pages/office-managers-invisible-workload.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")
