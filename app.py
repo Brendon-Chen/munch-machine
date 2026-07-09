@@ -224,6 +224,13 @@ def guide_office_manager():
     return render_template("pages/office-managers-invisible-workload.html", **_ctx())
 
 
+# --- Technology pages ---
+
+@app.route("/how-smart-vending-machines-work")
+def tech_smart_vending():
+    return render_template("pages/how-smart-vending-machines-work.html", **_ctx())
+
+
 # --- Question-based pages ---
 
 @app.route("/how-office-vending-works")

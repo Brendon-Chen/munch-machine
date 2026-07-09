@@ -246,6 +246,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Technology pages -->
+  <url>
+    <loc>{{ base }}/how-smart-vending-machines-work</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Question / guide pages -->
   <url>
     <loc>{{ base }}/how-office-vending-works</loc>
