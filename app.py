@@ -224,6 +224,13 @@ def guide_office_manager():
     return render_template("pages/office-managers-invisible-workload.html", **_ctx())
 
 
+# --- Procurement / vendor evaluation guides ---
+
+@app.route("/vendor-reliability-checklist")
+def guide_vendor_checklist():
+    return render_template("pages/vendor-reliability-checklist.html", **_ctx())
+
+
 # --- Technology pages ---
 
 @app.route("/how-smart-vending-machines-work")

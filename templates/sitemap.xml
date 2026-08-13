@@ -246,6 +246,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Procurement / vendor evaluation guides -->
+  <url>
+    <loc>{{ base }}/vendor-reliability-checklist</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Technology pages -->
   <url>
     <loc>{{ base }}/how-smart-vending-machines-work</loc>
