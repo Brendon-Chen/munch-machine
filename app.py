@@ -231,6 +231,13 @@ def guide_vendor_checklist():
     return render_template("pages/vendor-reliability-checklist.html", **_ctx())
 
 
+# --- Customer experience guides ---
+
+@app.route("/psychology-of-the-waiting-room")
+def guide_waiting_room():
+    return render_template("pages/psychology-of-the-waiting-room.html", **_ctx())
+
+
 # --- Technology pages ---
 
 @app.route("/how-smart-vending-machines-work")

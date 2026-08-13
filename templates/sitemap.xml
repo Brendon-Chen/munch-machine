@@ -254,6 +254,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Customer experience guides -->
+  <url>
+    <loc>{{ base }}/psychology-of-the-waiting-room</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Technology pages -->
   <url>
     <loc>{{ base }}/how-smart-vending-machines-work</loc>
