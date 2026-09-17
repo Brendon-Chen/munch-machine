@@ -248,7 +248,7 @@
 
   <!-- Procurement / vendor evaluation guides -->
   <url>
-    <loc>{{ base }}/vendor-reliability-checklist</loc>
+    <loc>{{ base }}/how-to-choose-a-service-vendor</loc>
     <lastmod>{{ today }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -256,7 +256,15 @@
 
   <!-- Customer experience guides -->
   <url>
-    <loc>{{ base }}/psychology-of-the-waiting-room</loc>
+    <loc>{{ base }}/how-to-make-waiting-feel-shorter</loc>
+    <lastmod>{{ today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Commercial real estate guides -->
+  <url>
+    <loc>{{ base }}/tenant-retention-amenities</loc>
     <lastmod>{{ today }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

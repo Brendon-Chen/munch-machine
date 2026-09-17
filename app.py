@@ -226,16 +226,23 @@ def guide_office_manager():
 
 # --- Procurement / vendor evaluation guides ---
 
-@app.route("/vendor-reliability-checklist")
+@app.route("/how-to-choose-a-service-vendor")
 def guide_vendor_checklist():
-    return render_template("pages/vendor-reliability-checklist.html", **_ctx())
+    return render_template("pages/how-to-choose-a-service-vendor.html", **_ctx())
 
 
 # --- Customer experience guides ---
 
-@app.route("/psychology-of-the-waiting-room")
+@app.route("/how-to-make-waiting-feel-shorter")
 def guide_waiting_room():
-    return render_template("pages/psychology-of-the-waiting-room.html", **_ctx())
+    return render_template("pages/how-to-make-waiting-feel-shorter.html", **_ctx())
+
+
+# --- Commercial real estate guides ---
+
+@app.route("/tenant-retention-amenities")
+def page_tenant_retention():
+    return render_template("pages/tenant-retention-amenities.html", **_ctx())
 
 
 # --- Technology pages ---
