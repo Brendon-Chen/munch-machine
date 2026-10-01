@@ -1,0 +1,22 @@
+{# Service area dropdown, shared by base.html and index.html #}
+<div class="nav-dd" data-nav-dd>
+  <button type="button" class="nav-dd-toggle cursor-target" aria-expanded="false" aria-controls="service-area-menu">
+    Service area <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+  </button>
+  <div class="nav-dd-menu" id="service-area-menu">
+    <p class="nav-dd-label">Where we operate</p>
+    <ul>
+      {% for endpoint, city in [
+        ('page_fremont_vending', 'Fremont'),
+        ('page_san_jose_vending', 'San Jose'),
+        ('page_palo_alto_vending', 'Palo Alto'),
+        ('page_menlo_park_vending', 'Menlo Park'),
+        ('page_union_city_vending', 'Union City'),
+        ('page_newark_vending', 'Newark'),
+        ('page_milpitas_vending', 'Milpitas'),
+      ] %}
+      <li><a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} aria-current="page"{% endif %}><span class="nav-dd-city">{{ city }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

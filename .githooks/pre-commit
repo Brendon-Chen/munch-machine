@@ -1,0 +1,6 @@
+#!/bin/sh
+# Refresh sitemap lastmod dates and include them in this commit.
+root="$(git rev-parse --show-toplevel)"
+py="$root/venv/Scripts/python.exe"
+[ -x "$py" ] || py="$(command -v python3 || command -v python)"
+"$py" "$root/scripts/update_lastmod.py" && git add "$root/lastmod.json"

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ base }}/</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/'] %}<lastmod>{{ lastmod['/'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>{{ base }}/resources</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/resources'] %}<lastmod>{{ lastmod['/resources'] }}</lastmod>{% endif %}
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>{{ base }}/inquire</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/inquire'] %}<lastmod>{{ lastmod['/inquire'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -23,31 +23,31 @@
   <!-- Core service area pages -->
   <url>
     <loc>{{ base }}/fremont-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/fremont-vending-services'] %}<lastmod>{{ lastmod['/fremont-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>{{ base }}/bay-area-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/bay-area-vending-services'] %}<lastmod>{{ lastmod['/bay-area-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>{{ base }}/silicon-valley-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/silicon-valley-vending'] %}<lastmod>{{ lastmod['/silicon-valley-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/san-jose-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/san-jose-vending-services'] %}<lastmod>{{ lastmod['/san-jose-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/newark-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/newark-vending-services'] %}<lastmod>{{ lastmod['/newark-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -55,43 +55,55 @@
   <!-- City pages -->
   <url>
     <loc>{{ base }}/hayward-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/hayward-vending-services'] %}<lastmod>{{ lastmod['/hayward-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/union-city-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/union-city-vending-services'] %}<lastmod>{{ lastmod['/union-city-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/milpitas-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/milpitas-vending-services'] %}<lastmod>{{ lastmod['/milpitas-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/sunnyvale-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/sunnyvale-vending-services'] %}<lastmod>{{ lastmod['/sunnyvale-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/mountain-view-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/mountain-view-vending'] %}<lastmod>{{ lastmod['/mountain-view-vending'] }}</lastmod>{% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ base }}/palo-alto-vending-services</loc>
+    {% if lastmod['/palo-alto-vending-services'] %}<lastmod>{{ lastmod['/palo-alto-vending-services'] }}</lastmod>{% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>{{ base }}/menlo-park-vending-services</loc>
+    {% if lastmod['/menlo-park-vending-services'] %}<lastmod>{{ lastmod['/menlo-park-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/oakland-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/oakland-vending-services'] %}<lastmod>{{ lastmod['/oakland-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/pleasanton-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/pleasanton-vending-services'] %}<lastmod>{{ lastmod['/pleasanton-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -99,67 +111,67 @@
   <!-- Service pages -->
   <url>
     <loc>{{ base }}/managed-vending-services</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/managed-vending-services'] %}<lastmod>{{ lastmod['/managed-vending-services'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>{{ base }}/office-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/office-vending'] %}<lastmod>{{ lastmod['/office-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/micro-markets</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/micro-markets'] %}<lastmod>{{ lastmod['/micro-markets'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/healthy-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/healthy-vending'] %}<lastmod>{{ lastmod['/healthy-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/warehouse-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/warehouse-vending'] %}<lastmod>{{ lastmod['/warehouse-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/break-room-solutions</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/break-room-solutions'] %}<lastmod>{{ lastmod['/break-room-solutions'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/cashless-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/cashless-vending'] %}<lastmod>{{ lastmod['/cashless-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/full-service-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/full-service-vending'] %}<lastmod>{{ lastmod['/full-service-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>{{ base }}/vending-machine-installation</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/vending-machine-installation'] %}<lastmod>{{ lastmod['/vending-machine-installation'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/vending-machine-restocking</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/vending-machine-restocking'] %}<lastmod>{{ lastmod['/vending-machine-restocking'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/office-snack-delivery</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/office-snack-delivery'] %}<lastmod>{{ lastmod['/office-snack-delivery'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -167,37 +179,37 @@
   <!-- Industry pages -->
   <url>
     <loc>{{ base }}/apartment-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/apartment-vending'] %}<lastmod>{{ lastmod['/apartment-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/coworking-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/coworking-vending'] %}<lastmod>{{ lastmod['/coworking-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/gym-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/gym-vending'] %}<lastmod>{{ lastmod['/gym-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/manufacturing-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/manufacturing-vending'] %}<lastmod>{{ lastmod['/manufacturing-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/school-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/school-vending'] %}<lastmod>{{ lastmod['/school-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/corporate-campus-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/corporate-campus-vending'] %}<lastmod>{{ lastmod['/corporate-campus-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -205,43 +217,43 @@
   <!-- Workplace culture guides -->
   <url>
     <loc>{{ base }}/why-employees-come-to-the-office</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/why-employees-come-to-the-office'] %}<lastmod>{{ lastmod['/why-employees-come-to-the-office'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/break-room-audit</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/break-room-audit'] %}<lastmod>{{ lastmod['/break-room-audit'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/cost-of-employee-turnover</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/cost-of-employee-turnover'] %}<lastmod>{{ lastmod['/cost-of-employee-turnover'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/what-candidates-notice-on-an-office-tour</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/what-candidates-notice-on-an-office-tour'] %}<lastmod>{{ lastmod['/what-candidates-notice-on-an-office-tour'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/office-perks-that-actually-matter</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/office-perks-that-actually-matter'] %}<lastmod>{{ lastmod['/office-perks-that-actually-matter'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/the-hidden-cost-of-the-coffee-run</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/the-hidden-cost-of-the-coffee-run'] %}<lastmod>{{ lastmod['/the-hidden-cost-of-the-coffee-run'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/the-office-managers-invisible-workload</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/the-office-managers-invisible-workload'] %}<lastmod>{{ lastmod['/the-office-managers-invisible-workload'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -249,7 +261,7 @@
   <!-- Procurement / vendor evaluation guides -->
   <url>
     <loc>{{ base }}/how-to-choose-a-service-vendor</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-to-choose-a-service-vendor'] %}<lastmod>{{ lastmod['/how-to-choose-a-service-vendor'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -257,7 +269,7 @@
   <!-- Customer experience guides -->
   <url>
     <loc>{{ base }}/how-to-make-waiting-feel-shorter</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-to-make-waiting-feel-shorter'] %}<lastmod>{{ lastmod['/how-to-make-waiting-feel-shorter'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -265,7 +277,7 @@
   <!-- Commercial real estate guides -->
   <url>
     <loc>{{ base }}/tenant-retention-amenities</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tenant-retention-amenities'] %}<lastmod>{{ lastmod['/tenant-retention-amenities'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -273,7 +285,7 @@
   <!-- Technology pages -->
   <url>
     <loc>{{ base }}/how-smart-vending-machines-work</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-smart-vending-machines-work'] %}<lastmod>{{ lastmod['/how-smart-vending-machines-work'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -281,31 +293,31 @@
   <!-- Question / guide pages -->
   <url>
     <loc>{{ base }}/how-office-vending-works</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-office-vending-works'] %}<lastmod>{{ lastmod['/how-office-vending-works'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/how-to-get-a-vending-machine</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-to-get-a-vending-machine'] %}<lastmod>{{ lastmod['/how-to-get-a-vending-machine'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/vending-service-vs-owning</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/vending-service-vs-owning'] %}<lastmod>{{ lastmod['/vending-service-vs-owning'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/benefits-of-office-vending</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/benefits-of-office-vending'] %}<lastmod>{{ lastmod['/benefits-of-office-vending'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/how-much-does-vending-cost</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/how-much-does-vending-cost'] %}<lastmod>{{ lastmod['/how-much-does-vending-cost'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -313,25 +325,25 @@
   <!-- Research pages -->
   <url>
     <loc>{{ base }}/research/afternoon-energy-crash</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/research/afternoon-energy-crash'] %}<lastmod>{{ lastmod['/research/afternoon-energy-crash'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/research/dehydration-at-work</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/research/dehydration-at-work'] %}<lastmod>{{ lastmod['/research/dehydration-at-work'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/research/choice-architecture-break-room</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/research/choice-architecture-break-room'] %}<lastmod>{{ lastmod['/research/choice-architecture-break-room'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>{{ base }}/research/work-breaks-and-performance</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/research/work-breaks-and-performance'] %}<lastmod>{{ lastmod['/research/work-breaks-and-performance'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -339,37 +351,37 @@
   <!-- Consumer tips -->
   <url>
     <loc>{{ base }}/tips/how-to-pick-a-healthy-snack</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/how-to-pick-a-healthy-snack'] %}<lastmod>{{ lastmod['/tips/how-to-pick-a-healthy-snack'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>{{ base }}/tips/how-many-snacks-a-day</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/how-many-snacks-a-day'] %}<lastmod>{{ lastmod['/tips/how-many-snacks-a-day'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>{{ base }}/tips/best-snacks-for-energy</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/best-snacks-for-energy'] %}<lastmod>{{ lastmod['/tips/best-snacks-for-energy'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>{{ base }}/tips/healthy-vending-options</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/healthy-vending-options'] %}<lastmod>{{ lastmod['/tips/healthy-vending-options'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>{{ base }}/tips/snacks-for-work-break</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/snacks-for-work-break'] %}<lastmod>{{ lastmod['/tips/snacks-for-work-break'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>{{ base }}/tips/workplace-snack-benefits</loc>
-    <lastmod>{{ today }}</lastmod>
+    {% if lastmod['/tips/workplace-snack-benefits'] %}<lastmod>{{ lastmod['/tips/workplace-snack-benefits'] }}</lastmod>{% endif %}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Palo Alto Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Managed vending for Palo Alto offices, startups, and research facilities. Premium, health-forward snacks, cashless payment, micro market option. Zero cost to host.{% endblock %}
+{% block canonical_path %}/palo-alto-vending-services{% endblock %}
+{% block og_url_path %}/palo-alto-vending-services{% endblock %}
+{% block og_title %}Palo Alto Vending Services | Munch Machine{% endblock %}
+{% block og_description %}Premium managed vending for Palo Alto startups, research labs, and offices. Health-forward product mix, cashless, zero cost to host.{% endblock %}
+{% block twitter_title %}Palo Alto Vending Services | Munch Machine{% endblock %}
+{% block twitter_description %}Premium managed vending for Palo Alto offices and research facilities — health-forward, cashless, zero cost.{% endblock %}
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Palo Alto CA Vending Services","provider":{"@type":"LocalBusiness","name":"Munch Machine","telephone":"+19255834228","address":{"@type":"PostalAddress","addressLocality":"Fremont","addressRegion":"CA"}},"areaServed":{"@type":"City","name":"Palo Alto","containedInPlace":{"@type":"State","name":"California"}},"serviceType":"Managed Vending Machine Service"}
+</script>
+{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="{{ url_for('index') }}">Home</a><span class="sep">›</span><a href="{{ url_for('blog') }}">Resources</a><span class="sep">›</span><span>Palo Alto, CA</span></nav>
+    <div class="eyebrow">Local Vending · Palo Alto, CA</div>
+    <h1>Vending built for <em>Palo Alto's pace.</em></h1>
+    <p class="lead">Palo Alto runs on long days and short attention spans for anything that doesn't work. Early-stage startups on University Avenue, research teams in Stanford Research Park, and professional offices along El Camino all share the same expectation: the break room should just work, and it should carry something worth eating.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Market<strong>Startups · Research · Professional</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Healthy options<strong>Emphasized</strong></div>
+      <div class="meta-item">Cashless<strong>Standard</strong></div>
+    </div>
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap"><div class="prose">
+
+    <h2>Why Palo Alto offices care about what's on-site</h2>
+    <p>Downtown Palo Alto has plenty of cafés, but Stanford Research Park and the office buildings off Page Mill Road and East Bayshore don't. For a lot of Palo Alto teams, the nearest decent coffee or snack is a drive, not a walk — and in a startup or lab running on tight timelines, that's a real cost repeated several times a day.</p>
+    <p>On-site vending closes that gap without adding a vendor your operations person has to manage. We own the machine, stock it based on live sales data, and handle every repair. For a ten-person startup in a shared building or a research facility running late shifts, that means food and drinks are there when people need them, with zero overhead.</p>
+
+    <h2>What we stock for Palo Alto workplaces</h2>
+    <ul>
+      <li><strong>Snacks:</strong> RXBAR, Kind, protein chips, organic trail mix, roasted seaweed, dark chocolate, lightly salted nuts</li>
+      <li><strong>Beverages:</strong> Cold brew, sparkling water, kombucha, protein shakes, coconut water, energy drinks with clean ingredient labels</li>
+      <li><strong>Alongside classics:</strong> Kettle chips, Clif bars, Gatorade, standard sodas — because sales data consistently shows people want both</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <div class="page-faq faq">
+      <details class="faq-item"><summary><span>Do you serve small startups in shared Palo Alto buildings?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. In multi-tenant buildings, a machine in the lobby or shared break room serves every company in the building, which works well for smaller teams. The arrangement can be with the building manager or with one tenant on behalf of the floor.</p></details>
+      <details class="faq-item"><summary><span>Can you serve research and lab facilities with after-hours staff?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. Machines run 24/7 with cashless payment, so late-shift researchers and weekend staff have the same access as the daytime team. Live inventory monitoring means we restock based on actual use, including off-hours demand.</p></details>
+      <details class="faq-item"><summary><span>Can we request mostly healthy options?</span><div class="ch"><span class="material-symbols-outlined" style="font-size:16px">add</span></div></summary><p>Yes. We can weight the mix heavily toward organic, low-sugar, and high-protein products, and adjust it over time based on what your team actually buys and requests.</p></details>
+    </div>
+
+    <div class="related-links">
+  <span class="related-label">See also</span>
+  <a href="{{ url_for('page_menlo_park_vending') }}">Menlo Park</a>
+  <a href="{{ url_for('page_mountain_view_vending') }}">Mountain View</a>
+  <a href="{{ url_for('page_silicon_valley_vending') }}">Silicon Valley</a>
+</div>
+<div class="page-cta">
+      <div class="cta-text"><h2>Better snacks for <em>Palo Alto teams.</em></h2><p>Health-forward, cashless, fully managed. Zero cost to your business.</p></div>
+      <div class="cta-actions"><a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a></div>
+    </div>
+  </div></div>
+</section>
+{% endblock %}

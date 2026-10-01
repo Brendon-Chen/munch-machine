@@ -492,3 +492,24 @@ setTimeout(() => {
     bootSite();
   }
 }, 6000);
+
+// ============================================================
+// NAV DROPDOWN — click/tap toggle, Escape + outside click close
+// (hover and keyboard focus open it via CSS)
+// ============================================================
+document.querySelectorAll('[data-nav-dd]').forEach(dd => {
+  const toggle = dd.querySelector('.nav-dd-toggle');
+  const setOpen = open => {
+    dd.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    setOpen(!dd.classList.contains('is-open'));
+  });
+  document.addEventListener('click', e => { if (!dd.contains(e.target)) setOpen(false); });
+  dd.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { setOpen(false); toggle.focus(); }
+  });
+  dd.addEventListener('focusout', e => { if (!dd.contains(e.relatedTarget)) setOpen(false); });
+});

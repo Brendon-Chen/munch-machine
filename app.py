@@ -1,8 +1,9 @@
 """Munch Machine landing page backend."""
 from __future__ import annotations
 
+import json
 import os
-from datetime import date
+from collections import defaultdict
 from pathlib import Path
 
 from flask import Flask, Response, render_template, request
@@ -116,6 +117,16 @@ def page_sunnyvale_vending():
 @app.route("/mountain-view-vending")
 def page_mountain_view_vending():
     return render_template("pages/mountain-view-vending.html", **_ctx())
+
+
+@app.route("/palo-alto-vending-services")
+def page_palo_alto_vending():
+    return render_template("pages/palo-alto-vending-services.html", **_ctx())
+
+
+@app.route("/menlo-park-vending-services")
+def page_menlo_park_vending():
+    return render_template("pages/menlo-park-vending-services.html", **_ctx())
 
 
 @app.route("/oakland-vending-services")
@@ -340,10 +351,22 @@ def robots_txt():
     return Response(body, mimetype="text/plain")
 
 
+_LASTMOD_FILE = Path(__file__).parent / "lastmod.json"
+
+
+def _lastmod() -> defaultdict[str, str]:
+    """Per-URL last-changed dates, written by scripts/update_lastmod.py."""
+    try:
+        data = json.loads(_LASTMOD_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    return defaultdict(str, data)
+
+
 @app.route("/sitemap.xml")
 def sitemap_xml():
     return (
-        render_template("sitemap.xml", base=_base_url(), today=date.today().isoformat()),
+        render_template("sitemap.xml", base=_base_url(), lastmod=_lastmod()),
         200,
         {"Content-Type": "application/xml; charset=utf-8"},
     )

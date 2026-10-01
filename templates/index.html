@@ -179,6 +179,66 @@ body {
 }
 .site-header .cta:hover { transform: translateY(-1px); opacity: 0.88; }
 
+/* Service area dropdown */
+.site-header .nav { align-items: center; }
+.nav-dd { position: relative; }
+.nav-dd-toggle {
+  display: inline-flex; align-items: center; gap: 2px;
+  background: none; border: 0; padding: 4px 0; cursor: pointer;
+  font-family: inherit; font-size: 13px; color: var(--ink-soft);
+}
+.nav-dd-toggle .material-symbols-outlined {
+  font-size: 18px; transition: transform 0.25s ease;
+}
+.nav-dd-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%;
+  min-width: 200px; padding: 10px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -18px rgba(17,17,17,0.28);
+  opacity: 0; visibility: hidden;
+  transform: translate(-50%, -6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+}
+/* Invisible bridge so the menu doesn't close crossing the gap */
+.nav-dd-menu::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -15px; height: 15px;
+}
+.nav-dd.is-open .nav-dd-menu,
+.nav-dd-menu:focus-within {
+  opacity: 1; visibility: visible;
+  transform: translate(-50%, 0);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-dd:hover .nav-dd-menu {
+    opacity: 1; visibility: visible;
+    transform: translate(-50%, 0);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+  }
+  .nav-dd:hover .nav-dd-toggle .material-symbols-outlined { transform: rotate(180deg); }
+}
+.nav-dd.is-open .nav-dd-toggle .material-symbols-outlined { transform: rotate(180deg); }
+.nav-dd-label {
+  margin: 4px 10px 8px;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 500; color: var(--muted-soft);
+}
+.nav-dd-menu ul { list-style: none; margin: 0; padding: 0; }
+.site-header .nav .nav-dd-menu a {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 9px 10px; border-radius: 8px;
+  color: var(--ink);
+  transition: background 0.2s ease;
+}
+.site-header .nav .nav-dd-menu a:hover,
+.site-header .nav .nav-dd-menu a:focus-visible { background: var(--cream-warm); outline: none; }
+.site-header .nav .nav-dd-menu a[aria-current="page"] { background: var(--cream-warm); }
+.site-header .nav .nav-dd-menu a[aria-current="page"] .nav-dd-city { color: var(--sage-deep); }
+.nav-dd-city { font-size: 14px; font-weight: 500; }
+
+
 @media (max-width: 900px) {
   .site-header .nav { display: none; }
 }
@@ -956,6 +1016,7 @@ html.lenis { height: auto; }
       <a href="#tech" class="cursor-target">Our service</a>
       <a href="#process" class="cursor-target">Process</a>
       <a href="#faq" class="cursor-target">Questions</a>
+      {% include 'partials/service_area_nav.html' %}
       <a href="{{ url_for('blog') }}" class="cursor-target">Resources</a>
     </nav>
     <a href="#inquire" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>

@@ -66,6 +66,7 @@
     <nav class="nav">
       <a href="{{ url_for('index') }}#tech" class="cursor-target">Our service</a>
       <a href="{{ url_for('index') }}#process" class="cursor-target">Process</a>
+      {% include 'partials/service_area_nav.html' %}
       <a href="{{ url_for('blog') }}" class="cursor-target">Resources</a>
     </nav>
     <a href="{{ url_for('page_inquire') }}" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
