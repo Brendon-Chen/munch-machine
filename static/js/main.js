@@ -347,6 +347,15 @@ document.querySelectorAll('form[data-endpoint]').forEach(form => {
         : `Suggestion${tag}`;
   }
 
+  // Referral contact: accept an email address or a phone number (7+ digits)
+  const contactInfo = form.querySelector('[name=contact_email_or_phone]');
+  const checkContact = () => {
+    const v = contactInfo.value.trim();
+    const ok = !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || v.replace(/\D/g, '').length >= 7;
+    contactInfo.setCustomValidity(ok ? '' : 'Enter an email address or a phone number.');
+  };
+  contactInfo.addEventListener('input', checkContact);
+
   form.addEventListener('change', sync);
   form.addEventListener('input', sync);
   if (location.hash === '#refer') form.querySelector('[name=type][value=Referral]').checked = true;

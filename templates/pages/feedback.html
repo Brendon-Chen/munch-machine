@@ -113,11 +113,18 @@
                 <input id="fb-location" name="business_location" type="text" class="field" required placeholder="Fremont, CA"/>
               </div>
             </div>
+            <p class="fb-subhead">Who should we talk to there?</p>
             <div class="field-row two">
               <div>
-                <label class="field-label" for="fb-contact">Who should we talk to? <span class="fb-opt">Optional</span></label>
-                <input id="fb-contact" name="business_contact" type="text" class="field" placeholder="Name, role, or phone"/>
+                <label class="field-label" for="fb-contact-name">Their name</label>
+                <input id="fb-contact-name" name="contact_name" type="text" class="field" required autocomplete="off" placeholder="Jordan Lee, Office Manager"/>
               </div>
+              <div>
+                <label class="field-label" for="fb-contact-info">Their email or phone</label>
+                <input id="fb-contact-info" name="contact_email_or_phone" type="text" class="field" required autocomplete="off" placeholder="jordan@acme.com or (510) 555-0123"/>
+              </div>
+            </div>
+            <div class="field-row">
               <div>
                 <label class="field-label" for="fb-relationship">How do you know them?</label>
                 <select id="fb-relationship" name="relationship" class="field">
