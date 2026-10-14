@@ -267,11 +267,11 @@ function runProcessPin() {
 
 
 // ============================================================
-// Inquiry form
+// Forms — every form[data-endpoint] posts to its Formspree URL.
+// Dispatches a cancelable "submitted" event on success; a page can
+// call preventDefault() on it to show its own confirmation.
 // ============================================================
-(() => {
-  const form = document.getElementById('inquiry-form');
-  if (!form) return;
+document.querySelectorAll('form[data-endpoint]').forEach(form => {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type=submit]');
@@ -279,22 +279,100 @@ function runProcessPin() {
     btn.innerHTML = 'Transmitting…';
     btn.disabled = true;
     try {
-      const r = await fetch('https://formspree.io/f/mqejkyvn', {
+      const r = await fetch(form.dataset.endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
-      if (r.ok) {
+      if (!r.ok) throw new Error();
+      const shown = form.dispatchEvent(new CustomEvent('submitted', { cancelable: true }));
+      form.reset();
+      if (shown) {
         btn.innerHTML = '✓ Received — we will be in touch';
-        form.reset();
         setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 3500);
       } else {
-        throw new Error();
+        btn.innerHTML = orig;
+        btn.disabled = false;
       }
     } catch {
       btn.innerHTML = 'Error — retry';
       btn.disabled = false;
     }
+  });
+});
+
+// ============================================================
+// Feedback page — tabs, conditional fields, subject line, thank-you
+// ============================================================
+(() => {
+  const form = document.querySelector('form[data-feedback]');
+  if (!form) return;
+  const wrap = form.parentElement;
+  const thanks = wrap.querySelector('.fb-thanks');
+  const category = form.querySelector('[name=issue_category]');
+  const email = form.querySelector('[name=email]');
+  const emailHint = form.querySelector('[data-email-hint]');
+  const subject = form.querySelector('[name=_subject]');
+  const machine = form.querySelector('[name=machine_id]').value;
+  const LABELS = { Issue: 'Send report', Suggestion: 'Send suggestion', Referral: 'Send referral' };
+
+  const type = () => form.querySelector('[name=type]:checked').value;
+  const isMoney = () => !!category.selectedOptions[0]?.hasAttribute('data-money');
+  const show = (el, on) => {
+    el.hidden = !on;
+    el.querySelectorAll('input, select, textarea').forEach(f => { f.disabled = !on; });
+  };
+
+  function sync() {
+    const t = type();
+    form.querySelectorAll('.fb-panel').forEach(p => {
+      const on = p.dataset.panel === t;
+      p.hidden = !on;
+      p.disabled = !on;
+    });
+    form.querySelectorAll('.fb-money').forEach(el => show(el, t === 'Issue' && isMoney()));
+    form.querySelectorAll('[data-show-for]').forEach(el => show(el, el.dataset.showFor === t));
+
+    const needEmail = t === 'Referral' || (t === 'Issue' && isMoney());
+    email.required = needEmail;
+    emailHint.textContent = needEmail ? 'Required' : 'Optional';
+    form.querySelector('[data-submit-label]').textContent = LABELS[t];
+
+    const tag = machine ? ` — ${machine}` : '';
+    const business = form.querySelector('[name=business_name]').value.trim();
+    subject.value = t === 'Referral'
+      ? `Referral — ${business || 'new location'}${tag}`
+      : t === 'Issue'
+        ? `Issue: ${category.value || 'report'}${tag}`
+        : `Suggestion${tag}`;
+  }
+
+  form.addEventListener('change', sync);
+  form.addEventListener('input', sync);
+  if (location.hash === '#refer') form.querySelector('[name=type][value=Referral]').checked = true;
+  sync();
+
+  form.addEventListener('submitted', e => {
+    e.preventDefault();
+    const t = type();
+    thanks.querySelector('[data-thanks-title]').textContent =
+      t === 'Referral' ? 'Thanks for the referral.' : "Thanks — we've got it.";
+    thanks.querySelector('[data-thanks-body]').textContent =
+      t === 'Referral'
+        ? "We'll reach out to them soon. If we place a machine there, your $100 is paid within 30 days of installation."
+        : t === 'Issue'
+          ? "We'll look into it and usually reply within 1 business day."
+          : 'We read every suggestion and use them to decide what to stock.';
+    form.hidden = true;
+    thanks.hidden = false;
+    thanks.focus();
+  });
+
+  thanks.querySelector('.fb-again').addEventListener('click', () => {
+    thanks.hidden = true;
+    form.hidden = false;
+    sync();
+    form.querySelector('[name=type]:checked').focus();
   });
 })();
 

@@ -8,7 +8,7 @@
 
 <title>{% block title %}Munch Machine — Bay Area Vending Services{% endblock %}</title>
 <meta name="description" content="{% block meta_description %}Fully managed vending machines for Bay Area businesses. Zero cost, no contracts. Munch Machine places, stocks, and services every machine.{% endblock %}"/>
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
+<meta name="robots" content="{% block robots %}index, follow, max-snippet:-1, max-image-preview:large{% endblock %}"/>
 <link rel="canonical" href="{{ site_url }}{% block canonical_path %}/{% endblock %}"/>
 
 <meta property="og:type" content="website"/>
@@ -109,6 +109,7 @@
           <li><a href="{{ url_for('blog') }}">All Articles</a></li>
           <li><a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a></li>
           <li><a href="{{ url_for('index') }}#faq">FAQ</a></li>
+          <li><a href="{{ url_for('page_feedback') }}">Feedback &amp; referrals</a></li>
         </ul>
       </div>
       <div>

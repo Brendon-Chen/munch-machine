@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -90,6 +91,18 @@ def page_san_jose_vending():
 @app.route("/inquire")
 def page_inquire():
     return render_template("pages/inquire.html", **_ctx())
+
+
+_MACHINE_ID = re.compile(r"[A-Za-z0-9-]{1,32}")
+
+
+@app.route("/feedback")
+def page_feedback():
+    """QR landing page on each machine: issues, suggestions, location referrals."""
+    machine = request.args.get("m", "").strip()
+    if not _MACHINE_ID.fullmatch(machine):
+        machine = ""
+    return render_template("pages/feedback.html", machine_id=machine.upper(), **_ctx())
 
 
 # --- Batch 3: City pages ---

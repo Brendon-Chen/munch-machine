@@ -1328,7 +1328,7 @@ html.lenis { height: auto; }
         <p class="lead">Tell us about your space. We respond within 24 hours, with no obligation.</p>
       </div>
 
-      <form id="inquiry-form" autocomplete="off">
+      <form id="inquiry-form" data-endpoint="https://formspree.io/f/mqejkyvn" autocomplete="off">
         <div class="field-row two">
           <div>
             <label class="field-label">Organization</label>
@@ -1403,6 +1403,7 @@ html.lenis { height: auto; }
           <li><a href="{{ url_for('blog') }}">All Guides</a></li>
           <li><a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="{{ url_for('page_feedback') }}">Feedback &amp; referrals</a></li>
         </ul>
       </div>
       <div>

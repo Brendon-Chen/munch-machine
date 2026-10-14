@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% block title %}Feedback &amp; Referrals | Munch Machine{% endblock %}
+{% block meta_description %}Report a problem with a Munch Machine vending machine, suggest something to stock, or refer a location and earn $100 when we place a machine there.{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+{% block canonical_path %}/feedback{% endblock %}
+{% block og_url_path %}/feedback{% endblock %}
+{% block og_title %}Feedback &amp; Referrals | Munch Machine{% endblock %}
+{% block og_description %}Report an issue, suggest a product, or refer a location for a $100 finder's bonus.{% endblock %}
+{% block twitter_title %}Feedback &amp; Referrals | Munch Machine{% endblock %}
+{% block twitter_description %}Report an issue, suggest a product, or refer a location for a $100 finder's bonus.{% endblock %}
+{% block content %}
+
+<section class="page-hero fb-hero">
+  <div class="wrap">
+    <div class="eyebrow">Feedback · Referrals</div>
+    <h1>Tell us how <em>we're doing.</em></h1>
+    <p class="lead">Something wrong with the machine, an idea for what to stock, or a place that should have one? It takes under a minute, and a real person reads every message.</p>
+    {% if machine_id %}
+    <div class="fb-machine"><span class="material-symbols-outlined" aria-hidden="true">qr_code_2</span> Machine <strong>{{ machine_id }}</strong></div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="inquire-page-section fb-section">
+  <div class="wrap">
+    <div class="fb-container">
+
+      <div class="inquire-form-wrap fb-wrap">
+        <form id="feedback-form" data-endpoint="https://formspree.io/f/xbgdzwqa" data-feedback autocomplete="on">
+          <input type="hidden" name="machine_id" value="{{ machine_id }}"/>
+          <input type="hidden" name="_subject" value="Feedback"/>
+          <input type="text" name="_gotcha" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true"/>
+
+          <div class="fb-tabs" role="radiogroup" aria-label="What would you like to do?">
+            <label class="fb-tab">
+              <input type="radio" name="type" value="Issue" checked/>
+              <span class="material-symbols-outlined" aria-hidden="true">report</span>
+              <span class="fb-tab-text">Report an issue</span>
+            </label>
+            <label class="fb-tab">
+              <input type="radio" name="type" value="Suggestion"/>
+              <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
+              <span class="fb-tab-text">Suggest something</span>
+            </label>
+            <label class="fb-tab">
+              <input type="radio" name="type" value="Referral"/>
+              <span class="material-symbols-outlined" aria-hidden="true">storefront</span>
+              <span class="fb-tab-text">Refer a location <span class="fb-badge">$100</span></span>
+            </label>
+          </div>
+
+          <!-- Report an issue -->
+          <fieldset class="fb-panel" data-panel="Issue">
+            <legend class="fb-sr">Report an issue</legend>
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="fb-category">What happened?</label>
+                <select id="fb-category" name="issue_category" class="field" required>
+                  <option value="" selected disabled>Choose one</option>
+                  <option data-money>Didn't vend / lost money</option>
+                  <option data-money>Payment problem</option>
+                  <option>Out of stock</option>
+                  <option>Machine not working</option>
+                  <option>Cleanliness</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row two fb-money" hidden>
+              <div>
+                <label class="field-label" for="fb-amount">Amount</label>
+                <input id="fb-amount" name="amount" type="text" inputmode="decimal" class="field" placeholder="$2.50"/>
+              </div>
+              <div>
+                <label class="field-label" for="fb-when">Roughly when?</label>
+                <input id="fb-when" name="when" type="text" class="field" placeholder="Today, around 2pm"/>
+              </div>
+            </div>
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="fb-details">Details</label>
+                <textarea id="fb-details" name="details" rows="4" class="field" required placeholder="What did you try to buy, and what happened?"></textarea>
+              </div>
+            </div>
+            <p class="fb-note fb-money" hidden>Lost money? Leave your email and we'll make it right.</p>
+          </fieldset>
+
+          <!-- Suggest something -->
+          <fieldset class="fb-panel" data-panel="Suggestion" hidden disabled>
+            <legend class="fb-sr">Suggest something</legend>
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="fb-suggestion">What should we stock or change?</label>
+                <textarea id="fb-suggestion" name="suggestion" rows="5" class="field" required placeholder="A snack you'd buy every day, a drink we're missing, anything that would make this machine better…"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Refer a location -->
+          <fieldset class="fb-panel" data-panel="Referral" hidden disabled>
+            <legend class="fb-sr">Refer a location</legend>
+            <div class="fb-bonus">
+              <span class="fb-bonus-amt">$100</span>
+              <p>Know a business, gym, or building that should have a machine? If we place one there, you get <strong>$100 cash or Venmo</strong>.</p>
+            </div>
+            <div class="field-row two">
+              <div>
+                <label class="field-label" for="fb-business">Business name</label>
+                <input id="fb-business" name="business_name" type="text" class="field" required placeholder="Acme Fitness"/>
+              </div>
+              <div>
+                <label class="field-label" for="fb-location">Address or city</label>
+                <input id="fb-location" name="business_location" type="text" class="field" required placeholder="Fremont, CA"/>
+              </div>
+            </div>
+            <div class="field-row two">
+              <div>
+                <label class="field-label" for="fb-contact">Who should we talk to? <span class="fb-opt">Optional</span></label>
+                <input id="fb-contact" name="business_contact" type="text" class="field" placeholder="Name, role, or phone"/>
+              </div>
+              <div>
+                <label class="field-label" for="fb-relationship">How do you know them?</label>
+                <select id="fb-relationship" name="relationship" class="field">
+                  <option>I work there</option>
+                  <option>I visit often</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="fb-ref-notes">Anything else? <span class="fb-opt">Optional</span></label>
+                <textarea id="fb-ref-notes" name="referral_notes" rows="3" class="field" placeholder="Why they'd want one, the best time to stop by…"></textarea>
+              </div>
+            </div>
+            <ul class="fb-terms">
+              <li>Paid once a machine is installed at the location you refer.</li>
+              <li>If more than one person refers the same place, the first referral counts.</li>
+              <li>Doesn't apply to locations already talking with us.</li>
+              <li>Paid within 30 days of installation.</li>
+            </ul>
+          </fieldset>
+
+          <!-- About you -->
+          <div class="fb-about">
+            <p class="fb-about-title">About you</p>
+            <div class="field-row two">
+              <div>
+                <label class="field-label" for="fb-name">Name <span class="fb-opt">Optional</span></label>
+                <input id="fb-name" name="name" type="text" class="field" autocomplete="name"/>
+              </div>
+              <div>
+                <label class="field-label" for="fb-email">Email <span class="fb-opt" data-email-hint>Optional</span></label>
+                <input id="fb-email" name="email" type="email" class="field" autocomplete="email" placeholder="you@example.com"/>
+              </div>
+            </div>
+            <div class="field-row" data-show-for="Referral" hidden>
+              <div>
+                <label class="field-label" for="fb-venmo">Venmo for your bonus <span class="fb-opt">Optional</span></label>
+                <input id="fb-venmo" name="venmo" type="text" class="field" placeholder="@your-handle — or we'll contact you" disabled/>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn fb-submit">
+            <span data-submit-label>Send report</span>
+            <span class="material-symbols-outlined" style="font-size:16px" aria-hidden="true">arrow_forward</span>
+          </button>
+          <p class="fb-trust">We read every message and usually reply within 1 business day.</p>
+        </form>
+
+        <div class="fb-thanks" hidden tabindex="-1">
+          <span class="material-symbols-outlined fb-thanks-icon" aria-hidden="true">check_circle</span>
+          <h2 data-thanks-title>Thanks — we've got it.</h2>
+          <p data-thanks-body>A real person will read this shortly.</p>
+          <button type="button" class="fb-again">Send something else</button>
+        </div>
+      </div>
+
+      <p class="fb-alt">Prefer to talk? Call <a href="tel:+19255834228">(925) 583-4228</a> or email <a href="mailto:admin@munch-machine.com">admin@munch-machine.com</a>.</p>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
