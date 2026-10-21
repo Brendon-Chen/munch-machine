@@ -238,7 +238,9 @@ body {
   font-weight: 300;
   color: var(--sage);
 }
-.hero .reveal-line { overflow: hidden; display: block; }
+/* Mask extends 0.15em below the line so descenders (g, y) aren't clipped;
+   the negative margin keeps the layout exactly as before. */
+.hero .reveal-line { overflow: hidden; display: block; padding-bottom: 0.15em; margin-bottom: -0.15em; }
 .hero .reveal-line > span { display: inline-block; will-change: transform; }
 .hero .lead {
   font-size: 18px; line-height: 1.55;

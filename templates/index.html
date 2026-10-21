@@ -273,7 +273,9 @@ body {
   font-weight: 300;
   color: var(--sage);
 }
-.hero .reveal-line { overflow: hidden; display: block; }
+/* Mask extends 0.15em below the line so descenders (g, y) aren't clipped;
+   the negative margin keeps the layout exactly as before. */
+.hero .reveal-line { overflow: hidden; display: block; padding-bottom: 0.15em; margin-bottom: -0.15em; }
 .hero .reveal-line > span { display: inline-block; will-change: transform; }
 .hero .lead {
   font-size: 18px; line-height: 1.55;
@@ -1032,13 +1034,12 @@ html.lenis { height: auto; }
       <div>
         <div class="eyebrow fade-up" data-reveal>Premium vending service · Bay Area, California</div>
         <h1 style="margin-top:24px">
-          <span class="reveal-line"><span data-line>Free vending</span></span>
+          <span class="reveal-line"><span data-line><span class="accent">Free vending</span></span></span>
           <span class="reveal-line"><span data-line>for the Bay Area.</span></span>
-          <span class="reveal-line"><span data-line><span class="accent">Zero hassle.</span></span></span>
+          <span class="reveal-line"><span data-line>Zero hassle.</span></span>
         </h1>
         <p class="lead fade-up" data-reveal data-reveal-delay="0.2">
-          We place, curate, restock, and service premium vending in your offices, lobbies, and shared spaces.
-          You host — we handle everything.
+          We place, curate, restock, and service premium vending in your offices, lobbies, and shared spaces at no cost to you!
         </p>
         <div class="actions fade-up" data-reveal data-reveal-delay="0.3">
           <a href="#inquire" class="btn btn-dark cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:16px">arrow_outward</span></a>

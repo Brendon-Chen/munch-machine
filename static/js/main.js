@@ -41,7 +41,11 @@ function killIntro() {
   document.getElementById('intro')?.remove();
 }
 
+let booted = false;
 function bootSite() {
+  // Called from the intro timeline and two safety timers; only the first call runs.
+  if (booted) return;
+  booted = true;
   killIntro();
   // Measure process-pin first so section.style.height is final before anything scrolls.
   try { runProcessPin(); } catch (e) { console.error(e); }
@@ -65,8 +69,15 @@ function runIntro() {
   // on an article page). The user wants the content, not the animation.
   if (!gsap || !document.getElementById('intro') || window.location.hash) { bootSite(); return; }
 
-  // Safety: no matter what, page boots after 5s
-  const safety = setTimeout(() => bootSite(), 5000);
+  // Safety: no matter what, page boots after 7s (timeline itself runs ~4.7s)
+  const safety = setTimeout(() => bootSite(), 7000);
+
+  // The intro plays the hero's fade-ins itself (same motion as the scroll reveals,
+  // just started with the headline). Take them out of the scroll-reveal queue so
+  // bootSite doesn't hide and replay them.
+  const heroFades = [...document.querySelectorAll('.hero [data-reveal]')];
+  heroFades.forEach(el => el.removeAttribute('data-reveal'));
+  gsap.set(heroFades, { opacity: 0, y: 36 });
 
   const tl = gsap.timeline({
     onComplete: () => {
@@ -75,46 +86,46 @@ function runIntro() {
     }
   });
 
-  // Logo strokes draw in
+  // Logo strokes draw in — the showpiece, each part traced in turn
   tl.to('#intro .intro-logo svg path, #intro .intro-logo svg rect, #intro .intro-logo svg line', {
     strokeDashoffset: 0,
-    duration: 1.1,
-    ease: 'power2.inOut',
-    stagger: 0.04,
+    duration: 1.6,
+    ease: 'power1.inOut',
+    stagger: 0.1,
   })
   .to('#intro .intro-logo svg path, #intro .intro-logo svg rect, #intro .intro-logo svg line', {
     fillOpacity: 1,
     duration: 0.5,
     ease: 'power2.out',
-  }, '-=0.3')
+  }, '-=0.4')
 
-  // Letters reveal
+  // Letters reveal — starts midway through the drawing (~2.0s)
   .to('#intro .intro-text span', {
     y: '0%',
-    duration: 0.7,
+    duration: 0.5,
     ease: 'expo.out',
-    stagger: 0.025,
-  }, '-=0.4')
+    stagger: 0.015,
+  }, 1.0)
 
   // Meta fade
   .to('#intro .intro-meta', {
     opacity: 1,
-    duration: 0.4,
-  }, '-=0.2')
+    duration: 0.3,
+  }, '<0.2')
 
   // Hold
-  .to({}, { duration: 0.4 })
+  .to({}, { duration: 0.15 })
 
   // Letters retract
   .to('#intro .intro-text span', {
     y: '-110%',
-    duration: 0.5,
+    duration: 0.3,
     ease: 'power3.in',
-    stagger: 0.015,
+    stagger: 0.006,
   })
   .to(['#intro .intro-logo', '#intro .intro-meta'], {
     opacity: 0,
-    duration: 0.4,
+    duration: 0.3,
     ease: 'power2.in',
   }, '<')
 
@@ -144,22 +155,26 @@ function runIntro() {
     y: '100%',
     duration: 0.7,
     ease: 'expo.inOut',
-  }, '<');
+  }, '<')
 
-  // Hero choreography (text reveal masks) starts as curtains open
-  tl.from('.hero [data-line]', {
-    yPercent: 110,
+  // Curtains are open: boot now (unlocks scrolling, arms scroll reveals)
+  // rather than waiting for the hero choreography below to finish.
+  .call(() => { clearTimeout(safety); bootSite(); });
+
+  // Hero choreography starts as the curtains open
+  tl.addLabel('hero', '-=0.5')
+  .from('.hero [data-line]', {
+    yPercent: 130,  // clears the taller descender-safe mask
     duration: 1,
     ease: 'expo.out',
     stagger: 0.1,
-  }, '-=0.5')
-  .from('.hero .fade-up', {
-    y: 30,
-    opacity: 0,
-    duration: 0.9,
+  }, 'hero');
+  heroFades.forEach(el => tl.to(el, {
+    opacity: 1,
+    y: 0,
+    duration: 0.95,
     ease: 'expo.out',
-    stagger: 0.08,
-  }, '-=0.7');
+  }, 'hero+=' + parseFloat(el.dataset.revealDelay || '0')));
 }
 
 // ============================================================
@@ -575,10 +590,10 @@ if (document.readyState === 'complete') {
 // Final hard safety — if anything above throws synchronously, this still kills overlay
 setTimeout(() => {
   if (document.getElementById('intro')) {
-    console.warn('[main] safety bail — removing intro after 6s');
+    console.warn('[main] safety bail — removing intro after 9s');
     bootSite();
   }
-}, 6000);
+}, 9000);
 
 // ============================================================
 // NAV DROPDOWN — click/tap toggle, Escape + outside click close
