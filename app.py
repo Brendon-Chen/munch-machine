@@ -105,6 +105,12 @@ def page_feedback():
     return render_template("pages/feedback.html", machine_id=machine.upper(), **_ctx())
 
 
+@app.route("/thank-you")
+def page_thank_you():
+    """Where the placement inquiry forms land on success; Google Ads counts visits here as conversions."""
+    return render_template("pages/thank-you.html", **_ctx())
+
+
 # --- Batch 3: City pages ---
 
 @app.route("/hayward-vending-services")

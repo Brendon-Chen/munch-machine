@@ -283,8 +283,10 @@ function runProcessPin() {
 
 // ============================================================
 // Forms — every form[data-endpoint] posts to its Formspree URL.
-// Dispatches a cancelable "submitted" event on success; a page can
-// call preventDefault() on it to show its own confirmation.
+// On success: forms with data-success-url go to that page (the inquiry
+// forms → /thank-you, which Google Ads counts as a conversion). Others
+// dispatch a cancelable "submitted" event; a page can call
+// preventDefault() on it to show its own confirmation.
 // ============================================================
 document.querySelectorAll('form[data-endpoint]').forEach(form => {
   form.addEventListener('submit', async e => {
@@ -300,6 +302,7 @@ document.querySelectorAll('form[data-endpoint]').forEach(form => {
         body: JSON.stringify(Object.fromEntries(new FormData(form))),
       });
       if (!r.ok) throw new Error();
+      if (form.dataset.successUrl) { window.location.assign(form.dataset.successUrl); return; }
       const shown = form.dispatchEvent(new CustomEvent('submitted', { cancelable: true }));
       form.reset();
       if (shown) {

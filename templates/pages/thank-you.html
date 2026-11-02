@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Request Received | Munch Machine{% endblock %}
+{% block meta_description %}Your vending placement request has been received.{% endblock %}
+{% block robots %}noindex, nofollow{% endblock %}
+{% block canonical_path %}/thank-you{% endblock %}
+{% block og_url_path %}/thank-you{% endblock %}
+{% block content %}
+
+<section class="page-hero ty-hero">
+  <div class="wrap">
+    <div class="eyebrow">Request received</div>
+    <h1>Thank you. <em>We're on it.</em></h1>
+    <p class="lead">We'll be in touch within 24 hours.</p>
+    <nav class="ty-links" aria-label="Explore">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('page_how_vending_works') }}">How Office Vending Works</a>
+      <a href="{{ url_for('tech_smart_vending') }}">How Smart Vending Machines Work</a>
+      <a href="{{ url_for('page_healthy_vending') }}">Healthy Vending Options</a>
+      <a href="{{ url_for('blog') }}">All Resources</a>
+    </nav>
+  </div>
+</section>
+
+{% endblock %}
