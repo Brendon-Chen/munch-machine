@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+{% include 'partials/google_tag.html' %}
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}"/>
@@ -857,6 +858,20 @@ html.lenis { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
 </style>
+
+{# Tells Google the preferred site name for search results. Must stay on the homepage,
+   and "url" must match the canonical homepage URL exactly. #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ site_url }}/#website",
+  "name": "Munch Machine",
+  "alternateName": ["Munch Machine Vending", "MunchMachine", "Munch Machine LLC"],
+  "url": "{{ site_url }}/",
+  "publisher": { "@id": "{{ site_url }}/#business" }
+}
+</script>
 
 <script type="application/ld+json">
 {
