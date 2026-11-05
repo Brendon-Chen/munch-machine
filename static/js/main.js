@@ -618,3 +618,56 @@ document.querySelectorAll('[data-nav-dd]').forEach(dd => {
   });
   dd.addEventListener('focusout', e => { if (!dd.contains(e.relatedTarget)) setOpen(false); });
 });
+
+// ============================================================
+// MOBILE NAV — menu button + full-screen panel below 900px
+// (markup and styles: templates/partials/mobile_nav.html)
+// ============================================================
+(() => {
+  const header = document.getElementById('site-header');
+  const burger = document.querySelector('[data-mnav-toggle]');
+  const panel = document.getElementById('mobile-nav');
+  if (!header || !burger || !panel) return;
+
+  let open = false;
+  // Everything behind the panel goes inert so focus and screen readers stay in the menu.
+  const behind = () => [...document.body.children]
+    .filter(el => el !== header && el !== panel && el.tagName !== 'SCRIPT');
+
+  const setOpen = (next, { restoreFocus = true } = {}) => {
+    if (next === open) return;
+    open = next;
+    if (open) panel.style.setProperty('--mnav-top', header.offsetHeight + 'px');
+    header.classList.toggle('menu-open', open);
+    panel.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.classList.toggle('mnav-open', open);
+    behind().forEach(el => { el.inert = open; });
+    if (lenis && booted) open ? lenis.stop() : lenis.start();
+    if (open) panel.querySelector('a, button')?.focus({ preventScroll: true });
+    else if (restoreFocus) burger.focus({ preventScroll: true });
+  };
+
+  burger.addEventListener('click', () => setOpen(!open));
+  // Close before the browser follows the link, so same-page anchors can scroll.
+  panel.addEventListener('click', e => {
+    if (e.target.closest('a')) setOpen(false, { restoreFocus: false });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && open) setOpen(false);
+  });
+  window.matchMedia('(max-width: 900px)').addEventListener('change', e => {
+    if (!e.matches) setOpen(false, { restoreFocus: false });
+  });
+
+  const areasBtn = panel.querySelector('[data-mnav-areas]');
+  const areas = areasBtn && document.getElementById(areasBtn.getAttribute('aria-controls'));
+  if (areasBtn && areas) {
+    areasBtn.addEventListener('click', () => {
+      const expand = areasBtn.getAttribute('aria-expanded') !== 'true';
+      areasBtn.setAttribute('aria-expanded', String(expand));
+      areas.hidden = !expand;
+    });
+  }
+})();

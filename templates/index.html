@@ -858,6 +858,8 @@ html.lenis { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
 </style>
+{% import 'partials/mobile_nav.html' as mnav with context %}
+{{ mnav.styles() }}
 
 {# Tells Google the preferred site name for search results. Must stay on the homepage,
    and "url" must match the canonical homepage URL exactly. #}
@@ -1037,8 +1039,10 @@ html.lenis { height: auto; }
       <a href="{{ url_for('blog') }}" class="cursor-target">Resources</a>
     </nav>
     <a href="#inquire" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
+    {{ mnav.toggle() }}
   </div>
 </header>
+{{ mnav.panel() }}
 
 <main id="top">
 
@@ -1329,7 +1333,7 @@ html.lenis { height: auto; }
       {% endfor %}
     </div>
     <div style="margin-top:64px;text-align:right">
-      <a href="{{ url_for('blog') }}" style="font-size:13px;color:var(--ink-light);text-decoration:none;display:inline-flex;align-items:center;gap:6px">More in our guides <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
+      <a href="{{ url_for('blog') }}" style="font-size:13px;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:6px">More in our guides <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
     </div>
   </div>
 </section>

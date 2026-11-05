@@ -144,6 +144,14 @@ body {
 }
 .site-header .cta:hover { transform: translateY(-1px); opacity: 0.88; }
 
+/* Light-on-dark header: inner pages open on a dark hero. Reverts once .scrolled adds the cream bar. */
+.site-header.on-dark:not(.scrolled):not(.menu-open) .logo,
+.site-header.on-dark:not(.scrolled):not(.menu-open) .nav > a,
+.site-header.on-dark:not(.scrolled):not(.menu-open) .nav-dd-toggle { color: var(--cream); }
+.site-header.on-dark:not(.scrolled):not(.menu-open) .nav > a:hover,
+.site-header.on-dark:not(.scrolled):not(.menu-open) .nav-dd-toggle:hover { color: var(--sage-light); }
+.site-header.on-dark:not(.scrolled):not(.menu-open) .cta { background: var(--cream); color: var(--ink); }
+
 /* Service area dropdown */
 .site-header .nav { align-items: center; }
 .nav-dd { position: relative; }
@@ -151,6 +159,7 @@ body {
   display: inline-flex; align-items: center; gap: 2px;
   background: none; border: 0; padding: 4px 0; cursor: pointer;
   font-family: inherit; font-size: 13px; color: var(--ink-soft);
+  transition: color 0.5s ease;
 }
 .nav-dd-toggle .material-symbols-outlined {
   font-size: 18px; transition: transform 0.25s ease;

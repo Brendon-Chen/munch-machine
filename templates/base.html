@@ -34,6 +34,8 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;300;400&display=swap"/></noscript>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}?v={{ v }}"/>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}?v={{ v }}"/>
+{% import 'partials/mobile_nav.html' as mnav with context %}
+{{ mnav.styles() }}
 </head>
 <body>
 
@@ -52,7 +54,7 @@
   <div class="target-cursor-corner corner-bl"></div>
 </div>
 
-<header class="site-header" id="site-header">
+<header class="site-header {% block header_theme %}on-dark{% endblock %}" id="site-header">
   <div class="wrap row">
     <a href="{{ url_for('index') }}" class="logo">
       <svg class="logo-mark" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5">
@@ -71,8 +73,10 @@
       <a href="{{ url_for('blog') }}" class="cursor-target">Resources</a>
     </nav>
     <a href="{{ url_for('page_inquire') }}" class="cta cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span></a>
+    {{ mnav.toggle() }}
   </div>
 </header>
+{{ mnav.panel() }}
 
 <main>
 {% block content %}{% endblock %}

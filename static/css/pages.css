@@ -17,7 +17,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--muted);
   flex-shrink: 0;
   margin-right: 4px;
 }
@@ -44,7 +44,7 @@
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-light);
+  color: var(--muted);
   margin: 0 0 16px;
 }
 .cite-list ol {
@@ -53,7 +53,7 @@
 }
 .cite-list li {
   font-size: 12px;
-  color: var(--ink-light);
+  color: var(--muted);
   line-height: 1.7;
   margin-bottom: 10px;
 }
@@ -107,7 +107,7 @@ sup.ref {
   flex-shrink: 0;
 }
 .inquire-point strong { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
-.inquire-point p { font-size: 13px; color: var(--ink-light); line-height: 1.5; margin: 0; }
+.inquire-point p { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 0; }
 .inquire-qualify {
   margin-top: 8px;
   padding: 20px 24px;
@@ -116,7 +116,7 @@ sup.ref {
   border: 1px solid rgba(0,0,0,0.06);
 }
 .inquire-qualify ul { margin: 0; padding: 0 0 0 16px; }
-.inquire-qualify ul li { font-size: 13px; color: var(--ink-light); line-height: 1.7; }
+.inquire-qualify ul li { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
 .inquire-form-wrap {
   background: var(--ink);
@@ -666,7 +666,7 @@ textarea.field { resize: vertical; min-height: 80px; }
   display: inline-block;
   margin-top: 10px;
   font-size: 13px;
-  color: var(--ink-light);
+  color: var(--muted);
   background: rgba(0,0,0,0.04);
   border-radius: 6px;
   padding: 6px 12px;
@@ -709,7 +709,7 @@ textarea.field { resize: vertical; min-height: 80px; }
 }
 .score-card p {
   font-size: 13px;
-  color: var(--ink-light);
+  color: var(--muted);
   line-height: 1.65;
   margin: 0;
 }
