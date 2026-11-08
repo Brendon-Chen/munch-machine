@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icons/apple-touch-icon.png') }}"/>
 
 <title>Vending Machines in the Bay Area | Free Placement | Munch Machine</title>
-<meta name="description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
+<meta name="description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. A Fremont vending company that places, stocks and services every machine."/>
 <meta name="author" content="Munch Machine"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="{{ site_url }}/"/>
@@ -20,7 +20,7 @@
 <meta property="og:url" content="{{ site_url }}/"/>
 <meta property="og:site_name" content="Munch Machine"/>
 <meta property="og:title" content="Vending Machines in the Bay Area | Free Placement | Munch Machine"/>
-<meta property="og:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
+<meta property="og:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. A Fremont vending company that places, stocks and services every machine."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:image" content="{{ site_url }}/static/img/og-image.jpg"/>
 <meta property="og:image:width" content="1200"/>
@@ -29,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ site_url }}/static/img/og-image.jpg"/>
 <meta name="twitter:title" content="Vending Machines in the Bay Area | Free Placement | Munch Machine"/>
-<meta name="twitter:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
+<meta name="twitter:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. A Fremont vending company that places, stocks and services every machine."/>
 
 <meta name="geo.region" content="US-CA"/>
 <meta name="geo.placename" content="Fremont, California"/>
@@ -454,6 +454,15 @@ body {
 }
 .tile-body p { font-size: 14px; color: var(--muted); line-height: 1.55; margin: 0; }
 .tile.large .tile-title { font-size: 42px; }
+.tile-media {
+  flex: 1 1 auto;
+  min-height: 220px;
+  margin: 8px 0 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--cream-warm);
+}
+.tile-media img { width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; display: block; }
 
 .hw-grid {
   display: grid;
@@ -1096,6 +1105,9 @@ html.lenis { height: auto; }
           <div class="tile-icon"><span class="material-symbols-outlined">visibility</span></div>
           <h3 class="tile-title">Effortless shopping</h3>
         </div>
+        <figure class="tile-media">
+          <img src="{{ url_for('static', filename='img/locations/apartment.webp') }}" alt="Residents browsing a Munch Machine smart vending machine in an apartment lobby" loading="lazy" width="1600" height="900">
+        </figure>
         <div class="tile-body"><p>Your people browse freely and grab what they want. No kiosk, no scanning, no waiting in line.</p></div>
       </div>
 
