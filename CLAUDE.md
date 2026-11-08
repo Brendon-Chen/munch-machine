@@ -49,7 +49,7 @@ Live: https://munch-machine.com · Contact: (925) 583-4228 · admin@munch-machin
 - **Titles and slugs are plain and search-friendly**: name the query people type ("How to Choose a Service Vendor"), not a concept ("The Vendor Reliability Checklist"). Format: `Page Title | Munch Machine`.
 - **No claims that overstate scale**: no "route density", "dedicated team", "clients like…", "trusted by", fleet or client counts, or "most/highest of any market we serve".
 - **No headcount or space minimums** anywhere. Qualification is "consistent daily traffic" and "we assess each location individually".
-- Only use claims the site can back up: $0 to host, reply within 24 hours, setup in about 2 weeks, cashless, AI-powered machines with live inventory, built-in advertising panels. Don't add "same-day response" or "no contracts" unless the owner confirms them.
+- Only use claims the site can back up: $0 to host, reply within 24 hours, setup in about 2 weeks, cashless, AI-powered machines with live inventory, built-in advertising panels. "No contract required" is confirmed by the owner (use that wording, not "no contracts" or "no long-term contracts"). Don't add "same-day response" unless the owner confirms it.
 - Voice: premium, confident, specific, human. No fluff or clichés, short paragraphs, scannable.
 - Service areas (nav dropdown): Fremont, San Jose, Palo Alto, Menlo Park, Union City, Newark, Milpitas. City pages also exist for Hayward, Sunnyvale, Mountain View, Oakland, Pleasanton, Silicon Valley and Bay Area.
 
