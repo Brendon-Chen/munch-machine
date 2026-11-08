@@ -1,0 +1,7 @@
+assets/
+Reference/
+venv/
+scripts/
+.githooks/
+launch.bat
+*.md

@@ -10,6 +10,9 @@ Live: https://munch-machine.com · Contact: (925) 583-4228 · admin@munch-machin
 - Run locally: `launch.bat` (port 5050), or `venv\Scripts\python.exe app.py`.
 - JS: `static/js/main.js` plus vendored GSAP, ScrollTrigger and Lenis in `static/js/vendor/`.
 - CSS: `static/css/main.css` (theme tokens, header, homepage pieces) and `static/css/pages.css` (all inner-page components).
+- Images and media: `static/img/icons/` (favicon set; `/favicon.ico` is served by a route), `static/img/og-image.jpg` (share image), `static/img/locations/` (location renders, lowercase names), `static/img/hero-*.webp` (hero posters), `static/video/hero.mp4`. Full-size 4K render sources live in `assets/` (not deployed; see `.vercelignore`).
+- `app.py` injects `v` (CSS/JS cache-buster, a hash of those files), `material_icons` (icon names scanned from templates, so Google Fonts serves only those glyphs) and `year` into every template. New Material icons are picked up automatically.
+- Logo: `templates/partials/logo_mark.html` (header and footer, both layouts). The favicon (`static/img/icons/favicon.svg`) is the same drawing with more padding. The homepage intro keeps its own older logo SVG.
 - `SITE_URL` env var sets canonical and schema URLs; otherwise they come from the request host. Live canonical is `https://munch-machine.com/`.
 
 ## Repo map

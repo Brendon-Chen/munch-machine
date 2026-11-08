@@ -1,18 +1,47 @@
 """Munch Machine landing page backend."""
 from __future__ import annotations
 
+import datetime
+import hashlib
 import json
 import os
 import re
 from collections import defaultdict
 from pathlib import Path
 
-from flask import Flask, Response, render_template, request
+from flask import Flask, Response, redirect, render_template, request
 
 ROOT = Path(__file__).parent
 app = Flask(__name__, template_folder=str(ROOT / "templates"), static_folder=str(ROOT / "static"))
 
 SITE_URL = os.environ.get("SITE_URL", "").rstrip("/")
+
+
+def _asset_version() -> str:
+    """Cache-busting token for CSS/JS: changes only when those files change."""
+    h = hashlib.md5()
+    for rel in ("css/main.css", "css/pages.css", "js/main.js"):
+        h.update((ROOT / "static" / rel).read_bytes())
+    return h.hexdigest()[:10]
+
+
+def _material_icons() -> str:
+    """Every Material Symbols icon name used in the templates, sorted and
+    comma-joined, so Google Fonts serves only those glyphs (about 20 KB instead
+    of about 750 KB). New icons in templates are picked up automatically."""
+    names = set()
+    for path in (ROOT / "templates").rglob("*.html"):
+        names.update(re.findall(r"material-symbols-outlined[^>]*>\s*([a-z0-9_]+)\s*<", path.read_text(encoding="utf-8")))
+    return ",".join(sorted(names))
+
+
+ASSET_V = _asset_version()
+MATERIAL_ICONS = _material_icons()
+
+
+@app.context_processor
+def _globals():
+    return {"v": ASSET_V, "material_icons": MATERIAL_ICONS, "year": datetime.date.today().year}
 
 
 def _base_url() -> str:
@@ -24,7 +53,6 @@ def _www_to_apex():
     """Permanent (301) redirect www.munch-machine.com to the apex domain."""
     host = request.host.split(":")[0]
     if host.startswith("www."):
-        from flask import redirect
         return redirect(request.url.replace("://www.", "://", 1), code=301)
 
 
@@ -407,7 +435,7 @@ def sitemap_xml():
 
 @app.route("/favicon.ico")
 def favicon():
-    return app.send_static_file("favicon.ico")
+    return app.send_static_file("img/icons/favicon.ico")
 
 
 @app.route("/googlea56dbcb37b555c0c.html")
