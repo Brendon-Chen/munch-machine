@@ -35,13 +35,23 @@ def _material_icons() -> str:
     return ",".join(sorted(names))
 
 
+# Google Business Profile (Maps listing and the "write a review" link).
+GOOGLE_MAPS_URL = "https://maps.app.goo.gl/GbggM3A5iqanNENe7"
+GOOGLE_REVIEW_URL = "https://g.page/r/CVwZAYUkzQH3EBM/review"
+
 ASSET_V = _asset_version()
 MATERIAL_ICONS = _material_icons()
 
 
 @app.context_processor
 def _globals():
-    return {"v": ASSET_V, "material_icons": MATERIAL_ICONS, "year": datetime.date.today().year}
+    return {
+        "v": ASSET_V,
+        "material_icons": MATERIAL_ICONS,
+        "year": datetime.date.today().year,
+        "google_maps_url": GOOGLE_MAPS_URL,
+        "google_review_url": GOOGLE_REVIEW_URL,
+    }
 
 
 def _base_url() -> str:

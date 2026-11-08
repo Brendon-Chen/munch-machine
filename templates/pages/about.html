@@ -28,6 +28,8 @@
     "image": "{{ site_url }}/static/img/og-image.jpg",
     "telephone": "+19255834228",
     "email": "admin@munch-machine.com",
+    "hasMap": "{{ google_maps_url }}",
+    "sameAs": ["{{ google_maps_url }}"],
     "description": "Vending machine company based in Fremont, California. Free-to-host, cashless snack and drink machines and micro markets for Bay Area businesses.",
     "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA", "postalCode": "94538", "addressCountry": "US" }
   }
@@ -88,7 +90,8 @@
       <h2>Contact</h2>
       <ul>
         <li><strong>Business:</strong> Munch Machine LLC (Munch Machine Vending)</li>
-        <li><strong>Location:</strong> Fremont, California</li>
+        <li><strong>Location:</strong> <a href="{{ google_maps_url }}" target="_blank" rel="noopener">Fremont, California</a></li>
+        <li><strong>Reviews:</strong> <a href="{{ google_review_url }}" target="_blank" rel="noopener">Leave us a Google review</a></li>
         <li><strong>Phone:</strong> <a href="tel:+19255834228">(925) 583-4228</a></li>
         <li><strong>Email:</strong> <a href="mailto:admin@munch-machine.com">admin@munch-machine.com</a></li>
       </ul>

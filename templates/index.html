@@ -866,6 +866,8 @@ html.lenis { height: auto; }
   "image": "{{ site_url }}/static/img/og-image.jpg",
   "telephone": "+19255834228",
   "email": "admin@munch-machine.com",
+  "hasMap": "{{ google_maps_url }}",
+  "sameAs": ["{{ google_maps_url }}"],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Fremont",
@@ -1392,7 +1394,8 @@ html.lenis { height: auto; }
           <ul>
             <li><a href="tel:+19255834228">(925) 583-4228</a></li>
             <li><a href="mailto:admin@munch-machine.com">admin@munch-machine.com</a></li>
-            <li>Fremont, California</li>
+            <li><a href="{{ google_maps_url }}" target="_blank" rel="noopener">Fremont, California</a></li>
+            <li><a href="{{ google_review_url }}" target="_blank" rel="noopener">Review us on Google</a></li>
           </ul>
         </address>
       </div>
