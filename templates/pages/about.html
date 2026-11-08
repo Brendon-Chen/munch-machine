@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}About Munch Machine Vending | Fremont Vending Company{% endblock %}
+{% block meta_description %}Munch Machine (Munch Machine Vending) is a Fremont, California vending company placing free-to-host vending machines in Bay Area businesses.{% endblock %}
+{% block canonical_path %}/about{% endblock %}
+{% block og_url_path %}/about{% endblock %}
+{% block og_title %}About Munch Machine Vending | Fremont, CA{% endblock %}
+{% block og_description %}A Fremont, California vending company. Free-to-host, cashless vending machines for Bay Area businesses, stocked and serviced by us.{% endblock %}
+{% block twitter_title %}About Munch Machine Vending | Fremont, CA{% endblock %}
+{% block twitter_description %}A Fremont, California vending company. Free-to-host, cashless vending machines for Bay Area businesses.{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "{{ site_url }}/about#page",
+  "url": "{{ site_url }}/about",
+  "name": "About Munch Machine Vending",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "{{ site_url }}/#business",
+    "name": "Munch Machine",
+    "alternateName": ["Munch Machine Vending", "Munch Machine LLC"],
+    "legalName": "Munch Machine LLC",
+    "url": "{{ site_url }}/",
+    "logo": "{{ site_url }}/static/img/icons/favicon-512.png",
+    "image": "{{ site_url }}/static/img/og-image.jpg",
+    "telephone": "+19255834228",
+    "email": "admin@munch-machine.com",
+    "description": "Vending machine company based in Fremont, California. Free-to-host, cashless snack and drink machines and micro markets for Bay Area businesses.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA", "postalCode": "94538", "addressCountry": "US" }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site_url }}/" },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": "{{ site_url }}/about" }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumb">
+      <a href="{{ url_for('index') }}">Home</a>
+      <span class="sep">›</span>
+      <span>About</span>
+    </nav>
+    <div class="eyebrow">About us · Fremont, California</div>
+    <h1>A Fremont vending company, <em>run locally.</em></h1>
+    <p class="lead">Munch Machine is a vending machine operator based in Fremont, California. We place, stock and service free-to-host vending machines for businesses across the Bay Area.</p>
+    <div class="page-hero-meta">
+      <div class="meta-item">Based in<strong>Fremont, CA</strong></div>
+      <div class="meta-item">Cost to host<strong>$0</strong></div>
+      <div class="meta-item">Reply time<strong>Within 24 hours</strong></div>
+      <div class="meta-item">Setup time<strong>~2 weeks</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>What we do</h2>
+      <p>We put modern vending machines in offices, warehouses, gyms, apartment buildings and coworking spaces, then take care of everything after that: stocking, restocking, cleaning, repairs and payments. The host pays nothing. We earn from product sales, so a machine only works for us if it works for the people using it.</p>
+      <p>Every machine is cashless and AI-powered, with live inventory so we restock before items run out. Most machines also have a built-in advertising panel. For larger sites we also run <a href="{{ url_for('page_micro_markets') }}">micro markets</a>.</p>
+
+      <h2>Where we work</h2>
+      <p>We're based in Fremont and work across the <a href="{{ url_for('page_bay_area_vending') }}">Bay Area</a>, including
+        <a href="{{ url_for('page_fremont_vending') }}">Fremont</a>,
+        <a href="{{ url_for('page_newark_vending') }}">Newark</a>,
+        <a href="{{ url_for('page_union_city_vending') }}">Union City</a>,
+        <a href="{{ url_for('page_milpitas_vending') }}">Milpitas</a>,
+        <a href="{{ url_for('page_san_jose_vending') }}">San Jose</a>,
+        <a href="{{ url_for('page_palo_alto_vending') }}">Palo Alto</a> and
+        <a href="{{ url_for('page_menlo_park_vending') }}">Menlo Park</a>.
+        We assess each location individually. What matters is consistent daily traffic, not the size of your team or space.</p>
+
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Business:</strong> Munch Machine LLC (Munch Machine Vending)</li>
+        <li><strong>Location:</strong> Fremont, California</li>
+        <li><strong>Phone:</strong> <a href="tel:+19255834228">(925) 583-4228</a></li>
+        <li><strong>Email:</strong> <a href="mailto:admin@munch-machine.com">admin@munch-machine.com</a></li>
+      </ul>
+
+      <div class="related-links">
+        <span class="related-label">See also</span>
+        <a href="{{ url_for('page_bay_area_vending') }}">Bay Area Vending</a>
+        <a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a>
+        <a href="{{ url_for('page_vending_cost') }}">How Much Vending Costs</a>
+      </div>
+      <div class="page-cta">
+        <div class="cta-text">
+          <h2>Have a space that could use <em>a machine?</em></h2>
+          <p>Tell us about it. We reply within 24 hours.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="{{ url_for('page_inquire') }}" class="btn btn-dark" style="background:var(--cream);color:var(--ink);font-size:14px">
+            Request a placement <span class="material-symbols-outlined" style="font-size:14px">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}How to Pick a Healthy Snack | Munch Machine{% endblock %}
 {% block meta_description %}A practical guide to choosing healthy snacks — what to look for on nutrition labels, what to avoid, and the best options available in a modern vending machine.{% endblock %}
 {% block canonical_path %}/tips/how-to-pick-a-healthy-snack{% endblock %}

@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}The Real Cost of Employee Turnover — And the Cheap Fixes Nobody Tries First | Munch Machine{% endblock %}
 {% block meta_description %}Replacing an employee costs far more than most companies budget for. What the research says turnover actually costs in the Bay Area — and why the cheapest retention levers are often the ones nobody tries first.{% endblock %}
 {% block canonical_path %}/cost-of-employee-turnover{% endblock %}

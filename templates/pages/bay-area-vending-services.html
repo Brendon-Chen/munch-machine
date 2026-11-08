@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}Bay Area Vending Services | Munch Machine{% endblock %}
-{% block meta_description %}Full-service vending for Bay Area businesses — offices, warehouses, tech campuses & more. Zero cost to host. Munch Machine serves Fremont, San Jose, Oakland, Silicon Valley & beyond.{% endblock %}
+{% block title %}Bay Area Vending Machines and Vending Services | Munch Machine{% endblock %}
+{% block meta_description %}Vending machines for Bay Area offices, warehouses and campuses. $0 to host. Based in Fremont, serving San Jose, Silicon Valley and the East Bay.{% endblock %}
 {% block canonical_path %}/bay-area-vending-services{% endblock %}
 {% block og_url_path %}/bay-area-vending-services{% endblock %}
-{% block og_title %}Bay Area Vending Services | Munch Machine{% endblock %}
+{% block og_title %}Bay Area Vending Machines and Vending Services | Munch Machine{% endblock %}
 {% block og_description %}Managed vending for offices, warehouses, and campuses across the Bay Area. Zero cost, no contracts, weekly restocking. Serving Fremont, San Jose, Oakland, Silicon Valley & more.{% endblock %}
-{% block twitter_title %}Bay Area Vending Services | Munch Machine{% endblock %}
+{% block twitter_title %}Bay Area Vending Machines and Vending Services | Munch Machine{% endblock %}
 {% block twitter_description %}Managed vending across the Bay Area. Zero cost, no contracts, weekly restocking. Fremont, San Jose, Oakland, Silicon Valley & beyond.{% endblock %}
 
 {% block schema %}
@@ -17,9 +17,12 @@
   "name": "Bay Area Vending Services",
   "provider": {
     "@type": "LocalBusiness",
+    "@id": "{{ site_url }}/#business",
     "name": "Munch Machine",
+    "alternateName": "Munch Machine Vending",
+    "url": "{{ site_url }}/",
     "telephone": "+19255834228",
-    "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA" }
+    "address": { "@type": "PostalAddress", "addressLocality": "Fremont", "addressRegion": "CA", "postalCode": "94538", "addressCountry": "US" }
   },
   "areaServed": { "@type": "AdministrativeArea", "name": "San Francisco Bay Area, CA" },
   "serviceType": "Managed Vending Machine Service",
@@ -53,16 +56,14 @@
     <nav class="breadcrumb">
       <a href="{{ url_for('index') }}">Home</a>
       <span class="sep">›</span>
-      <a href="{{ url_for('blog') }}">Resources</a>
-      <span class="sep">›</span>
       <span>Bay Area</span>
     </nav>
     <div class="eyebrow">Service Area · Bay Area, California</div>
-    <h1>Vending services across the <em>entire Bay Area.</em></h1>
+    <h1>Vending machines across the <em>Bay Area.</em></h1>
     <p class="lead">From the East Bay industrial corridor to Silicon Valley tech campuses, we provide fully managed vending for Bay Area businesses of every type and size — at zero cost to the host.</p>
     <div class="page-hero-meta">
       <div class="meta-item">Service territory<strong>Bay Area-wide</strong></div>
-      <div class="meta-item">Response time<strong>Same / next day</strong></div>
+      <div class="meta-item">Reply time<strong>Within 24 hours</strong></div>
       <div class="meta-item">Cost to host<strong>$0</strong></div>
       <div class="meta-item">Contract<strong>None required</strong></div>
     </div>
