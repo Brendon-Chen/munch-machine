@@ -151,7 +151,6 @@ body {
 .site-header.on-dark:not(.scrolled):not(.menu-open) .nav > a:hover,
 .site-header.on-dark:not(.scrolled):not(.menu-open) .nav-dd-toggle:hover { color: var(--sage-light); }
 .site-header.on-dark:not(.scrolled):not(.menu-open) .cta { background: var(--cream); color: var(--ink); }
-.site-header.on-dark:not(.scrolled):not(.menu-open) .logo-mark { border-radius: 22%; box-shadow: 0 0 0 1px rgba(234, 230, 224, 0.28); }
 
 /* Service area dropdown */
 .site-header .nav { align-items: center; }
