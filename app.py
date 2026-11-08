@@ -391,6 +391,11 @@ def sitemap_xml():
     )
 
 
+@app.route("/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
+
 @app.route("/googlea56dbcb37b555c0c.html")
 def google_verify():
     return "google-site-verification: googlea56dbcb37b555c0c.html"

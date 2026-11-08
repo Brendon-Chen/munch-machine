@@ -5,7 +5,11 @@
 {% include 'partials/google_tag.html' %}
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/favicon.ico" sizes="48x48"/>
 <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}"/>
+<link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon-96.png') }}"/>
+<link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon-192.png') }}"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}"/>
 
 <title>Munch Machine — Managed Vending Service | Bay Area, CA</title>
 <meta name="description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
@@ -883,6 +887,8 @@ html.lenis { height: auto; }
   "name": "Munch Machine",
   "description": "Premium managed vending machine service for Bay Area businesses. Zero-cost placement with full curation, restocking, and maintenance included.",
   "url": "{{ site_url }}",
+  "logo": "{{ site_url }}/static/favicon-512.png",
+  "image": "{{ site_url }}/static/favicon-512.png",
   "telephone": "+19255834228",
   "email": "admin@munch-machine.com",
   "address": {

@@ -5,7 +5,11 @@
 {% include 'partials/google_tag.html' %}
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/favicon.ico" sizes="48x48"/>
 <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}"/>
+<link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon-96.png') }}"/>
+<link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon-192.png') }}"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}"/>
 
 <title>{% block title %}Munch Machine — Bay Area Vending Services{% endblock %}</title>
 <meta name="description" content="{% block meta_description %}Fully managed vending machines for Bay Area businesses. Zero cost, no contracts. Munch Machine places, stocks, and services every machine.{% endblock %}"/>
