@@ -5,7 +5,11 @@
 {% include 'partials/google_tag.html' %}
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/favicon.ico" sizes="48x48"/>
 <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}"/>
+<link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='favicon-96.png') }}"/>
+<link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon-192.png') }}"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}"/>
 
 <title>Munch Machine — Managed Vending Service | Bay Area, CA</title>
 <meta name="description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
@@ -883,6 +887,8 @@ html.lenis { height: auto; }
   "name": "Munch Machine",
   "description": "Premium managed vending machine service for Bay Area businesses. Zero-cost placement with full curation, restocking, and maintenance included.",
   "url": "{{ site_url }}",
+  "logo": "{{ site_url }}/static/favicon-512.png",
+  "image": "{{ site_url }}/static/favicon-512.png",
   "telephone": "+19255834228",
   "email": "admin@munch-machine.com",
   "address": {
@@ -1022,13 +1028,7 @@ html.lenis { height: auto; }
 <header class="site-header" id="site-header">
   <div class="wrap row">
     <a href="#top" class="logo">
-      <svg class="logo-mark" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5">
-        <rect x="4" y="4" width="56" height="88" rx="6" fill="#EAE6E0"/>
-        <rect x="10" y="10" width="44" height="50" rx="3" fill="#E2DDD4"/>
-        <line x1="10" y1="27" x2="54" y2="27"/>
-        <line x1="10" y1="44" x2="54" y2="44"/>
-        <rect x="14" y="65" width="36" height="14" rx="2" fill="#E2DDD4"/>
-      </svg>
+      {% with style=None %}{% include 'partials/logo_mark.html' %}{% endwith %}
       <span class="logo-text">Munch Machine</span>
     </a>
     <nav class="nav">
@@ -1397,13 +1397,7 @@ html.lenis { height: auto; }
     <div class="footer-grid">
       <div>
         <a href="#top" class="logo" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)">
-          <svg class="logo-mark" viewBox="0 0 64 96" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1A1A1A" stroke-width="1.5" style="width:36px;height:54px">
-            <rect x="4" y="4" width="56" height="88" rx="6" fill="#EAE6E0"/>
-            <rect x="10" y="10" width="44" height="50" rx="3" fill="#E2DDD4"/>
-            <line x1="10" y1="27" x2="54" y2="27"/>
-            <line x1="10" y1="44" x2="54" y2="44"/>
-            <rect x="14" y="65" width="36" height="14" rx="2" fill="#E2DDD4"/>
-          </svg>
+          {% with style='width:36px;height:36px' %}{% include 'partials/logo_mark.html' %}{% endwith %}
           <span class="logo-text">Munch Machine</span>
         </a>
         <p style="margin-top:24px;color:var(--muted);font-size:14px;max-width:340px;line-height:1.6">Premium vending, fully managed. We place, stock, and service every machine — so you never have to.</p>
