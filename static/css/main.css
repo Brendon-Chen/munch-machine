@@ -534,48 +534,6 @@ body {
 }
 
 /* ========================== PARTNERS MARQUEE ========================== */
-.partners-section { padding: 100px 0; background: var(--cream); overflow: hidden; }
-.partners-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-}
-.partners-track {
-  display: flex;
-  gap: 120px;
-  width: max-content;
-  animation: partners-scroll 20s linear infinite;
-}
-.partner-logo {
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  background: var(--cream-warm);
-  border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  font-family: 'Fraunces', serif;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  user-select: none;
-}
-.partner-placeholder {
-  background: transparent;
-  border: 1.5px dashed var(--line);
-}
-.placeholder-inner {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-soft);
-  text-align: center;
-  line-height: 1.4;
-}
-@keyframes partners-scroll {
-  to { transform: translateX(-720px); }
-}
 
 /* ========================== FAQ ========================== */
 .faq { max-width: 880px; margin: 0 auto; }

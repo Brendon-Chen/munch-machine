@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}How Many Snacks Should You Eat in a Day? | Munch Machine{% endblock %}
 {% block meta_description %}How many snacks per day is healthy for an office worker? What the research says about snacking frequency, timing, and total calorie balance.{% endblock %}
 {% block canonical_path %}/tips/how-many-snacks-a-day{% endblock %}

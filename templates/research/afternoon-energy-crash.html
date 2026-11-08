@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}Why You Get Tired at 3pm: The Afternoon Energy Crash | Munch Machine{% endblock %}
 {% block meta_description %}Why the 3pm slump happens — research-backed explanation of the post-lunch dip, circadian rhythms, and how blood glucose stability affects afternoon cognitive performance.{% endblock %}
 {% block canonical_path %}/research/afternoon-energy-crash{% endblock %}

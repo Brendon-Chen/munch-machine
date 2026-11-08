@@ -19,6 +19,15 @@ def _base_url() -> str:
     return SITE_URL or request.url_root.rstrip("/")
 
 
+@app.before_request
+def _www_to_apex():
+    """Permanent (301) redirect www.munch-machine.com to the apex domain."""
+    host = request.host.split(":")[0]
+    if host.startswith("www."):
+        from flask import redirect
+        return redirect(request.url.replace("://www.", "://", 1), code=301)
+
+
 def _ctx():
     return {"site_url": _base_url()}
 
@@ -36,6 +45,11 @@ def blog():
 @app.route("/fremont-vending-services")
 def page_fremont_vending():
     return render_template("pages/fremont-vending-services.html", **_ctx())
+
+
+@app.route("/about")
+def page_about():
+    return render_template("pages/about.html", **_ctx())
 
 
 @app.route("/office-vending")

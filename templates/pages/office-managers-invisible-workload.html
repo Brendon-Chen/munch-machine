@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}What Office Managers Actually Do All Day | Munch Machine{% endblock %}
 {% block meta_description %}The work that keeps an office running is mostly invisible — until it stops. A clear look at the uncredited, interrupt-driven load office managers carry, and which parts can actually be taken off the plate.{% endblock %}
 {% block canonical_path %}/the-office-managers-invisible-workload{% endblock %}

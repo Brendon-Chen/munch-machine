@@ -22,7 +22,11 @@
 <meta property="og:title" content="{% block og_title %}Munch Machine — Bay Area Vending Services{% endblock %}"/>
 <meta property="og:description" content="{% block og_description %}Fully managed vending machines for Bay Area businesses. Zero cost, no contracts.{% endblock %}"/>
 <meta property="og:locale" content="en_US"/>
+<meta property="og:image" content="{{ site_url }}/static/{% block og_image %}og-image.jpg{% endblock %}"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ site_url }}/static/og-image.jpg"/>
 <meta name="twitter:title" content="{% block twitter_title %}Munch Machine — Bay Area Vending Services{% endblock %}"/>
 <meta name="twitter:description" content="{% block twitter_description %}Fully managed vending machines for Bay Area businesses. Zero cost, no contracts.{% endblock %}"/>
 
@@ -103,8 +107,10 @@
       <div>
         <h5>Resources</h5>
         <ul>
-          <li><a href="{{ url_for('blog') }}">All Articles</a></li>
+          <li><a href="{{ url_for('page_about') }}">About us</a></li>
+          <li><a href="{{ url_for('page_bay_area_vending') }}">Bay Area Vending</a></li>
           <li><a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a></li>
+          <li><a href="{{ url_for('blog') }}">All Articles</a></li>
           <li><a href="{{ url_for('index') }}#faq">FAQ</a></li>
           <li><a href="{{ url_for('page_feedback') }}">Feedback &amp; referrals</a></li>
         </ul>

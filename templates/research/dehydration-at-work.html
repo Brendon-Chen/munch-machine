@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}How Dehydration Affects Focus and Performance at Work | Munch Machine{% endblock %}
 {% block meta_description %}Research on how mild dehydration — as little as 1% body mass loss — impairs attention, working memory, and mood in office workers. What the studies show.{% endblock %}
 {% block canonical_path %}/research/dehydration-at-work{% endblock %}

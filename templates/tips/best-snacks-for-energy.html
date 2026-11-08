@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{# Off-topic for vending searches: kept for readers, out of Google's index. #}
+{% block robots %}noindex, follow{% endblock %}
 {% block title %}Best Snacks for Energy at Work | Munch Machine{% endblock %}
 {% block meta_description %}The best snacks for sustained energy during the workday — what the science says about blood sugar, caffeine, and why protein beats sugar for afternoon focus.{% endblock %}
 {% block canonical_path %}/tips/best-snacks-for-energy{% endblock %}

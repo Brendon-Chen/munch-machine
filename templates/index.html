@@ -11,8 +11,8 @@
 <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon-192.png') }}"/>
 <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}"/>
 
-<title>Munch Machine — Managed Vending Service | Bay Area, CA</title>
-<meta name="description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+<title>Vending Machines in the Bay Area | Free Placement | Munch Machine</title>
+<meta name="description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
 <meta name="author" content="Munch Machine"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="{{ site_url }}/"/>
@@ -20,12 +20,17 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="{{ site_url }}/"/>
 <meta property="og:site_name" content="Munch Machine"/>
-<meta property="og:title" content="Munch Machine — Managed Vending Service | Bay Area, CA"/>
-<meta property="og:description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+<meta property="og:title" content="Vending Machines in the Bay Area | Free Placement | Munch Machine"/>
+<meta property="og:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
 <meta property="og:locale" content="en_US"/>
+<meta property="og:image" content="{{ site_url }}/static/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="A Munch Machine smart vending machine in an office break area"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Munch Machine — Managed Vending Service | Bay Area, CA"/>
-<meta name="twitter:description" content="Zero-cost vending machines for Bay Area offices, gyms &amp; lobbies. We place, stock, and service every machine — no fees, no contracts, no maintenance."/>
+<meta name="twitter:image" content="{{ site_url }}/static/og-image.jpg"/>
+<meta name="twitter:title" content="Vending Machines in the Bay Area | Free Placement | Munch Machine"/>
+<meta name="twitter:description" content="Free vending machines for Bay Area offices, warehouses, gyms and apartments. Munch Machine, a Fremont vending company, places, stocks and services every machine at $0 to host."/>
 
 <meta name="geo.region" content="US-CA"/>
 <meta name="geo.placename" content="Fremont, California"/>
@@ -553,48 +558,6 @@ body {
   .process-step .num { font-size: 30vw; }
 }
 
-.partners-section { padding: 100px 0; background: var(--cream); overflow: hidden; }
-.partners-marquee {
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-}
-.partners-track {
-  display: flex;
-  gap: 120px;
-  width: max-content;
-  animation: partners-scroll 20s linear infinite;
-}
-.partner-logo {
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  background: var(--cream-warm);
-  border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  font-family: 'Fraunces', serif;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  user-select: none;
-}
-.partner-placeholder {
-  background: transparent;
-  border: 1.5px dashed var(--line);
-}
-.placeholder-inner {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-soft);
-  text-align: center;
-  line-height: 1.4;
-}
-@keyframes partners-scroll {
-  to { transform: translateX(-720px); }
-}
 
 .faq { max-width: 880px; margin: 0 auto; }
 .faq-item {
@@ -885,10 +848,12 @@ html.lenis { height: auto; }
   "@type": "LocalBusiness",
   "@id": "{{ site_url }}/#business",
   "name": "Munch Machine",
-  "description": "Premium managed vending machine service for Bay Area businesses. Zero-cost placement with full curation, restocking, and maintenance included.",
+  "alternateName": ["Munch Machine Vending", "Munch Machine LLC"],
+  "legalName": "Munch Machine LLC",
+  "description": "Fremont, California vending machine company. Free-to-host, cashless snack and drink machines and micro markets for Bay Area businesses, placed, stocked and serviced by Munch Machine.",
   "url": "{{ site_url }}",
   "logo": "{{ site_url }}/static/favicon-512.png",
-  "image": "{{ site_url }}/static/favicon-512.png",
+  "image": "{{ site_url }}/static/og-image.jpg",
   "telephone": "+19255834228",
   "email": "admin@munch-machine.com",
   "address": {
@@ -904,12 +869,13 @@ html.lenis { height: auto; }
     "longitude": -121.9886
   },
   "areaServed": [
-    { "@type": "City", "name": "San Francisco" },
-    { "@type": "City", "name": "Oakland" },
-    { "@type": "City", "name": "San Jose" },
     { "@type": "City", "name": "Fremont" },
+    { "@type": "City", "name": "Newark" },
+    { "@type": "City", "name": "Union City" },
+    { "@type": "City", "name": "Milpitas" },
+    { "@type": "City", "name": "San Jose" },
     { "@type": "City", "name": "Palo Alto" },
-    { "@type": "City", "name": "Berkeley" },
+    { "@type": "City", "name": "Menlo Park" },
     { "@type": "AdministrativeArea", "name": "San Francisco Bay Area" }
   ],
   "priceRange": "$",
@@ -1051,14 +1017,14 @@ html.lenis { height: auto; }
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow fade-up" data-reveal>Premium vending service · Bay Area, California</div>
+        <div class="eyebrow fade-up" data-reveal>Vending company · Fremont, California</div>
         <h1 style="margin-top:24px">
-          <span class="reveal-line"><span data-line><span class="accent">Free vending</span></span></span>
+          <span class="reveal-line"><span data-line>Vending machines</span></span>
           <span class="reveal-line"><span data-line>for the Bay Area.</span></span>
-          <span class="reveal-line"><span data-line>Zero hassle.</span></span>
+          <span class="reveal-line"><span data-line><span class="accent">Free to host.</span></span></span>
         </h1>
         <p class="lead fade-up" data-reveal data-reveal-delay="0.2">
-          We place, curate, restock, and service premium vending in your offices, lobbies, and shared spaces at no cost to you!
+          We place, stock, and service cashless vending machines in offices, warehouses, and shared spaces across the <a href="{{ url_for('page_bay_area_vending') }}" class="cursor-target" style="color:var(--sage);text-decoration:underline;text-underline-offset:3px">Bay Area</a>, at no cost to you.
         </p>
         <div class="actions fade-up" data-reveal data-reveal-delay="0.3">
           <a href="#inquire" class="btn btn-dark cursor-target">Host a machine <span class="material-symbols-outlined" style="font-size:16px">arrow_outward</span></a>
@@ -1277,29 +1243,6 @@ html.lenis { height: auto; }
   </div>
 </section>
 
-{# ===== PARTNERS ===== #}
-<section class="partners-section">
-  <div class="partners-header">
-    <div class="eyebrow" style="text-align:center;margin-bottom:48px">Trusted by</div>
-  </div>
-  <div class="partners-marquee" aria-label="Partner companies">
-    <div class="partners-track">
-      {% set partners = [
-        {'init':'','name':'Your company','placeholder':true},
-        {'init':'','name':'Your company','placeholder':true},
-        {'init':'','name':'Your company','placeholder':true},
-      ] %}
-      {% for _ in range(8) %}
-      {% for p in partners %}
-      <div class="partner-logo{% if p.placeholder %} partner-placeholder{% endif %}" title="{{ p.name }}" {% if not loop.first or not loop.index0 == 0 %}aria-hidden="true"{% endif %}>
-        {% if p.placeholder %}<span class="placeholder-inner">+ Your logo</span>{% else %}<span>{{ p.init }}</span>{% endif %}
-      </div>
-      {% endfor %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 {# ===== FAQ ===== #}
 <section class="section faq-section alt" id="faq">
   <div class="wrap">
@@ -1414,8 +1357,10 @@ html.lenis { height: auto; }
       <div>
         <h5>Resources</h5>
         <ul>
-          <li><a href="{{ url_for('blog') }}">All Guides</a></li>
+          <li><a href="{{ url_for('page_about') }}">About us</a></li>
+          <li><a href="{{ url_for('page_bay_area_vending') }}">Bay Area Vending</a></li>
           <li><a href="{{ url_for('page_fremont_vending') }}">Fremont Vending</a></li>
+          <li><a href="{{ url_for('blog') }}">All Guides</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="{{ url_for('page_feedback') }}">Feedback &amp; referrals</a></li>
         </ul>
