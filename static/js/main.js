@@ -101,11 +101,12 @@ function runIntro() {
   }, '-=0.4')
 
   // Power on — the logo's colours fill into the outline: the window goes
-  // black and the slot turns sage together, then the shelves light cream.
-  // Runs before the hold, so the curtain timing is unchanged.
+  // black and the slot turns sage together. The shelves are already cream,
+  // so the black fills in around them. Runs before the hold, so the curtain
+  // timing is unchanged.
   .addLabel('powerOn', '-=0.15')
   .to('#intro .ip-window', { opacity: 1, duration: 0.4, ease: 'power2.out' }, 'powerOn')
-  .to('#intro .ip-shelf', { opacity: 1, duration: 0.25, stagger: 0.08, ease: 'power2.out' }, 'powerOn+=0.2')
+  .set('#intro .ip-shelf', { opacity: 1 }, 'powerOn')
   .to('#intro .ip-slot', { opacity: 1, duration: 0.4, ease: 'power2.out' }, 'powerOn')
 
   // Letters reveal — starts midway through the drawing (~2.0s)
